@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='iso-8859-1' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.3.4">
+  <compounddef id="structRightMatrix" kind="struct">
+    <compoundname>RightMatrix</compoundname>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structRightMatrix_1a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool RightMatrix::apply_on_state</definition>
+        <argsstring>(vector&lt; bool &gt;::reference ampl1, vector&lt; bool &gt;::reference ampl2, RightPhase &amp;ph1, RightPhase &amp;ph2)</argsstring>
+        <name>apply_on_state</name>
+        <param>
+          <type>vector&lt; bool &gt;::reference</type>
+          <declname>ampl1</declname>
+        </param>
+        <param>
+          <type>vector&lt; bool &gt;::reference</type>
+          <declname>ampl2</declname>
+        </param>
+        <param>
+          <type><ref refid="structRightPhase" kindref="compound">RightPhase</ref> &amp;</type>
+          <declname>ph1</declname>
+        </param>
+        <param>
+          <type><ref refid="structRightPhase" kindref="compound">RightPhase</ref> &amp;</type>
+          <declname>ph2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <location file="/net/dopey1/sanders/work/graphsim-0.10/loccliff.h" line="63" bodystart="106" bodyend="156"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structRightMatrix_1o0" prot="public" static="no" volatile="no" mutable="no">
+        <type>bool</type>
+        <definition>bool RightMatrix::sqrt2norm</definition>
+        <argsstring></argsstring>
+        <name>sqrt2norm</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <location file="/net/dopey1/sanders/work/graphsim-0.10/loccliff.h" line="59" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structRightMatrix_1o1" prot="public" static="no" volatile="no" mutable="no">
+        <type>bool</type>
+        <definition>bool RightMatrix::ampls[2][2]</definition>
+        <argsstring>[2][2]</argsstring>
+        <name>ampls</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <location file="/net/dopey1/sanders/work/graphsim-0.10/loccliff.h" line="60" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structRightMatrix_1o2" prot="public" static="no" volatile="no" mutable="no">
+        <type><ref refid="structRightPhase" kindref="compound">RightPhase</ref></type>
+        <definition>RightPhase RightMatrix::phases[2][2]</definition>
+        <argsstring>[2][2]</argsstring>
+        <name>phases</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <location file="/net/dopey1/sanders/work/graphsim-0.10/loccliff.h" line="61" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="16">
+        <label>RightMatrix</label>
+        <childnode refid="17" relation="usage">
+          <edgelabel>phases</edgelabel>
+        </childnode>
+      </node>
+      <node id="17">
+        <label>RightPhase</label>
+        <link refid="structRightPhase"/>
+      </node>
+    </collaborationgraph>
+    <location file="/net/dopey1/sanders/work/graphsim-0.10/loccliff.h" line="58" bodystart="58" bodyend="64"/>
+    <listofallmembers>
+      <member refid="structRightMatrix_1o1" prot="public" virt="non-virtual"><scope>RightMatrix</scope><name>ampls</name></member>
+      <member refid="structRightMatrix_1a0" prot="public" virt="non-virtual"><scope>RightMatrix</scope><name>apply_on_state</name></member>
+      <member refid="structRightMatrix_1o2" prot="public" virt="non-virtual"><scope>RightMatrix</scope><name>phases</name></member>
+      <member refid="structRightMatrix_1o0" prot="public" virt="non-virtual"><scope>RightMatrix</scope><name>sqrt2norm</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

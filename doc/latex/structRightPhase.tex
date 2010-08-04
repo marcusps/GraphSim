@@ -1,0 +1,43 @@
+\section{Right\-Phase Struct Reference}
+\label{structRightPhase}\index{RightPhase@{RightPhase}}
+A phase, which is 0, 90, 180, or 270 degrees.  
+
+
+{\tt \#include $<$loccliff.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+{\bf Right\-Phase} (void)\label{structRightPhase_a0}
+
+\begin{CompactList}\small\item\em initializes as 0 degrees \item\end{CompactList}\item 
+{\bf Right\-Phase} (unsigned short ph\_\-)\label{structRightPhase_a1}
+
+\begin{CompactList}\small\item\em takes 0..3 as argument and writes it to ph \item\end{CompactList}\item 
+string {\bf get\_\-name} (void) const \label{structRightPhase_a2}
+
+\begin{CompactList}\small\item\em returns \char`\"{} +\char`\"{}, \char`\"{} i\char`\"{}, \char`\"{} -\char`\"{}, or \char`\"{}-i\char`\"{} \item\end{CompactList}\end{CompactItemize}
+\subsection*{Public Attributes}
+\begin{CompactItemize}
+\item 
+unsigned short {\bf ph}
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+A phase, which is 0, 90, 180, or 270 degrees. 
+
+
+
+\subsection{Member Data Documentation}
+\index{RightPhase@{Right\-Phase}!ph@{ph}}
+\index{ph@{ph}!RightPhase@{Right\-Phase}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}unsigned short {\bf Right\-Phase::ph}}\label{structRightPhase_o0}
+
+
+to be read modulo 4, i.e. \& 0x03 The field 'ph' indicated the angle with a value 0, 1, 2, or 3, corresponding to 0, 90, 180, or 270 degrees Do not rely on ph$<$3, always read it out anded with 0x03. 
+
+The documentation for this struct was generated from the following files:\begin{CompactItemize}
+\item 
+{\bf loccliff.h}\item 
+loccliff.cpp\end{CompactItemize}

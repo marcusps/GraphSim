@@ -1,0 +1,60 @@
+\section{Stabilizer Struct Reference}
+\label{structStabilizer}\index{Stabilizer@{Stabilizer}}
+A stabilizer describing a quantum state.  
+
+
+{\tt \#include $<$stabilizer.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+{\bf Stabilizer} (const  {\bf Vertex\-Index} num\-Qubits\_\-)\label{structStabilizer_a0}
+
+\item 
+{\bf Stabilizer} (const  {\bf Graph\-Register} \&gr, const  hash\_\-set$<$ {\bf Vertex\-Index} $>$ \&qubits)\label{structStabilizer_a1}
+
+\item 
+{\bf Stabilizer} (QState $\ast$qs)\label{structStabilizer_a2}
+
+\item 
+void {\bf add\_\-row} (unsigned target, unsigned addend)\label{structStabilizer_a3}
+
+\item 
+void {\bf conjugate} (unsigned row, unsigned col, const  {\bf Loc\-Cliff\-Op} trans)\label{structStabilizer_a4}
+
+\item 
+void {\bf conjugate\_\-column} (unsigned col, const  {\bf Loc\-Cliff\-Op} trans)\label{structStabilizer_a5}
+
+\item 
+void {\bf print} (ostream \&os=cout) const \label{structStabilizer_a6}
+
+\item 
+bool {\bf compare} (const  {\bf Stabilizer} \&diag)\label{structStabilizer_a7}
+
+\end{CompactItemize}
+\subsection*{Public Attributes}
+\begin{CompactItemize}
+\item 
+{\bf Vertex\-Index} {\bf num\-Qubits}\label{structStabilizer_o0}
+
+\item 
+vector$<$ vector$<$ {\bf Loc\-Cliff\-Op} $>$ $>$ {\bf paulis}\label{structStabilizer_o1}
+
+\item 
+vector$<$ {\bf Right\-Phase} $>$ {\bf rowsigns}\label{structStabilizer_o2}
+
+\item 
+vector$<$ {\bf Vertex\-Index} $>$ {\bf vtxidx}\label{structStabilizer_o3}
+
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+A stabilizer describing a quantum state. 
+
+
+
+The documentation for this struct was generated from the following files:\begin{CompactItemize}
+\item 
+{\bf stabilizer.h}\item 
+stabilizer.cpp\end{CompactItemize}

@@ -1,0 +1,544 @@
+<?xml version='1.0' encoding='iso-8859-1' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.3.4">
+  <compounddef id="classGraphRegister" kind="class">
+    <compoundname>GraphRegister</compoundname>
+    <includes refid="graphsim_8h" local="no">graphsim.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classGraphRegister_1a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GraphRegister::GraphRegister</definition>
+        <argsstring>(VertexIndex numQubits, int randomize=-1)</argsstring>
+        <name>GraphRegister</name>
+        <param>
+          <type><ref refid="graphsim_8h_1a1" kindref="member">VertexIndex</ref></type>
+          <declname>numQubits</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>randomize</declname>
+          <defval>-1</defval>
+        </param>
+        <briefdescription>
+<para>Instantiate a quantum register with &apos;numQubits&apos; qubits, initally all in state |0&gt;. </para>        </briefdescription>
+        <detaileddescription>
+<para>If randomize &gt; -1 the RNG will be seeded with the current time plus the value of randomize. (Otherwise, it is not seeded.) That the value of randomize is added to the seed is useful in parallel processing settings where you want to ensure different seeds. (If you call this from Python, remember, that Python&apos;s RNG is not seeded.) </para>        </detaileddescription>
+        <location file="/net/dopey1/sanders/work/graphsim-0.10/graphsim.h" line="124" bodystart="20" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="classGraphRegister_1a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GraphRegister::GraphRegister</definition>
+        <argsstring>(GraphRegister &amp;gr)</argsstring>
+        <name>GraphRegister</name>
+        <param>
+          <type><ref refid="classGraphRegister" kindref="compound">GraphRegister</ref> &amp;</type>
+          <declname>gr</declname>
+        </param>
+        <briefdescription>
+<para>Copy constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para>Clones a register </para>        </detaileddescription>
+        <location file="/net/dopey1/sanders/work/graphsim-0.10/graphsim.h" line="125" bodystart="30" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="classGraphRegister_1a2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>GraphRegister::~GraphRegister</definition>
+        <argsstring>()</argsstring>
+        <name>~GraphRegister</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <location file="/net/dopey1/sanders/work/graphsim-0.10/graphsim.h" line="126" bodystart="126" bodyend="126"/>
+      </memberdef>
+      <memberdef kind="function" id="classGraphRegister_1a3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void GraphRegister::local_op</definition>
+        <argsstring>(VertexIndex v, LocCliffOp o)</argsstring>
+        <name>local_op</name>
+        <param>
+          <type><ref refid="graphsim_8h_1a1" kindref="member">VertexIndex</ref></type>
+          <declname>v</declname>
+        </param>
+        <param>
+          <type><ref refid="structLocCliffOp" kindref="compound">LocCliffOp</ref></type>
+          <declname>o</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Apply the local (i.e. single-qubit) operation o on vertex v. </para>        </detaileddescription>
+        <location file="/net/dopey1/sanders/work/graphsim-0.10/graphsim.h" line="127" bodystart="171" bodyend="173"/>
+        <references refid="classGraphRegister_1o0" compoundref="graphsim_8h" startline="123">vertices</references>
+        <referencedby refid="classGraphRegister_1a6" compoundref="graphsim_8h" startline="187" endline="189">bitflip</referencedby>
+        <referencedby refid="classGraphRegister_1a4" compoundref="graphsim_8h" startline="176" endline="178">hadamard</referencedby>
+        <referencedby refid="classGraphRegister_1a7" compoundref="graphsim_8h" startline="192" endline="194">phaseflip</referencedby>
+        <referencedby refid="classGraphRegister_1a5" compoundref="graphsim_8h" startline="182" endline="184">phaserot</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classGraphRegister_1a4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void GraphRegister::hadamard</definition>
+        <argsstring>(VertexIndex v)</argsstring>
+        <name>hadamard</name>
+        <param>
+          <type><ref refid="graphsim_8h_1a1" kindref="member">VertexIndex</ref></type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Apply a Hadamard gate on vertex v </para>        </detaileddescription>
+        <location file="/net/dopey1/sanders/work/graphsim-0.10/graphsim.h" line="128" bodystart="176" bodyend="178"/>
+        <references refid="loccliff_8h_1a5" compoundref="loccliff_8h" startline="140">lco_H</references>
+        <references refid="classGraphRegister_1a3" compoundref="graphsim_8h" startline="171" endline="173">local_op</references>
+      </memberdef>
+      <memberdef kind="function" id="classGraphRegister_1a5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void GraphRegister::phaserot</definition>
+        <argsstring>(VertexIndex v)</argsstring>
+        <name>phaserot</name>
+        <param>
+          <type><ref refid="graphsim_8h_1a1" kindref="member">VertexIndex</ref></type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Apply a phaserot gate on vertex v. Phaserot means the gate S = |0&gt;&lt;0| + i |1&gt;&lt;1|. </para>        </detaileddescription>
+        <location file="/net/dopey1/sanders/work/graphsim-0.10/graphsim.h" line="129" bodystart="182" bodyend="184"/>
+        <references refid="loccliff_8h_1a12" compoundref="loccliff_8h" startline="147">lco_S</references>
+        <references refid="classGraphRegister_1a3" compoundref="graphsim_8h" startline="171" endline="173">local_op</references>
+      </memberdef>
+      <memberdef kind="function" id="classGraphRegister_1a6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void GraphRegister::bitflip</definition>
+        <argsstring>(VertexIndex v)</argsstring>
+        <name>bitflip</name>
+        <param>
+          <type><ref refid="graphsim_8h_1a1" kindref="member">VertexIndex</ref></type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Apply a bitflip gate (i.e. a Pauli X) on vertex v </para>        </detaileddescription>
+        <location file="/net/dopey1/sanders/work/graphsim-0.10/graphsim.h" line="130" bodystart="187" bodyend="189"/>
+        <references refid="loccliff_8h_1a2" compoundref="loccliff_8h" startline="137">lco_X</references>
+        <references refid="classGraphRegister_1a3" compoundref="graphsim_8h" startline="171" endline="173">local_op</references>
+      </memberdef>
+      <memberdef kind="function" id="classGraphRegister_1a7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void GraphRegister::phaseflip</definition>
+        <argsstring>(VertexIndex v)</argsstring>
+        <name>phaseflip</name>
+        <param>
+          <type><ref refid="graphsim_8h_1a1" kindref="member">VertexIndex</ref></type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Apply a phaseflip gate (i.e. a Pauli Z) on vertex v </para>        </detaileddescription>
+        <location file="/net/dopey1/sanders/work/graphsim-0.10/graphsim.h" line="131" bodystart="192" bodyend="194"/>
+        <references refid="loccliff_8h_1a4" compoundref="loccliff_8h" startline="139">lco_Z</references>
+        <references refid="classGraphRegister_1a3" compoundref="graphsim_8h" startline="171" endline="173">local_op</references>
+      </memberdef>
+      <memberdef kind="function" id="classGraphRegister_1a8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GraphRegister::cphase</definition>
+        <argsstring>(VertexIndex v1, VertexIndex v2)</argsstring>
+        <name>cphase</name>
+        <param>
+          <type><ref refid="graphsim_8h_1a1" kindref="member">VertexIndex</ref></type>
+          <declname>v1</declname>
+        </param>
+        <param>
+          <type><ref refid="graphsim_8h_1a1" kindref="member">VertexIndex</ref></type>
+          <declname>v2</declname>
+        </param>
+        <briefdescription>
+<para>Do a conditional phase gate between the two qubits. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <location file="/net/dopey1/sanders/work/graphsim-0.10/graphsim.h" line="132" bodystart="166" bodyend="194"/>
+      </memberdef>
+      <memberdef kind="function" id="classGraphRegister_1a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GraphRegister::cnot</definition>
+        <argsstring>(VertexIndex vc, VertexIndex vt)</argsstring>
+        <name>cnot</name>
+        <param>
+          <type><ref refid="graphsim_8h_1a1" kindref="member">VertexIndex</ref></type>
+          <declname>vc</declname>
+        </param>
+        <param>
+          <type><ref refid="graphsim_8h_1a1" kindref="member">VertexIndex</ref></type>
+          <declname>vt</declname>
+        </param>
+        <briefdescription>
+<para>Do a controlled not gate between the vertices vc (control) and vt (target). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <location file="/net/dopey1/sanders/work/graphsim-0.10/graphsim.h" line="133" bodystart="198" bodyend="202"/>
+      </memberdef>
+      <memberdef kind="function" id="classGraphRegister_1a10" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int GraphRegister::measure</definition>
+        <argsstring>(VertexIndex v, LocCliffOp basis=lco_Z, bool *determined=NULL, int force=-1)</argsstring>
+        <name>measure</name>
+        <param>
+          <type><ref refid="graphsim_8h_1a1" kindref="member">VertexIndex</ref></type>
+          <declname>v</declname>
+        </param>
+        <param>
+          <type><ref refid="structLocCliffOp" kindref="compound">LocCliffOp</ref></type>
+          <declname>basis</declname>
+          <defval><ref refid="loccliff_8h_1a4" kindref="member">lco_Z</ref></defval>
+        </param>
+        <param>
+          <type>bool *</type>
+          <declname>determined</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>force</declname>
+          <defval>-1</defval>
+        </param>
+        <briefdescription>
+<para>Measure qubit v in basis &apos;basis&apos;. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <location file="/net/dopey1/sanders/work/graphsim-0.10/graphsim.h" line="135" bodystart="397" bodyend="430"/>
+      </memberdef>
+      <memberdef kind="function" id="classGraphRegister_1a11" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structStabilizer" kindref="compound">Stabilizer</ref> &amp;</type>
+        <definition>Stabilizer &amp; GraphRegister::get_full_stabilizer</definition>
+        <argsstring>(void) const </argsstring>
+        <name>get_full_stabilizer</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Create the <ref refid="structStabilizer" kindref="compound">Stabilizer</ref> of the state. </para>        </briefdescription>
+        <detaileddescription>
+<para>This is useful to print out the stabilizer (or to compare with CHP). You can also use print_stabilizer. </para>        </detaileddescription>
+        <location file="/net/dopey1/sanders/work/graphsim-0.10/graphsim.h" line="136" bodystart="66" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="classGraphRegister_1a12" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GraphRegister::invert_neighborhood</definition>
+        <argsstring>(VertexIndex v)</argsstring>
+        <name>invert_neighborhood</name>
+        <param>
+          <type><ref refid="graphsim_8h_1a1" kindref="member">VertexIndex</ref></type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+<para>Do a neighborhood inversion (i.e. local complementation) about vertex v. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <location file="/net/dopey1/sanders/work/graphsim-0.10/graphsim.h" line="137" bodystart="435" bodyend="455"/>
+      </memberdef>
+      <memberdef kind="function" id="classGraphRegister_1a13" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GraphRegister::print_adj_list</definition>
+        <argsstring>(ostream &amp;os=cout) const </argsstring>
+        <name>print_adj_list</name>
+        <param>
+          <type>ostream &amp;</type>
+          <declname>os</declname>
+          <defval>cout</defval>
+        </param>
+        <briefdescription>
+<para>Prints out the description of the current state. </para>        </briefdescription>
+        <detaileddescription>
+<para>in terms of adjacency lists of the graph and the VOps. </para>        </detaileddescription>
+        <location file="/net/dopey1/sanders/work/graphsim-0.10/graphsim.h" line="138" bodystart="78" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="classGraphRegister_1a14" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GraphRegister::print_adj_list_line</definition>
+        <argsstring>(ostream &amp;os, VertexIndex i) const </argsstring>
+        <name>print_adj_list_line</name>
+        <param>
+          <type>ostream &amp;</type>
+          <declname>os</declname>
+        </param>
+        <param>
+          <type><ref refid="graphsim_8h_1a1" kindref="member">VertexIndex</ref></type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+<para>Prints the line for Vertex i in the adjacency list representation of the state. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <location file="/net/dopey1/sanders/work/graphsim-0.10/graphsim.h" line="139" bodystart="86" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="classGraphRegister_1a15" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GraphRegister::print_stabilizer</definition>
+        <argsstring>(ostream &amp;os=cout) const </argsstring>
+        <name>print_stabilizer</name>
+        <param>
+          <type>ostream &amp;</type>
+          <declname>os</declname>
+          <defval>cout</defval>
+        </param>
+        <briefdescription>
+<para>Print the current state in stabilizer representation. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <location file="/net/dopey1/sanders/work/graphsim-0.10/graphsim.h" line="140" bodystart="98" bodyend="101"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classGraphRegister_1o0" prot="public" static="no" volatile="no" mutable="no">
+        <type>vector&lt; <ref refid="structQubitVertex" kindref="compound">QubitVertex</ref> &gt;</type>
+        <definition>vector&lt;QubitVertex&gt; GraphRegister::vertices</definition>
+        <argsstring></argsstring>
+        <name>vertices</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This vector stores all the qubits, represented as <ref refid="structQubitVertex" kindref="compound">QubitVertex</ref> objects. The index of the vector is usually taken as of type VertexIndex. </para>        </detaileddescription>
+        <location file="/net/dopey1/sanders/work/graphsim-0.10/graphsim.h" line="123" bodystart="123" bodyend="-1"/>
+        <referencedby refid="classGraphRegister_1a3" compoundref="graphsim_8h" startline="171" endline="173">local_op</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classGraphRegister_1d0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GraphRegister::add_edge</definition>
+        <argsstring>(VertexIndex v1, VertexIndex v2)</argsstring>
+        <name>add_edge</name>
+        <param>
+          <type><ref refid="graphsim_8h_1a1" kindref="member">VertexIndex</ref></type>
+          <declname>v1</declname>
+        </param>
+        <param>
+          <type><ref refid="graphsim_8h_1a1" kindref="member">VertexIndex</ref></type>
+          <declname>v2</declname>
+        </param>
+        <briefdescription>
+<para>Add an edge to the graph underlying the state. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <location file="/net/dopey1/sanders/work/graphsim-0.10/graphsim.h" line="142" bodystart="36" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="classGraphRegister_1d1" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GraphRegister::del_edge</definition>
+        <argsstring>(VertexIndex v1, VertexIndex v2)</argsstring>
+        <name>del_edge</name>
+        <param>
+          <type><ref refid="graphsim_8h_1a1" kindref="member">VertexIndex</ref></type>
+          <declname>v1</declname>
+        </param>
+        <param>
+          <type><ref refid="graphsim_8h_1a1" kindref="member">VertexIndex</ref></type>
+          <declname>v2</declname>
+        </param>
+        <briefdescription>
+<para>Delete an edge to the graph underlying the state. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <location file="/net/dopey1/sanders/work/graphsim-0.10/graphsim.h" line="143" bodystart="44" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="classGraphRegister_1d2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GraphRegister::toggle_edge</definition>
+        <argsstring>(VertexIndex v1, VertexIndex v2)</argsstring>
+        <name>toggle_edge</name>
+        <param>
+          <type><ref refid="graphsim_8h_1a1" kindref="member">VertexIndex</ref></type>
+          <declname>v1</declname>
+        </param>
+        <param>
+          <type><ref refid="graphsim_8h_1a1" kindref="member">VertexIndex</ref></type>
+          <declname>v2</declname>
+        </param>
+        <briefdescription>
+<para>Toggle an edge to the graph underlying the state. </para>        </briefdescription>
+        <detaileddescription>
+<para>(i.e. add it if not present, and delete it if present.) </para>        </detaileddescription>
+        <location file="/net/dopey1/sanders/work/graphsim-0.10/graphsim.h" line="144" bodystart="52" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="classGraphRegister_1d3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int GraphRegister::graph_Z_measure</definition>
+        <argsstring>(VertexIndex v, int force=-1)</argsstring>
+        <name>graph_Z_measure</name>
+        <param>
+          <type><ref refid="graphsim_8h_1a1" kindref="member">VertexIndex</ref></type>
+          <declname>v</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>force</declname>
+          <defval>-1</defval>
+        </param>
+        <briefdescription>
+<para>Measure the bare graph state in the Z basis. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <location file="/net/dopey1/sanders/work/graphsim-0.10/graphsim.h" line="145" bodystart="244" bodyend="269"/>
+      </memberdef>
+      <memberdef kind="function" id="classGraphRegister_1d4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int GraphRegister::graph_Y_measure</definition>
+        <argsstring>(VertexIndex v, int force=-1)</argsstring>
+        <name>graph_Y_measure</name>
+        <param>
+          <type><ref refid="graphsim_8h_1a1" kindref="member">VertexIndex</ref></type>
+          <declname>v</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>force</declname>
+          <defval>-1</defval>
+        </param>
+        <briefdescription>
+<para>Measure the bare graph state in the Y basis. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <location file="/net/dopey1/sanders/work/graphsim-0.10/graphsim.h" line="146" bodystart="272" bodyend="305"/>
+      </memberdef>
+      <memberdef kind="function" id="classGraphRegister_1d5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int GraphRegister::graph_X_measure</definition>
+        <argsstring>(VertexIndex v, bool *determined=NULL, int force=-1)</argsstring>
+        <name>graph_X_measure</name>
+        <param>
+          <type><ref refid="graphsim_8h_1a1" kindref="member">VertexIndex</ref></type>
+          <declname>v</declname>
+        </param>
+        <param>
+          <type>bool *</type>
+          <declname>determined</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>force</declname>
+          <defval>-1</defval>
+        </param>
+        <briefdescription>
+<para>Measure the bare graph state in the X basis. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <location file="/net/dopey1/sanders/work/graphsim-0.10/graphsim.h" line="147" bodystart="308" bodyend="389"/>
+      </memberdef>
+      <memberdef kind="function" id="classGraphRegister_1d6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GraphRegister::toggle_edges</definition>
+        <argsstring>(const  hash_set&lt; VertexIndex &gt; vs1, const  hash_set&lt; VertexIndex &gt; vs2)</argsstring>
+        <name>toggle_edges</name>
+        <param>
+          <type>const hash_set&lt; <ref refid="graphsim_8h_1a1" kindref="member">VertexIndex</ref> &gt;</type>
+          <declname>vs1</declname>
+        </param>
+        <param>
+          <type>const hash_set&lt; <ref refid="graphsim_8h_1a1" kindref="member">VertexIndex</ref> &gt;</type>
+          <declname>vs2</declname>
+        </param>
+        <briefdescription>
+<para>Toggles the edges between the vertex sets vs1 and vs2. </para>        </briefdescription>
+        <detaileddescription>
+<para>The function takes extra care not to invert an edge twice. If vs1 and vs2 are disjunct, this cannot happen and we do not need the function. If vs1 == v2s, we can do without, too. </para>        </detaileddescription>
+        <location file="/net/dopey1/sanders/work/graphsim-0.10/graphsim.h" line="149" bodystart="228" bodyend="241"/>
+      </memberdef>
+      <memberdef kind="function" id="classGraphRegister_1d7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool GraphRegister::remove_byprod_op</definition>
+        <argsstring>(VertexIndex v, VertexIndex use_not)</argsstring>
+        <name>remove_byprod_op</name>
+        <param>
+          <type><ref refid="graphsim_8h_1a1" kindref="member">VertexIndex</ref></type>
+          <declname>v</declname>
+        </param>
+        <param>
+          <type><ref refid="graphsim_8h_1a1" kindref="member">VertexIndex</ref></type>
+          <declname>use_not</declname>
+          <defname>avoid</defname>
+        </param>
+        <briefdescription>
+<para>Do neighborhood inversions to reduce the VOp of vertex v to the identity. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <location file="/net/dopey1/sanders/work/graphsim-0.10/graphsim.h" line="150" bodystart="461" bodyend="516"/>
+      </memberdef>
+      <memberdef kind="function" id="classGraphRegister_1d8" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GraphRegister::cphase_with_table</definition>
+        <argsstring>(VertexIndex v1, VertexIndex v2)</argsstring>
+        <name>cphase_with_table</name>
+        <param>
+          <type><ref refid="graphsim_8h_1a1" kindref="member">VertexIndex</ref></type>
+          <declname>v1</declname>
+        </param>
+        <param>
+          <type><ref refid="graphsim_8h_1a1" kindref="member">VertexIndex</ref></type>
+          <declname>v2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Use the cphase look-up table. This is called by cphase after VOps that do not commute with the cphase gate have been removed as far as possible. </para>        </detaileddescription>
+        <location file="/net/dopey1/sanders/work/graphsim-0.10/graphsim.h" line="151" bodystart="105" bodyend="147"/>
+      </memberdef>
+      <memberdef kind="function" id="classGraphRegister_1d9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structConnectionInfo" kindref="compound">ConnectionInfo</ref></type>
+        <definition>ConnectionInfo GraphRegister::getConnectionInfo</definition>
+        <argsstring>(VertexIndex v1, VertexIndex v2)</argsstring>
+        <name>getConnectionInfo</name>
+        <param>
+          <type><ref refid="graphsim_8h_1a1" kindref="member">VertexIndex</ref></type>
+          <declname>v1</declname>
+        </param>
+        <param>
+          <type><ref refid="graphsim_8h_1a1" kindref="member">VertexIndex</ref></type>
+          <declname>v2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Check whether the qubits are connected to each other and to non-operand vertices. </para>        </detaileddescription>
+        <location file="/net/dopey1/sanders/work/graphsim-0.10/graphsim.h" line="152" bodystart="151" bodyend="163"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A quantum register. </para>    </briefdescription>
+    <detaileddescription>
+<para>GraphRegister is the central class of graphsim. It represents a register of qubits that can be entangled with each other. It offers functions to initialize the register, let gates operate on the qubits, do measurements and print out the state. </para>    </detaileddescription>
+    <location file="/net/dopey1/sanders/work/graphsim-0.10/graphsim.h" line="119" bodystart="119" bodyend="153"/>
+    <listofallmembers>
+      <member refid="classGraphRegister_1d0" prot="private" virt="non-virtual"><scope>GraphRegister</scope><name>add_edge</name></member>
+      <member refid="classGraphRegister_1a6" prot="public" virt="non-virtual"><scope>GraphRegister</scope><name>bitflip</name></member>
+      <member refid="classGraphRegister_1a9" prot="public" virt="non-virtual"><scope>GraphRegister</scope><name>cnot</name></member>
+      <member refid="classGraphRegister_1a8" prot="public" virt="non-virtual"><scope>GraphRegister</scope><name>cphase</name></member>
+      <member refid="classGraphRegister_1d8" prot="private" virt="non-virtual"><scope>GraphRegister</scope><name>cphase_with_table</name></member>
+      <member refid="classGraphRegister_1d1" prot="private" virt="non-virtual"><scope>GraphRegister</scope><name>del_edge</name></member>
+      <member refid="classGraphRegister_1a11" prot="public" virt="non-virtual"><scope>GraphRegister</scope><name>get_full_stabilizer</name></member>
+      <member refid="classGraphRegister_1d9" prot="private" virt="non-virtual"><scope>GraphRegister</scope><name>getConnectionInfo</name></member>
+      <member refid="classGraphRegister_1d5" prot="private" virt="non-virtual"><scope>GraphRegister</scope><name>graph_X_measure</name></member>
+      <member refid="classGraphRegister_1d4" prot="private" virt="non-virtual"><scope>GraphRegister</scope><name>graph_Y_measure</name></member>
+      <member refid="classGraphRegister_1d3" prot="private" virt="non-virtual"><scope>GraphRegister</scope><name>graph_Z_measure</name></member>
+      <member refid="classGraphRegister_1a0" prot="public" virt="non-virtual"><scope>GraphRegister</scope><name>GraphRegister</name></member>
+      <member refid="classGraphRegister_1a1" prot="public" virt="non-virtual"><scope>GraphRegister</scope><name>GraphRegister</name></member>
+      <member refid="classGraphRegister_1a4" prot="public" virt="non-virtual"><scope>GraphRegister</scope><name>hadamard</name></member>
+      <member refid="classGraphRegister_1a12" prot="public" virt="non-virtual"><scope>GraphRegister</scope><name>invert_neighborhood</name></member>
+      <member refid="classGraphRegister_1a3" prot="public" virt="non-virtual"><scope>GraphRegister</scope><name>local_op</name></member>
+      <member refid="classGraphRegister_1a10" prot="public" virt="non-virtual"><scope>GraphRegister</scope><name>measure</name></member>
+      <member refid="classGraphRegister_1a7" prot="public" virt="non-virtual"><scope>GraphRegister</scope><name>phaseflip</name></member>
+      <member refid="classGraphRegister_1a5" prot="public" virt="non-virtual"><scope>GraphRegister</scope><name>phaserot</name></member>
+      <member refid="classGraphRegister_1a13" prot="public" virt="non-virtual"><scope>GraphRegister</scope><name>print_adj_list</name></member>
+      <member refid="classGraphRegister_1a14" prot="public" virt="non-virtual"><scope>GraphRegister</scope><name>print_adj_list_line</name></member>
+      <member refid="classGraphRegister_1a15" prot="public" virt="non-virtual"><scope>GraphRegister</scope><name>print_stabilizer</name></member>
+      <member refid="classGraphRegister_1d7" prot="private" virt="non-virtual"><scope>GraphRegister</scope><name>remove_byprod_op</name></member>
+      <member refid="classGraphRegister_1d2" prot="private" virt="non-virtual"><scope>GraphRegister</scope><name>toggle_edge</name></member>
+      <member refid="classGraphRegister_1d6" prot="private" virt="non-virtual"><scope>GraphRegister</scope><name>toggle_edges</name></member>
+      <member refid="classGraphRegister_1o0" prot="public" virt="non-virtual"><scope>GraphRegister</scope><name>vertices</name></member>
+      <member refid="classGraphRegister_1a2" prot="public" virt="non-virtual"><scope>GraphRegister</scope><name>~GraphRegister</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

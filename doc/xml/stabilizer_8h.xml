@@ -1,0 +1,154 @@
+<?xml version='1.0' encoding='iso-8859-1' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.3.4">
+  <compounddef id="stabilizer_8h" kind="file">
+    <compoundname>stabilizer.h</compoundname>
+    <includes local="no">iostream</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">cassert</includes>
+    <includes refid="loccliff_8h" local="yes">loccliff.h</includes>
+    <includes local="no">ext/hash_set</includes>
+    <includedby refid="graphsim_8h" local="yes">graphsim.h</includedby>
+    <includedby refid="stabilizer_8cpp" local="yes">stabilizer.cpp</includedby>
+    <incdepgraph>
+      <node id="71">
+        <label>ext/hash_set</label>
+      </node>
+      <node id="67">
+        <label>cassert</label>
+      </node>
+      <node id="69">
+        <label>string</label>
+      </node>
+      <node id="70">
+        <label>multtbl.tbl</label>
+      </node>
+      <node id="68">
+        <label>loccliff.h</label>
+        <link refid="loccliff_8h"/>
+        <childnode refid="69" relation="include">
+        </childnode>
+        <childnode refid="66" relation="include">
+        </childnode>
+        <childnode refid="70" relation="include">
+        </childnode>
+      </node>
+      <node id="66">
+        <label>vector</label>
+      </node>
+      <node id="65">
+        <label>iostream</label>
+      </node>
+      <node id="64">
+        <label>stabilizer.h</label>
+        <link refid="stabilizer.h"/>
+        <childnode refid="65" relation="include">
+        </childnode>
+        <childnode refid="66" relation="include">
+        </childnode>
+        <childnode refid="67" relation="include">
+        </childnode>
+        <childnode refid="68" relation="include">
+        </childnode>
+        <childnode refid="71" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="73">
+        <label>graphsim.h</label>
+        <link refid="graphsim_8h"/>
+      </node>
+      <node id="72">
+        <label>stabilizer.h</label>
+        <link refid="stabilizer.h"/>
+        <childnode refid="73" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structQState">QState</innerclass>
+    <innerclass refid="structStabilizer">Stabilizer</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="stabilizer_8h_1a0" prot="public" static="no">
+        <type>unsigned long</type>
+        <definition>typedef unsigned long VertexIndex</definition>
+        <argsstring></argsstring>
+        <name>VertexIndex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <location file="/net/dopey1/sanders/work/graphsim-0.10/stabilizer.h" line="45" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>defines the <ref refid="structStabilizer" kindref="compound">Stabilizer</ref> class</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>stabilizer.h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="preprocessor">#ifndef<sp/>STABILIZER_H</highlight></codeline>
+<codeline lineno="7"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>STABILIZER_H</highlight></codeline>
+<codeline lineno="8"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cassert&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="loccliff_8h" kindref="compound">loccliff.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ext/hash_set&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>SWIG</highlight></codeline>
+<codeline lineno="16"><highlight class="preprocessor"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>__gnu_cxx::hash_set;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="18"><highlight class="preprocessor"></highlight><highlight class="comment">//<sp/>See<sp/>note<sp/>at<sp/>top<sp/>of<sp/>file<sp/>graphsim.h<sp/>in<sp/>case<sp/>of<sp/>problems<sp/>compiling</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">//<sp/>the<sp/>preceding<sp/>lines.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>SWIG</highlight></codeline>
+<codeline lineno="23"><highlight class="preprocessor"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">QState;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight></codeline>
+<codeline lineno="25"><highlight class="preprocessor"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>following<sp/>struct<sp/>declaration<sp/>is<sp/>quoted<sp/>in<sp/>verbatim<sp/>from<sp/>Scott</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Aaronson&apos;s<sp/>CHP<sp/>program.<sp/>(Scott,<sp/>I<sp/>hope,<sp/>you<sp/>don&apos;t<sp/>mind.)<sp/>It<sp/>is<sp/>used</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>here<sp/>to<sp/>implement<sp/>the<sp/>functionality<sp/>of<sp/>comparing<sp/>a<sp/>stabilizer<sp/>state</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>in<sp/>CHP<sp/>with<sp/>a<sp/>state<sp/>in<sp/>graphsim.<sp/>This<sp/>is<sp/>used<sp/>to<sp/>compare<sp/>the<sp/>action</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>of<sp/>the<sp/>two<sp/>programs<sp/>to<sp/>ensure<sp/>correctness.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">QState</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>n;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>#<sp/>of<sp/>qubits</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>**x;<sp/></highlight><highlight class="comment">//<sp/>(2n+1)*n<sp/>matrix<sp/>for<sp/>stabilizer/destabilizer<sp/>x<sp/>bits<sp/>(there&apos;s<sp/>one<sp/>&quot;scratch<sp/>row&quot;<sp/>at</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>**z;<sp/></highlight><highlight class="comment">//<sp/>(2n+1)*n<sp/>matrix<sp/>for<sp/>z<sp/>bits<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>the<sp/>bottom)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*r;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Phase<sp/>bits:<sp/>0<sp/>for<sp/>+1,<sp/>1<sp/>for<sp/>i,<sp/>2<sp/>for<sp/>-1,<sp/>3<sp/>for<sp/>-i.<sp/><sp/>Normally<sp/>either<sp/>0<sp/>or<sp/>2.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>pw[32];<sp/></highlight><highlight class="comment">//<sp/>pw[i]<sp/>=<sp/>2^i</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>over32;<sp/></highlight><highlight class="comment">//<sp/>floor(n/8)+1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/>};<sp/></highlight></codeline>
+<codeline lineno="40"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//SWIG</highlight></codeline>
+<codeline lineno="42"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="comment">//forward<sp/>declarations,<sp/>definition<sp/>in<sp/>graphsim.h:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="graphsim_8h_1a1" kindref="member">VertexIndex</ref>;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structQubitVertex" kindref="compound">QubitVertex</ref>;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classGraphRegister" kindref="compound">GraphRegister</ref>;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="comment">/*<sp/>This<sp/>class<sp/>is<sp/>used<sp/>at<sp/>the<sp/>moment<sp/>only<sp/>by<sp/>GraphRegister::print_stabilizer<sp/>and<sp/>for</highlight></codeline>
+<codeline lineno="51"><highlight class="comment">the<sp/>compare<sp/>method<sp/>(when<sp/>comparing<sp/>with<sp/>CHP).<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="structStabilizer" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structStabilizer" kindref="compound">Stabilizer</ref><sp/>{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><ref refid="graphsim_8h_1a1" kindref="member">VertexIndex</ref><sp/>numQubits;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/>vector&lt;vector&lt;LocCliffOp&gt;<sp/>&gt;<sp/>paulis;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/>vector&lt;RightPhase&gt;<sp/>rowsigns;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/>vector&lt;VertexIndex&gt;<sp/>vtxidx;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><ref refid="structStabilizer" kindref="compound">Stabilizer</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="graphsim_8h_1a1" kindref="member">VertexIndex</ref><sp/>numQubits_);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><ref refid="structStabilizer" kindref="compound">Stabilizer</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classGraphRegister" kindref="compound">GraphRegister</ref>&amp;<sp/>gr,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>hash_set&lt;VertexIndex&gt;&amp;<sp/>qubits);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><ref refid="structStabilizer" kindref="compound">Stabilizer</ref><sp/>(QState<sp/>*<sp/>qs);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>add_row<sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>target,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>addend);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>conjugate<sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>row,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>col,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structLocCliffOp" kindref="compound">LocCliffOp</ref><sp/>trans);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>conjugate_column<sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>col,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structLocCliffOp" kindref="compound">LocCliffOp</ref><sp/>trans);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>print<sp/>(ostream<sp/>&amp;os<sp/>=<sp/>cout)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>compare<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structStabilizer" kindref="compound">Stabilizer</ref><sp/>&amp;diag);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//STABILIZER_H</highlight></codeline>
+    </programlisting>
+    <location file="/net/dopey1/sanders/work/graphsim-0.10/stabilizer.h"/>
+  </compounddef>
+</doxygen>

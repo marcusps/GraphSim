@@ -1,0 +1,216 @@
+<?xml version='1.0' encoding='iso-8859-1' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.3.4">
+  <compounddef id="structStabilizer" kind="struct">
+    <compoundname>Stabilizer</compoundname>
+    <includes refid="stabilizer_8h" local="no">stabilizer.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structStabilizer_1a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Stabilizer::Stabilizer</definition>
+        <argsstring>(const  VertexIndex numQubits_)</argsstring>
+        <name>Stabilizer</name>
+        <param>
+          <type>const <ref refid="graphsim_8h_1a1" kindref="member">VertexIndex</ref></type>
+          <declname>numQubits_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <location file="/net/dopey1/sanders/work/graphsim-0.10/stabilizer.h" line="57" bodystart="8" bodyend="14"/>
+      </memberdef>
+      <memberdef kind="function" id="structStabilizer_1a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Stabilizer::Stabilizer</definition>
+        <argsstring>(const  GraphRegister &amp;gr, const  hash_set&lt; VertexIndex &gt; &amp;qubits)</argsstring>
+        <name>Stabilizer</name>
+        <param>
+          <type>const <ref refid="classGraphRegister" kindref="compound">GraphRegister</ref> &amp;</type>
+          <declname>gr</declname>
+        </param>
+        <param>
+          <type>const hash_set&lt; <ref refid="graphsim_8h_1a1" kindref="member">VertexIndex</ref> &gt; &amp;</type>
+          <declname>qubits</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <location file="/net/dopey1/sanders/work/graphsim-0.10/stabilizer.h" line="58" bodystart="17" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="structStabilizer_1a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Stabilizer::Stabilizer</definition>
+        <argsstring>(QState *qs)</argsstring>
+        <name>Stabilizer</name>
+        <param>
+          <type>QState *</type>
+          <declname>qs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <location file="/net/dopey1/sanders/work/graphsim-0.10/stabilizer.h" line="59"/>
+      </memberdef>
+      <memberdef kind="function" id="structStabilizer_1a3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Stabilizer::add_row</definition>
+        <argsstring>(unsigned target, unsigned addend)</argsstring>
+        <name>add_row</name>
+        <param>
+          <type>unsigned</type>
+          <declname>target</declname>
+        </param>
+        <param>
+          <type>unsigned</type>
+          <declname>addend</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <location file="/net/dopey1/sanders/work/graphsim-0.10/stabilizer.h" line="60" bodystart="67" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="structStabilizer_1a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Stabilizer::conjugate</definition>
+        <argsstring>(unsigned row, unsigned col, const  LocCliffOp trans)</argsstring>
+        <name>conjugate</name>
+        <param>
+          <type>unsigned</type>
+          <declname>row</declname>
+        </param>
+        <param>
+          <type>unsigned</type>
+          <declname>col</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structLocCliffOp" kindref="compound">LocCliffOp</ref></type>
+          <declname>trans</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <location file="/net/dopey1/sanders/work/graphsim-0.10/stabilizer.h" line="61" bodystart="77" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="structStabilizer_1a5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Stabilizer::conjugate_column</definition>
+        <argsstring>(unsigned col, const  LocCliffOp trans)</argsstring>
+        <name>conjugate_column</name>
+        <param>
+          <type>unsigned</type>
+          <declname>col</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structLocCliffOp" kindref="compound">LocCliffOp</ref></type>
+          <declname>trans</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <location file="/net/dopey1/sanders/work/graphsim-0.10/stabilizer.h" line="62" bodystart="83" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="structStabilizer_1a6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Stabilizer::print</definition>
+        <argsstring>(ostream &amp;os=cout) const </argsstring>
+        <name>print</name>
+        <param>
+          <type>ostream &amp;</type>
+          <declname>os</declname>
+          <defval>cout</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <location file="/net/dopey1/sanders/work/graphsim-0.10/stabilizer.h" line="63" bodystart="90" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="structStabilizer_1a7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Stabilizer::compare</definition>
+        <argsstring>(const  Stabilizer &amp;diag)</argsstring>
+        <name>compare</name>
+        <param>
+          <type>const <ref refid="structStabilizer" kindref="compound">Stabilizer</ref> &amp;</type>
+          <declname>diag</declname>
+          <defname>othr</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <location file="/net/dopey1/sanders/work/graphsim-0.10/stabilizer.h" line="64" bodystart="257" bodyend="261"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structStabilizer_1o0" prot="public" static="no" volatile="no" mutable="no">
+        <type><ref refid="graphsim_8h_1a1" kindref="member">VertexIndex</ref></type>
+        <definition>VertexIndex Stabilizer::numQubits</definition>
+        <argsstring></argsstring>
+        <name>numQubits</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <location file="/net/dopey1/sanders/work/graphsim-0.10/stabilizer.h" line="53" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structStabilizer_1o1" prot="public" static="no" volatile="no" mutable="no">
+        <type>vector&lt; vector&lt; <ref refid="structLocCliffOp" kindref="compound">LocCliffOp</ref> &gt; &gt;</type>
+        <definition>vector&lt;vector&lt;LocCliffOp&gt; &gt; Stabilizer::paulis</definition>
+        <argsstring></argsstring>
+        <name>paulis</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <location file="/net/dopey1/sanders/work/graphsim-0.10/stabilizer.h" line="54" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structStabilizer_1o2" prot="public" static="no" volatile="no" mutable="no">
+        <type>vector&lt; <ref refid="structRightPhase" kindref="compound">RightPhase</ref> &gt;</type>
+        <definition>vector&lt;RightPhase&gt; Stabilizer::rowsigns</definition>
+        <argsstring></argsstring>
+        <name>rowsigns</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <location file="/net/dopey1/sanders/work/graphsim-0.10/stabilizer.h" line="55" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structStabilizer_1o3" prot="public" static="no" volatile="no" mutable="no">
+        <type>vector&lt; <ref refid="graphsim_8h_1a1" kindref="member">VertexIndex</ref> &gt;</type>
+        <definition>vector&lt;VertexIndex&gt; Stabilizer::vtxidx</definition>
+        <argsstring></argsstring>
+        <name>vtxidx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <location file="/net/dopey1/sanders/work/graphsim-0.10/stabilizer.h" line="56" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A stabilizer describing a quantum state. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/net/dopey1/sanders/work/graphsim-0.10/stabilizer.h" line="52" bodystart="52" bodyend="65"/>
+    <listofallmembers>
+      <member refid="structStabilizer_1a3" prot="public" virt="non-virtual"><scope>Stabilizer</scope><name>add_row</name></member>
+      <member refid="structStabilizer_1a7" prot="public" virt="non-virtual"><scope>Stabilizer</scope><name>compare</name></member>
+      <member refid="structStabilizer_1a4" prot="public" virt="non-virtual"><scope>Stabilizer</scope><name>conjugate</name></member>
+      <member refid="structStabilizer_1a5" prot="public" virt="non-virtual"><scope>Stabilizer</scope><name>conjugate_column</name></member>
+      <member refid="structStabilizer_1o0" prot="public" virt="non-virtual"><scope>Stabilizer</scope><name>numQubits</name></member>
+      <member refid="structStabilizer_1o1" prot="public" virt="non-virtual"><scope>Stabilizer</scope><name>paulis</name></member>
+      <member refid="structStabilizer_1a6" prot="public" virt="non-virtual"><scope>Stabilizer</scope><name>print</name></member>
+      <member refid="structStabilizer_1o2" prot="public" virt="non-virtual"><scope>Stabilizer</scope><name>rowsigns</name></member>
+      <member refid="structStabilizer_1a0" prot="public" virt="non-virtual"><scope>Stabilizer</scope><name>Stabilizer</name></member>
+      <member refid="structStabilizer_1a1" prot="public" virt="non-virtual"><scope>Stabilizer</scope><name>Stabilizer</name></member>
+      <member refid="structStabilizer_1a2" prot="public" virt="non-virtual"><scope>Stabilizer</scope><name>Stabilizer</name></member>
+      <member refid="structStabilizer_1o3" prot="public" virt="non-virtual"><scope>Stabilizer</scope><name>vtxidx</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

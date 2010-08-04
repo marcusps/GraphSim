@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='iso-8859-1' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.3.4">
+  <compounddef id="structConnectionInfo" kind="struct">
+    <compoundname>ConnectionInfo</compoundname>
+    <includes refid="graphsim_8h" local="no">graphsim.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structConnectionInfo_1o0" prot="public" static="no" volatile="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ConnectionInfo::wasEdge</definition>
+        <argsstring></argsstring>
+        <name>wasEdge</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <location file="/net/dopey1/sanders/work/graphsim-0.10/graphsim.h" line="109" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structConnectionInfo_1o1" prot="public" static="no" volatile="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ConnectionInfo::non1</definition>
+        <argsstring></argsstring>
+        <name>non1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <location file="/net/dopey1/sanders/work/graphsim-0.10/graphsim.h" line="110" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structConnectionInfo_1o2" prot="public" static="no" volatile="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ConnectionInfo::non2</definition>
+        <argsstring></argsstring>
+        <name>non2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <location file="/net/dopey1/sanders/work/graphsim-0.10/graphsim.h" line="111" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This structure is only for internal use for the cphase functions. </para>    </detaileddescription>
+    <location file="/net/dopey1/sanders/work/graphsim-0.10/graphsim.h" line="108" bodystart="108" bodyend="112"/>
+    <listofallmembers>
+      <member refid="structConnectionInfo_1o1" prot="public" virt="non-virtual"><scope>ConnectionInfo</scope><name>non1</name></member>
+      <member refid="structConnectionInfo_1o2" prot="public" virt="non-virtual"><scope>ConnectionInfo</scope><name>non2</name></member>
+      <member refid="structConnectionInfo_1o0" prot="public" virt="non-virtual"><scope>ConnectionInfo</scope><name>wasEdge</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

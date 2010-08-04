@@ -1,0 +1,47 @@
+\section{Qubit\-Vertex Struct Reference}
+\label{structQubitVertex}\index{QubitVertex@{QubitVertex}}
+{\tt \#include $<$graphsim.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+{\bf Qubit\-Vertex} (void)
+\end{CompactItemize}
+\subsection*{Public Attributes}
+\begin{CompactItemize}
+\item 
+{\bf Loc\-Cliff\-Op} {\bf byprod}
+\item 
+hash\_\-set$<$ {\bf Vertex\-Index} $>$ {\bf neighbors}
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+A {\bf Graph\-Register}{\rm (p.\,\pageref{classGraphRegister})} object maintains a list of its vertices (qubits), each described by an object of the class Qubit\-Vertex described here. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{QubitVertex@{Qubit\-Vertex}!QubitVertex@{QubitVertex}}
+\index{QubitVertex@{QubitVertex}!QubitVertex@{Qubit\-Vertex}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Qubit\-Vertex::Qubit\-Vertex (void)\hspace{0.3cm}{\tt  [inline]}}\label{structQubitVertex_a0}
+
+
+Upon construction, a qubit vertex is initialised with the Hadamard operation as VOp, and with wmpty neighbor list. This makes it represent a $|$0$>$. 
+
+\subsection{Member Data Documentation}
+\index{QubitVertex@{Qubit\-Vertex}!byprod@{byprod}}
+\index{byprod@{byprod}!QubitVertex@{Qubit\-Vertex}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf Loc\-Cliff\-Op} {\bf Qubit\-Vertex::byprod}}\label{structQubitVertex_o0}
+
+
+byprod is the vertex operator (VOp) associated with the qubit (the name stems from the term 'byproduct operator' used for the similar concept in the one-way quantum computer. \index{QubitVertex@{Qubit\-Vertex}!neighbors@{neighbors}}
+\index{neighbors@{neighbors}!QubitVertex@{Qubit\-Vertex}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}hash\_\-set$<${\bf Vertex\-Index}$>$ {\bf Qubit\-Vertex::neighbors}}\label{structQubitVertex_o1}
+
+
+neigbors is the adjacency list for this vertex 
+
+The documentation for this struct was generated from the following file:\begin{CompactItemize}
+\item 
+{\bf graphsim.h}\end{CompactItemize}

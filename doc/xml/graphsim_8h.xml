@@ -1,0 +1,297 @@
+<?xml version='1.0' encoding='iso-8859-1' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.3.4">
+  <compounddef id="graphsim_8h" kind="file">
+    <compoundname>graphsim.h</compoundname>
+    <includes local="no">iostream</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">cassert</includes>
+    <includes refid="loccliff_8h" local="yes">loccliff.h</includes>
+    <includes refid="stabilizer_8h" local="yes">stabilizer.h</includes>
+    <includedby refid="graphsim_8cpp" local="yes">graphsim.cpp</includedby>
+    <includedby refid="gstest_8cpp" local="yes">gstest.cpp</includedby>
+    <includedby refid="stabilizer_8cpp" local="yes">stabilizer.cpp</includedby>
+    <incdepgraph>
+      <node id="24">
+        <label>ext/hash_set</label>
+      </node>
+      <node id="15">
+        <label>graphsim.h</label>
+        <link refid="graphsim.h"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>stdlib.h</label>
+      </node>
+      <node id="19">
+        <label>cassert</label>
+      </node>
+      <node id="21">
+        <label>string</label>
+      </node>
+      <node id="22">
+        <label>multtbl.tbl</label>
+      </node>
+      <node id="20">
+        <label>loccliff.h</label>
+        <link refid="loccliff_8h"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>vector</label>
+      </node>
+      <node id="16">
+        <label>iostream</label>
+      </node>
+      <node id="23">
+        <label>stabilizer.h</label>
+        <link refid="stabilizer_8h"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innerclass refid="structConnectionInfo">ConnectionInfo</innerclass>
+    <innerclass refid="classGraphRegister">GraphRegister</innerclass>
+    <innerclass refid="structQubitVertex">QubitVertex</innerclass>
+    <innernamespace refid="namespacestd">std</innernamespace>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="graphsim_8h_1a0" prot="public" static="no">
+        <name>DBGOUT</name>
+        <param><defname>a</defname></param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <location file="/net/dopey1/sanders/work/graphsim-0.10/graphsim.h" line="203" bodystart="203" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="graphsim_8h_1a1" prot="public" static="no">
+        <type>unsigned long</type>
+        <definition>typedef unsigned long VertexIndex</definition>
+        <argsstring></argsstring>
+        <name>VertexIndex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>All vertices in a graph state are numbered beginning with 0. To specify auch an index, the type VertexIndex (which is just unsigned long) is always used </para>        </detaileddescription>
+        <location file="/net/dopey1/sanders/work/graphsim-0.10/graphsim.h" line="88" bodystart="88" bodyend="-1"/>
+        <referencedby refid="classGraphRegister_1a9" compoundref="graphsim_8cpp" startline="198" endline="202">GraphRegister::cnot</referencedby>
+        <referencedby refid="classGraphRegister_1a8" compoundref="graphsim_8cpp" startline="166" endline="194">GraphRegister::cphase</referencedby>
+        <referencedby refid="classGraphRegister_1a0" compoundref="graphsim_8cpp" startline="20" endline="26">GraphRegister::GraphRegister</referencedby>
+        <referencedby refid="classGraphRegister_1a12" compoundref="graphsim_8cpp" startline="435" endline="455">GraphRegister::invert_neighborhood</referencedby>
+        <referencedby refid="classGraphRegister_1a10" compoundref="graphsim_8cpp" startline="397" endline="430">GraphRegister::measure</referencedby>
+        <referencedby refid="classGraphRegister_1a13" compoundref="graphsim_8cpp" startline="78" endline="83">GraphRegister::print_adj_list</referencedby>
+        <referencedby refid="classGraphRegister_1a14" compoundref="graphsim_8cpp" startline="86" endline="95">GraphRegister::print_adj_list_line</referencedby>
+      </memberdef>
+      <memberdef kind="typedef" id="graphsim_8h_1a2" prot="public" static="no">
+        <type>vector&lt; <ref refid="structQubitVertex" kindref="compound">QubitVertex</ref> &gt;::iterator</type>
+        <definition>typedef vector&lt;QubitVertex&gt;::iterator VertexIter</definition>
+        <argsstring></argsstring>
+        <name>VertexIter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>As we often iterate over sublists of <ref refid="classGraphRegister_1o0" kindref="member">GraphRegister::vertices</ref>, this iterator typedef is a handy abbreviation. </para>        </detaileddescription>
+        <location file="/net/dopey1/sanders/work/graphsim-0.10/graphsim.h" line="159" bodystart="159" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="graphsim_8h_1a3" prot="public" static="no">
+        <type>hash_set&lt; <ref refid="graphsim_8h_1a1" kindref="member">VertexIndex</ref> &gt;::iterator</type>
+        <definition>typedef hash_set&lt;VertexIndex&gt;::iterator VtxIdxIter</definition>
+        <argsstring></argsstring>
+        <name>VtxIdxIter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Another iterator, this one for the adjacency lists QubitVertex::neigbors, and subsets. </para>        </detaileddescription>
+        <location file="/net/dopey1/sanders/work/graphsim-0.10/graphsim.h" line="162" bodystart="162" bodyend="-1"/>
+        <referencedby refid="classGraphRegister_1a12" compoundref="graphsim_8cpp" startline="435" endline="455">GraphRegister::invert_neighborhood</referencedby>
+      </memberdef>
+      <memberdef kind="typedef" id="graphsim_8h_1a4" prot="public" static="no">
+        <type>vector&lt; <ref refid="structQubitVertex" kindref="compound">QubitVertex</ref> &gt;::const_iterator</type>
+        <definition>typedef vector&lt;QubitVertex&gt;::const_iterator VertexIterConst</definition>
+        <argsstring></argsstring>
+        <name>VertexIterConst</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A constant version of VertexIter </para>        </detaileddescription>
+        <location file="/net/dopey1/sanders/work/graphsim-0.10/graphsim.h" line="165" bodystart="165" bodyend="-1"/>
+        <referencedby refid="classGraphRegister_1a11" compoundref="graphsim_8cpp" startline="66" endline="74">GraphRegister::get_full_stabilizer</referencedby>
+      </memberdef>
+      <memberdef kind="typedef" id="graphsim_8h_1a5" prot="public" static="no">
+        <type>hash_set&lt; <ref refid="graphsim_8h_1a1" kindref="member">VertexIndex</ref> &gt;::const_iterator</type>
+        <definition>typedef hash_set&lt;VertexIndex&gt;::const_iterator VtxIdxIterConst</definition>
+        <argsstring></argsstring>
+        <name>VtxIdxIterConst</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A constant version of VtxIdxIter </para>        </detaileddescription>
+        <location file="/net/dopey1/sanders/work/graphsim-0.10/graphsim.h" line="167" bodystart="167" bodyend="-1"/>
+        <referencedby refid="classGraphRegister_1a14" compoundref="graphsim_8cpp" startline="86" endline="95">GraphRegister::print_adj_list_line</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This header file defines the main interface of graphsim.</para><para>(c) Simon Anders, University of Innsbruck, 2005 released under GPL.</para><para>Note: If you have trouble compiling this, please note: This file uses the &quot;hash_set&quot; template, which is an extension to the Standard C++ Library and the Standard Template Library, specified by SGI. Most C++ compilers have this template. For GNU C++, the header file &lt;ext/hash_set&gt; hasa to be included and hash_set has to be prefixed with namespace __gnu_cxx. If you use another compiler, you might have to change the include file and the namespace identifier.</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>graphsim.h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="preprocessor">#ifndef<sp/>GRAPHSIM_H</highlight></codeline>
+<codeline lineno="54"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>GRAPHSIM_H</highlight></codeline>
+<codeline lineno="55"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="comment">//The<sp/>following<sp/>directives<sp/>are<sp/>for<sp/>SWIG,<sp/>see<sp/>http://www.swig.org</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>SWIG</highlight></codeline>
+<codeline lineno="58"><highlight class="preprocessor"></highlight><highlight class="normal">%module<sp/>(docstring=</highlight><highlight class="stringliteral">&quot;Graph<sp/>State<sp/>Stabilizer<sp/>Simulator<sp/>--<sp/>S.<sp/>Anders&quot;</highlight><highlight class="normal">)<sp/>graphsim</highlight></codeline>
+<codeline lineno="59"><highlight class="normal">%{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="graphsim_8h" kindref="compound">graphsim.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="loccliff_8h" kindref="compound">loccliff.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="stabilizer_8h" kindref="compound">stabilizer.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal">%}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal">%include<sp/></highlight><highlight class="stringliteral">&quot;cpointer.i&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal">%pointer_class<sp/>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">,<sp/>boolpc);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal">%feature<sp/>(</highlight><highlight class="stringliteral">&quot;autodoc&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;1&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal">%rename<sp/>(print_tbl)<sp/>Stabilizer::print;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal">%rename<sp/>(print_kets)<sp/>CBDecomposition::print;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal">%include<sp/></highlight><highlight class="stringliteral">&quot;graphsim.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal">%include<sp/></highlight><highlight class="stringliteral">&quot;loccliff.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal">%include<sp/></highlight><highlight class="stringliteral">&quot;stabilizer.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>SWIG</highlight></codeline>
+<codeline lineno="73"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cassert&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="loccliff_8h" kindref="compound">loccliff.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="stabilizer_8h" kindref="compound">stabilizer.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">std;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88" refid="graphsim_8h_1a1" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="graphsim_8h_1a1" kindref="member">VertexIndex</ref>;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92" refid="structQubitVertex" refkind="compound"><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structQubitVertex" kindref="compound">QubitVertex</ref><sp/>{</highlight></codeline>
+<codeline lineno="96" refid="structQubitVertex_1o0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="structLocCliffOp" kindref="compound">LocCliffOp</ref><sp/><ref refid="structQubitVertex_1o0" kindref="member">byprod</ref>;</highlight></codeline>
+<codeline lineno="98" refid="structQubitVertex_1o1" refkind="member"><highlight class="normal"><sp/><sp/><sp/>hash_set&lt;VertexIndex&gt;<sp/><ref refid="structQubitVertex_1o1" kindref="member">neighbors</ref>;</highlight></codeline>
+<codeline lineno="102" refid="structQubitVertex_1a0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="structQubitVertex_1a0" kindref="member">QubitVertex</ref><sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>:<sp/><ref refid="structQubitVertex_1o0" kindref="member">byprod</ref><sp/>(<ref refid="loccliff_8h_1a5" kindref="member">lco_H</ref>)<sp/>{};</highlight></codeline>
+<codeline lineno="104"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>SWIG</highlight></codeline>
+<codeline lineno="107"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="108" refid="structConnectionInfo" refkind="compound"><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structConnectionInfo" kindref="compound">ConnectionInfo</ref><sp/>{</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>wasEdge;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>non1;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>non2;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="114"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="116"></codeline>
+<codeline lineno="119" refid="classGraphRegister" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classGraphRegister" kindref="compound">GraphRegister</ref><sp/>{</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="123" refid="classGraphRegister_1o0" refkind="member"><highlight class="normal"><sp/><sp/><sp/>vector&lt;QubitVertex&gt;<sp/><ref refid="classGraphRegister_1o0" kindref="member">vertices</ref>;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><ref refid="classGraphRegister_1a0" kindref="member">GraphRegister</ref><sp/>(VertexIndex<sp/>numQubits,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>randomize<sp/>=<sp/>-1);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><ref refid="classGraphRegister_1a0" kindref="member">GraphRegister</ref><sp/>(<ref refid="classGraphRegister" kindref="compound">GraphRegister</ref>&amp;<sp/>gr);</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/>~<ref refid="classGraphRegister" kindref="compound">GraphRegister</ref><sp/>()<sp/>{};</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classGraphRegister_1a3" kindref="member">local_op</ref><sp/>(VertexIndex<sp/>v,<sp/><ref refid="structLocCliffOp" kindref="compound">LocCliffOp</ref><sp/>o);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classGraphRegister_1a4" kindref="member">hadamard</ref><sp/>(VertexIndex<sp/>v);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classGraphRegister_1a5" kindref="member">phaserot</ref><sp/>(VertexIndex<sp/>v);</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classGraphRegister_1a6" kindref="member">bitflip</ref><sp/>(VertexIndex<sp/>v);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classGraphRegister_1a7" kindref="member">phaseflip</ref><sp/>(VertexIndex<sp/>v);</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classGraphRegister_1a8" kindref="member">cphase</ref><sp/>(VertexIndex<sp/>v1,<sp/>VertexIndex<sp/>v2);<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classGraphRegister_1a9" kindref="member">cnot</ref><sp/>(VertexIndex<sp/>vc,<sp/>VertexIndex<sp/>vt);</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classGraphRegister_1a10" kindref="member">measure</ref><sp/>(VertexIndex<sp/>v,<sp/><ref refid="structLocCliffOp" kindref="compound">LocCliffOp</ref><sp/>basis<sp/>=<sp/>lco_Z,<sp/></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">*<sp/>determined<sp/>=<sp/>NULL,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>force<sp/>=<sp/>-1);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><ref refid="structStabilizer" kindref="compound">Stabilizer</ref><sp/>&amp;<sp/><ref refid="classGraphRegister_1a11" kindref="member">get_full_stabilizer</ref><sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classGraphRegister_1a12" kindref="member">invert_neighborhood</ref><sp/>(VertexIndex<sp/>v);</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classGraphRegister_1a13" kindref="member">print_adj_list</ref><sp/>(ostream&amp;<sp/>os<sp/>=<sp/>cout)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classGraphRegister_1a14" kindref="member">print_adj_list_line</ref><sp/>(ostream&amp;<sp/>os,<sp/>VertexIndex<sp/>i)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classGraphRegister_1a15" kindref="member">print_stabilizer</ref><sp/>(ostream&amp;<sp/>os<sp/>=<sp/>cout)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>add_edge<sp/>(VertexIndex<sp/>v1,<sp/>VertexIndex<sp/>v2);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>del_edge<sp/>(VertexIndex<sp/>v1,<sp/>VertexIndex<sp/>v2);</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>toggle_edge<sp/>(VertexIndex<sp/>v1,<sp/>VertexIndex<sp/>v2);</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>graph_Z_measure<sp/>(VertexIndex<sp/>v,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>force<sp/>=<sp/>-1);</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>graph_Y_measure<sp/>(VertexIndex<sp/>v,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>force<sp/>=<sp/>-1);</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>graph_X_measure<sp/>(VertexIndex<sp/>v,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">*<sp/>determined<sp/>=<sp/>NULL,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>force<sp/>=<sp/>-1);</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>toggle_edges<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>hash_set&lt;VertexIndex&gt;<sp/>vs1,<sp/></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>hash_set&lt;VertexIndex&gt;<sp/>vs2);<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>remove_byprod_op<sp/>(VertexIndex<sp/>v,<sp/>VertexIndex<sp/>use_not);</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>cphase_with_table<sp/>(VertexIndex<sp/>v1,<sp/>VertexIndex<sp/>v2);</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><ref refid="structConnectionInfo" kindref="compound">ConnectionInfo</ref><sp/>getConnectionInfo<sp/>(VertexIndex<sp/>v1,<sp/>VertexIndex<sp/>v2);<sp/><sp/></highlight></codeline>
+<codeline lineno="153"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>SWIG</highlight></codeline>
+<codeline lineno="157"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="159" refid="graphsim_8h_1a2" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>vector&lt;QubitVertex&gt;::iterator<sp/><ref refid="graphsim_8h_1a2" kindref="member">VertexIter</ref>;</highlight></codeline>
+<codeline lineno="162" refid="graphsim_8h_1a3" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>hash_set&lt;VertexIndex&gt;::iterator<sp/><ref refid="graphsim_8h_1a3" kindref="member">VtxIdxIter</ref>;</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165" refid="graphsim_8h_1a4" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>vector&lt;QubitVertex&gt;::const_iterator<sp/><ref refid="graphsim_8h_1a4" kindref="member">VertexIterConst</ref>;</highlight></codeline>
+<codeline lineno="167" refid="graphsim_8h_1a5" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>hash_set&lt;VertexIndex&gt;::const_iterator<sp/><ref refid="graphsim_8h_1a5" kindref="member">VtxIdxIterConst</ref>;</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight></codeline>
+<codeline lineno="171" refid="classGraphRegister_1a3" refkind="member"><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classGraphRegister_1a3" kindref="member">GraphRegister::local_op</ref><sp/>(VertexIndex<sp/>v,<sp/><ref refid="structLocCliffOp" kindref="compound">LocCliffOp</ref><sp/>o)<sp/>{</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><ref refid="classGraphRegister_1o0" kindref="member">vertices</ref>[v].byprod<sp/>=<sp/>o<sp/>*<sp/><ref refid="classGraphRegister_1o0" kindref="member">vertices</ref>[v].byprod;</highlight></codeline>
+<codeline lineno="173"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176" refid="classGraphRegister_1a4" refkind="member"><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classGraphRegister_1a4" kindref="member">GraphRegister::hadamard</ref><sp/>(VertexIndex<sp/>v)<sp/>{</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><ref refid="classGraphRegister_1a3" kindref="member">local_op</ref><sp/>(v,<sp/><ref refid="loccliff_8h_1a5" kindref="member">lco_H</ref>);</highlight></codeline>
+<codeline lineno="178"><highlight class="normal">}<sp/></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight></codeline>
+<codeline lineno="182" refid="classGraphRegister_1a5" refkind="member"><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classGraphRegister_1a5" kindref="member">GraphRegister::phaserot</ref><sp/>(VertexIndex<sp/>v)<sp/>{</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><ref refid="classGraphRegister_1a3" kindref="member">local_op</ref><sp/>(v,<sp/><ref refid="loccliff_8h_1a12" kindref="member">lco_S</ref>);</highlight></codeline>
+<codeline lineno="184"><highlight class="normal">}<sp/></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187" refid="classGraphRegister_1a6" refkind="member"><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classGraphRegister_1a6" kindref="member">GraphRegister::bitflip</ref><sp/>(VertexIndex<sp/>v)<sp/>{</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><ref refid="classGraphRegister_1a3" kindref="member">local_op</ref><sp/>(v,<sp/><ref refid="loccliff_8h_1a2" kindref="member">lco_X</ref>);</highlight></codeline>
+<codeline lineno="189"><highlight class="normal">}<sp/></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight></codeline>
+<codeline lineno="192" refid="classGraphRegister_1a7" refkind="member"><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classGraphRegister_1a7" kindref="member">GraphRegister::phaseflip</ref><sp/>(VertexIndex<sp/>v)<sp/>{</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><ref refid="classGraphRegister_1a3" kindref="member">local_op</ref><sp/>(v,<sp/><ref refid="loccliff_8h_1a4" kindref="member">lco_Z</ref>);</highlight></codeline>
+<codeline lineno="194"><highlight class="normal">}<sp/></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//SWIG</highlight></codeline>
+<codeline lineno="197"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>DEBUGOUTPUT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>DEBUGOUTPUT</highlight></codeline>
+<codeline lineno="201"><highlight class="preprocessor"></highlight><highlight class="preprocessor"><sp/><sp/><sp/>#define<sp/>DBGOUT(a)<sp/>cout<sp/>&lt;&lt;<sp/>a</highlight></codeline>
+<codeline lineno="202"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#else</highlight></codeline>
+<codeline lineno="203"><highlight class="preprocessor"></highlight><highlight class="preprocessor"><sp/><sp/><sp/>#define<sp/>DBGOUT(a)<sp/></highlight></codeline>
+<codeline lineno="204"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="205"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//GRAPHSIM_H</highlight></codeline>
+    </programlisting>
+    <location file="/net/dopey1/sanders/work/graphsim-0.10/graphsim.h"/>
+  </compounddef>
+</doxygen>

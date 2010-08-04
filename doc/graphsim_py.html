@@ -1,0 +1,1074 @@
+
+<!doctype html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module graphsim</title>
+<style type="text/css"><!--
+TT { font-family: lucidatypewriter, lucida console, courier }
+--></style></head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>graphsim</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/net/dopey1/sanders/work/graphsim-0.10/graphsim.py">/net/dopey1/sanders/work/graphsim-0.10/graphsim.py</a></font></td></tr></table>
+    <p><tt>Graph&nbsp;State&nbsp;<a href="#Stabilizer">Stabilizer</a>&nbsp;Simulator&nbsp;--&nbsp;S.&nbsp;Anders</tt></p>
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#fffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="_graphsim.html">_graphsim</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="__builtin__.html#object">__builtin__.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="graphsim.html#GraphRegister">GraphRegister</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="graphsim.html#GraphRegisterPtr">GraphRegisterPtr</a>
+</font></dt></dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="graphsim.html#LocCliffOp">LocCliffOp</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="graphsim.html#LocCliffOpPtr">LocCliffOpPtr</a>
+</font></dt></dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="graphsim.html#QubitVertex">QubitVertex</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="graphsim.html#QubitVertexPtr">QubitVertexPtr</a>
+</font></dt></dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="graphsim.html#RightPhase">RightPhase</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="graphsim.html#RightPhasePtr">RightPhasePtr</a>
+</font></dt></dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="graphsim.html#Stabilizer">Stabilizer</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="graphsim.html#StabilizerPtr">StabilizerPtr</a>
+</font></dt></dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="graphsim.html#boolpc">boolpc</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="graphsim.html#boolpcPtr">boolpcPtr</a>
+</font></dt></dl>
+</dd>
+</dl>
+</dd>
+</dl>
+ 
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="GraphRegister">class <strong>GraphRegister</strong></a>(<a href="__builtin__.html#object">__builtin__.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Proxy&nbsp;of&nbsp;C++&nbsp;<a href="#GraphRegister">GraphRegister</a>&nbsp;class<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="GraphRegister-__del__"><strong>__del__</strong></a>(self, destroy<font color="#909090">=&lt;built-in function delete_GraphRegister&gt;</font>)</dt><dd><tt><a href="#GraphRegister-__del__">__del__</a>(self)</tt></dd></dl>
+
+<dl><dt><strong>__getattr__</strong> <em>lambda</em> self, name</dt></dl>
+
+<dl><dt><a name="GraphRegister-__init__"><strong>__init__</strong></a>(self, *args)</dt><dd><tt><a href="#GraphRegister-__init__">__init__</a>(self,&nbsp;VertexIndex&nbsp;numQubits,&nbsp;int&nbsp;randomize=-1)&nbsp;-&gt;&nbsp;<a href="#GraphRegister">GraphRegister</a><br>
+<a href="#GraphRegister-__init__">__init__</a>(self,&nbsp;VertexIndex&nbsp;numQubits)&nbsp;-&gt;&nbsp;<a href="#GraphRegister">GraphRegister</a><br>
+<a href="#GraphRegister-__init__">__init__</a>(self,&nbsp;<a href="#GraphRegister">GraphRegister</a>&nbsp;gr)&nbsp;-&gt;&nbsp;<a href="#GraphRegister">GraphRegister</a></tt></dd></dl>
+
+<dl><dt><a name="GraphRegister-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><strong>__setattr__</strong> <em>lambda</em> self, name, value</dt></dl>
+
+<dl><dt><a name="GraphRegister-bitflip"><strong>bitflip</strong></a>(*args)</dt><dd><tt><a href="#GraphRegister-bitflip">bitflip</a>(self,&nbsp;VertexIndex&nbsp;v)</tt></dd></dl>
+
+<dl><dt><a name="GraphRegister-cnot"><strong>cnot</strong></a>(*args)</dt><dd><tt><a href="#GraphRegister-cnot">cnot</a>(self,&nbsp;VertexIndex&nbsp;vc,&nbsp;VertexIndex&nbsp;vt)</tt></dd></dl>
+
+<dl><dt><a name="GraphRegister-cphase"><strong>cphase</strong></a>(*args)</dt><dd><tt><a href="#GraphRegister-cphase">cphase</a>(self,&nbsp;VertexIndex&nbsp;v1,&nbsp;VertexIndex&nbsp;v2)</tt></dd></dl>
+
+<dl><dt><a name="GraphRegister-get_full_stabilizer"><strong>get_full_stabilizer</strong></a>(*args)</dt><dd><tt><a href="#GraphRegister-get_full_stabilizer">get_full_stabilizer</a>(self)&nbsp;-&gt;&nbsp;<a href="#Stabilizer">Stabilizer</a></tt></dd></dl>
+
+<dl><dt><a name="GraphRegister-hadamard"><strong>hadamard</strong></a>(*args)</dt><dd><tt><a href="#GraphRegister-hadamard">hadamard</a>(self,&nbsp;VertexIndex&nbsp;v)</tt></dd></dl>
+
+<dl><dt><a name="GraphRegister-invert_neighborhood"><strong>invert_neighborhood</strong></a>(*args)</dt><dd><tt><a href="#GraphRegister-invert_neighborhood">invert_neighborhood</a>(self,&nbsp;VertexIndex&nbsp;v)</tt></dd></dl>
+
+<dl><dt><a name="GraphRegister-local_op"><strong>local_op</strong></a>(*args)</dt><dd><tt><a href="#GraphRegister-local_op">local_op</a>(self,&nbsp;VertexIndex&nbsp;v,&nbsp;<a href="#LocCliffOp">LocCliffOp</a>&nbsp;o)</tt></dd></dl>
+
+<dl><dt><a name="GraphRegister-measure"><strong>measure</strong></a>(*args)</dt><dd><tt><a href="#GraphRegister-measure">measure</a>(self,&nbsp;VertexIndex&nbsp;v,&nbsp;<a href="#LocCliffOp">LocCliffOp</a>&nbsp;basis=lco_Z,&nbsp;bool&nbsp;determined=None,&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;force=-1)&nbsp;-&gt;&nbsp;int<br>
+<a href="#GraphRegister-measure">measure</a>(self,&nbsp;VertexIndex&nbsp;v,&nbsp;<a href="#LocCliffOp">LocCliffOp</a>&nbsp;basis=lco_Z,&nbsp;bool&nbsp;determined=None)&nbsp;-&gt;&nbsp;int<br>
+<a href="#GraphRegister-measure">measure</a>(self,&nbsp;VertexIndex&nbsp;v,&nbsp;<a href="#LocCliffOp">LocCliffOp</a>&nbsp;basis=lco_Z)&nbsp;-&gt;&nbsp;int<br>
+<a href="#GraphRegister-measure">measure</a>(self,&nbsp;VertexIndex&nbsp;v)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="GraphRegister-phaseflip"><strong>phaseflip</strong></a>(*args)</dt><dd><tt><a href="#GraphRegister-phaseflip">phaseflip</a>(self,&nbsp;VertexIndex&nbsp;v)</tt></dd></dl>
+
+<dl><dt><a name="GraphRegister-phaserot"><strong>phaserot</strong></a>(*args)</dt><dd><tt><a href="#GraphRegister-phaserot">phaserot</a>(self,&nbsp;VertexIndex&nbsp;v)</tt></dd></dl>
+
+<dl><dt><a name="GraphRegister-print_adj_list"><strong>print_adj_list</strong></a>(*args)</dt><dd><tt><a href="#GraphRegister-print_adj_list">print_adj_list</a>(self,&nbsp;ostream&nbsp;os=cout)<br>
+<a href="#GraphRegister-print_adj_list">print_adj_list</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="GraphRegister-print_adj_list_line"><strong>print_adj_list_line</strong></a>(*args)</dt><dd><tt><a href="#GraphRegister-print_adj_list_line">print_adj_list_line</a>(self,&nbsp;ostream&nbsp;os,&nbsp;VertexIndex&nbsp;i)</tt></dd></dl>
+
+<dl><dt><a name="GraphRegister-print_stabilizer"><strong>print_stabilizer</strong></a>(*args)</dt><dd><tt><a href="#GraphRegister-print_stabilizer">print_stabilizer</a>(self,&nbsp;ostream&nbsp;os=cout)<br>
+<a href="#GraphRegister-print_stabilizer">print_stabilizer</a>(self)</tt></dd></dl>
+
+<hr>
+Properties defined here:<br>
+<dl><dt><strong>vertices</strong></dt>
+<dd><dl><dt><a name="GraphRegister-vertices getter"><strong>vertices getter</strong></a> = GraphRegister_vertices_get(...)</dt></dl>
+</dd>
+<dd><dl><dt><a name="GraphRegister-vertices setter"><strong>vertices setter</strong></a> = GraphRegister_vertices_set(...)</dt></dl>
+</dd>
+</dl>
+<hr>
+Data and non-method functions defined here:<br>
+<dl><dt><strong>__dict__</strong> = &lt;dict-proxy object&gt;</dl>
+
+<dl><dt><strong>__doc__</strong> = 'Proxy of C++ GraphRegister class'</dl>
+
+<dl><dt><strong>__module__</strong> = 'graphsim'</dl>
+
+<dl><dt><strong>__swig_getmethods__</strong> = {'vertices': &lt;built-in function GraphRegister_vertices_get&gt;}</dl>
+
+<dl><dt><strong>__swig_setmethods__</strong> = {'vertices': &lt;built-in function GraphRegister_vertices_set&gt;}</dl>
+
+<dl><dt><strong>__weakref__</strong> = &lt;member '__weakref__' of 'GraphRegister' objects&gt;</dl>
+
+<hr>
+Methods inherited from <a href="__builtin__.html#object">__builtin__.object</a>:<br>
+<dl><dt><a name="GraphRegister-__delattr__"><strong>__delattr__</strong></a>(...)</dt><dd><tt>x.<a href="#GraphRegister-__delattr__">__delattr__</a>('name')&nbsp;&lt;==&gt;&nbsp;del&nbsp;x.name</tt></dd></dl>
+
+<dl><dt><a name="GraphRegister-__getattribute__"><strong>__getattribute__</strong></a>(...)</dt><dd><tt>x.<a href="#GraphRegister-__getattribute__">__getattribute__</a>('name')&nbsp;&lt;==&gt;&nbsp;x.name</tt></dd></dl>
+
+<dl><dt><a name="GraphRegister-__hash__"><strong>__hash__</strong></a>(...)</dt><dd><tt>x.<a href="#GraphRegister-__hash__">__hash__</a>()&nbsp;&lt;==&gt;&nbsp;hash(x)</tt></dd></dl>
+
+<dl><dt><a name="GraphRegister-__reduce__"><strong>__reduce__</strong></a>(...)</dt><dd><tt>helper&nbsp;for&nbsp;pickle</tt></dd></dl>
+
+<dl><dt><a name="GraphRegister-__str__"><strong>__str__</strong></a>(...)</dt><dd><tt>x.<a href="#GraphRegister-__str__">__str__</a>()&nbsp;&lt;==&gt;&nbsp;str(x)</tt></dd></dl>
+
+<hr>
+Data and non-method functions inherited from <a href="__builtin__.html#object">__builtin__.object</a>:<br>
+<dl><dt><strong>__class__</strong> = &lt;type 'type'&gt;</dl>
+
+<dl><dt><strong>__new__</strong> = &lt;built-in method __new__ of type object&gt;<dd><tt>T.<a href="#GraphRegister-__new__">__new__</a>(S,&nbsp;...)&nbsp;-&gt;&nbsp;a&nbsp;new&nbsp;<a href="__builtin__.html#object">object</a>&nbsp;with&nbsp;type&nbsp;S,&nbsp;a&nbsp;subtype&nbsp;of&nbsp;T</tt></dl>
+
+</td></tr></table> 
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="GraphRegisterPtr">class <strong>GraphRegisterPtr</strong></a>(<a href="graphsim.html#GraphRegister">GraphRegister</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2>&nbsp;</td></tr>
+<tr><td>&nbsp;&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="graphsim.html#GraphRegisterPtr">GraphRegisterPtr</a></dd>
+<dd><a href="graphsim.html#GraphRegister">GraphRegister</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="GraphRegisterPtr-__init__"><strong>__init__</strong></a>(self, this)</dt></dl>
+
+<hr>
+Data and non-method functions defined here:<br>
+<dl><dt><strong>__doc__</strong> = None</dl>
+
+<dl><dt><strong>__module__</strong> = 'graphsim'</dl>
+
+<hr>
+Methods inherited from <a href="graphsim.html#GraphRegister">GraphRegister</a>:<br>
+<dl><dt><a name="GraphRegisterPtr-__del__"><strong>__del__</strong></a>(self, destroy<font color="#909090">=&lt;built-in function delete_GraphRegister&gt;</font>)</dt><dd><tt><a href="#GraphRegisterPtr-__del__">__del__</a>(self)</tt></dd></dl>
+
+<dl><dt><strong>__getattr__</strong> <em>lambda</em> self, name</dt></dl>
+
+<dl><dt><a name="GraphRegisterPtr-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><strong>__setattr__</strong> <em>lambda</em> self, name, value</dt></dl>
+
+<dl><dt><a name="GraphRegisterPtr-bitflip"><strong>bitflip</strong></a>(*args)</dt><dd><tt><a href="#GraphRegisterPtr-bitflip">bitflip</a>(self,&nbsp;VertexIndex&nbsp;v)</tt></dd></dl>
+
+<dl><dt><a name="GraphRegisterPtr-cnot"><strong>cnot</strong></a>(*args)</dt><dd><tt><a href="#GraphRegisterPtr-cnot">cnot</a>(self,&nbsp;VertexIndex&nbsp;vc,&nbsp;VertexIndex&nbsp;vt)</tt></dd></dl>
+
+<dl><dt><a name="GraphRegisterPtr-cphase"><strong>cphase</strong></a>(*args)</dt><dd><tt><a href="#GraphRegisterPtr-cphase">cphase</a>(self,&nbsp;VertexIndex&nbsp;v1,&nbsp;VertexIndex&nbsp;v2)</tt></dd></dl>
+
+<dl><dt><a name="GraphRegisterPtr-get_full_stabilizer"><strong>get_full_stabilizer</strong></a>(*args)</dt><dd><tt><a href="#GraphRegisterPtr-get_full_stabilizer">get_full_stabilizer</a>(self)&nbsp;-&gt;&nbsp;<a href="#Stabilizer">Stabilizer</a></tt></dd></dl>
+
+<dl><dt><a name="GraphRegisterPtr-hadamard"><strong>hadamard</strong></a>(*args)</dt><dd><tt><a href="#GraphRegisterPtr-hadamard">hadamard</a>(self,&nbsp;VertexIndex&nbsp;v)</tt></dd></dl>
+
+<dl><dt><a name="GraphRegisterPtr-invert_neighborhood"><strong>invert_neighborhood</strong></a>(*args)</dt><dd><tt><a href="#GraphRegisterPtr-invert_neighborhood">invert_neighborhood</a>(self,&nbsp;VertexIndex&nbsp;v)</tt></dd></dl>
+
+<dl><dt><a name="GraphRegisterPtr-local_op"><strong>local_op</strong></a>(*args)</dt><dd><tt><a href="#GraphRegisterPtr-local_op">local_op</a>(self,&nbsp;VertexIndex&nbsp;v,&nbsp;<a href="#LocCliffOp">LocCliffOp</a>&nbsp;o)</tt></dd></dl>
+
+<dl><dt><a name="GraphRegisterPtr-measure"><strong>measure</strong></a>(*args)</dt><dd><tt><a href="#GraphRegisterPtr-measure">measure</a>(self,&nbsp;VertexIndex&nbsp;v,&nbsp;<a href="#LocCliffOp">LocCliffOp</a>&nbsp;basis=lco_Z,&nbsp;bool&nbsp;determined=None,&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;force=-1)&nbsp;-&gt;&nbsp;int<br>
+<a href="#GraphRegisterPtr-measure">measure</a>(self,&nbsp;VertexIndex&nbsp;v,&nbsp;<a href="#LocCliffOp">LocCliffOp</a>&nbsp;basis=lco_Z,&nbsp;bool&nbsp;determined=None)&nbsp;-&gt;&nbsp;int<br>
+<a href="#GraphRegisterPtr-measure">measure</a>(self,&nbsp;VertexIndex&nbsp;v,&nbsp;<a href="#LocCliffOp">LocCliffOp</a>&nbsp;basis=lco_Z)&nbsp;-&gt;&nbsp;int<br>
+<a href="#GraphRegisterPtr-measure">measure</a>(self,&nbsp;VertexIndex&nbsp;v)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="GraphRegisterPtr-phaseflip"><strong>phaseflip</strong></a>(*args)</dt><dd><tt><a href="#GraphRegisterPtr-phaseflip">phaseflip</a>(self,&nbsp;VertexIndex&nbsp;v)</tt></dd></dl>
+
+<dl><dt><a name="GraphRegisterPtr-phaserot"><strong>phaserot</strong></a>(*args)</dt><dd><tt><a href="#GraphRegisterPtr-phaserot">phaserot</a>(self,&nbsp;VertexIndex&nbsp;v)</tt></dd></dl>
+
+<dl><dt><a name="GraphRegisterPtr-print_adj_list"><strong>print_adj_list</strong></a>(*args)</dt><dd><tt><a href="#GraphRegisterPtr-print_adj_list">print_adj_list</a>(self,&nbsp;ostream&nbsp;os=cout)<br>
+<a href="#GraphRegisterPtr-print_adj_list">print_adj_list</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="GraphRegisterPtr-print_adj_list_line"><strong>print_adj_list_line</strong></a>(*args)</dt><dd><tt><a href="#GraphRegisterPtr-print_adj_list_line">print_adj_list_line</a>(self,&nbsp;ostream&nbsp;os,&nbsp;VertexIndex&nbsp;i)</tt></dd></dl>
+
+<dl><dt><a name="GraphRegisterPtr-print_stabilizer"><strong>print_stabilizer</strong></a>(*args)</dt><dd><tt><a href="#GraphRegisterPtr-print_stabilizer">print_stabilizer</a>(self,&nbsp;ostream&nbsp;os=cout)<br>
+<a href="#GraphRegisterPtr-print_stabilizer">print_stabilizer</a>(self)</tt></dd></dl>
+
+<hr>
+Properties inherited from <a href="graphsim.html#GraphRegister">GraphRegister</a>:<br>
+<dl><dt><strong>vertices</strong></dt>
+<dd><dl><dt><a name="GraphRegisterPtr-vertices getter"><strong>vertices getter</strong></a> = GraphRegister_vertices_get(...)</dt></dl>
+</dd>
+<dd><dl><dt><a name="GraphRegisterPtr-vertices setter"><strong>vertices setter</strong></a> = GraphRegister_vertices_set(...)</dt></dl>
+</dd>
+</dl>
+<hr>
+Data and non-method functions inherited from <a href="graphsim.html#GraphRegister">GraphRegister</a>:<br>
+<dl><dt><strong>__dict__</strong> = &lt;dict-proxy object&gt;</dl>
+
+<dl><dt><strong>__swig_getmethods__</strong> = {'vertices': &lt;built-in function GraphRegister_vertices_get&gt;}</dl>
+
+<dl><dt><strong>__swig_setmethods__</strong> = {'vertices': &lt;built-in function GraphRegister_vertices_set&gt;}</dl>
+
+<dl><dt><strong>__weakref__</strong> = &lt;member '__weakref__' of 'GraphRegister' objects&gt;</dl>
+
+<hr>
+Methods inherited from <a href="__builtin__.html#object">__builtin__.object</a>:<br>
+<dl><dt><a name="GraphRegisterPtr-__delattr__"><strong>__delattr__</strong></a>(...)</dt><dd><tt>x.<a href="#GraphRegisterPtr-__delattr__">__delattr__</a>('name')&nbsp;&lt;==&gt;&nbsp;del&nbsp;x.name</tt></dd></dl>
+
+<dl><dt><a name="GraphRegisterPtr-__getattribute__"><strong>__getattribute__</strong></a>(...)</dt><dd><tt>x.<a href="#GraphRegisterPtr-__getattribute__">__getattribute__</a>('name')&nbsp;&lt;==&gt;&nbsp;x.name</tt></dd></dl>
+
+<dl><dt><a name="GraphRegisterPtr-__hash__"><strong>__hash__</strong></a>(...)</dt><dd><tt>x.<a href="#GraphRegisterPtr-__hash__">__hash__</a>()&nbsp;&lt;==&gt;&nbsp;hash(x)</tt></dd></dl>
+
+<dl><dt><a name="GraphRegisterPtr-__reduce__"><strong>__reduce__</strong></a>(...)</dt><dd><tt>helper&nbsp;for&nbsp;pickle</tt></dd></dl>
+
+<dl><dt><a name="GraphRegisterPtr-__str__"><strong>__str__</strong></a>(...)</dt><dd><tt>x.<a href="#GraphRegisterPtr-__str__">__str__</a>()&nbsp;&lt;==&gt;&nbsp;str(x)</tt></dd></dl>
+
+<hr>
+Data and non-method functions inherited from <a href="__builtin__.html#object">__builtin__.object</a>:<br>
+<dl><dt><strong>__class__</strong> = &lt;type 'type'&gt;</dl>
+
+<dl><dt><strong>__new__</strong> = &lt;built-in method __new__ of type object&gt;<dd><tt>T.<a href="#GraphRegisterPtr-__new__">__new__</a>(S,&nbsp;...)&nbsp;-&gt;&nbsp;a&nbsp;new&nbsp;<a href="__builtin__.html#object">object</a>&nbsp;with&nbsp;type&nbsp;S,&nbsp;a&nbsp;subtype&nbsp;of&nbsp;T</tt></dl>
+
+</td></tr></table> 
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="LocCliffOp">class <strong>LocCliffOp</strong></a>(<a href="__builtin__.html#object">__builtin__.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Proxy&nbsp;of&nbsp;C++&nbsp;<a href="#LocCliffOp">LocCliffOp</a>&nbsp;class<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="LocCliffOp-__del__"><strong>__del__</strong></a>(self, destroy<font color="#909090">=&lt;built-in function delete_LocCliffOp&gt;</font>)</dt><dd><tt><a href="#LocCliffOp-__del__">__del__</a>(self)</tt></dd></dl>
+
+<dl><dt><strong>__getattr__</strong> <em>lambda</em> self, name</dt></dl>
+
+<dl><dt><a name="LocCliffOp-__init__"><strong>__init__</strong></a>(self, *args)</dt><dd><tt><a href="#LocCliffOp-__init__">__init__</a>(self,&nbsp;unsigned&nbsp;short&nbsp;op_)&nbsp;-&gt;&nbsp;<a href="#LocCliffOp">LocCliffOp</a><br>
+<a href="#LocCliffOp-__init__">__init__</a>(self,&nbsp;unsigned&nbsp;short&nbsp;signsymb,&nbsp;unsigned&nbsp;short&nbsp;permsymb)&nbsp;-&gt;&nbsp;<a href="#LocCliffOp">LocCliffOp</a></tt></dd></dl>
+
+<dl><dt><a name="LocCliffOp-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><strong>__setattr__</strong> <em>lambda</em> self, name, value</dt></dl>
+
+<dl><dt><a name="LocCliffOp-conjugate"><strong>conjugate</strong></a>(*args)</dt><dd><tt><a href="#LocCliffOp-conjugate">conjugate</a>(self,&nbsp;<a href="#LocCliffOp">LocCliffOp</a>&nbsp;trans)&nbsp;-&gt;&nbsp;<a href="#RightPhase">RightPhase</a></tt></dd></dl>
+
+<dl><dt><a name="LocCliffOp-get_matrix"><strong>get_matrix</strong></a>(*args)</dt><dd><tt><a href="#LocCliffOp-get_matrix">get_matrix</a>(self)&nbsp;-&gt;&nbsp;RightMatrix</tt></dd></dl>
+
+<dl><dt><a name="LocCliffOp-get_name"><strong>get_name</strong></a>(*args)</dt><dd><tt><a href="#LocCliffOp-get_name">get_name</a>(self)&nbsp;-&gt;&nbsp;string</tt></dd></dl>
+
+<dl><dt><a name="LocCliffOp-herm_adjoint"><strong>herm_adjoint</strong></a>(*args)</dt><dd><tt><a href="#LocCliffOp-herm_adjoint">herm_adjoint</a>(self)&nbsp;-&gt;&nbsp;<a href="#LocCliffOp">LocCliffOp</a></tt></dd></dl>
+
+<dl><dt><a name="LocCliffOp-isXY"><strong>isXY</strong></a>(*args)</dt><dd><tt><a href="#LocCliffOp-isXY">isXY</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="LocCliffOp-is_diagonal"><strong>is_diagonal</strong></a>(*args)</dt><dd><tt><a href="#LocCliffOp-is_diagonal">is_diagonal</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<hr>
+Static methods defined here:<br>
+<dl><dt><a name="LocCliffOp-mult_phase"><strong>mult_phase</strong></a> = LocCliffOp_mult_phase(...)</dt></dl>
+
+<hr>
+Properties defined here:<br>
+<dl><dt><strong>op</strong></dt>
+<dd><dl><dt><a name="LocCliffOp-op getter"><strong>op getter</strong></a> = LocCliffOp_op_get(...)</dt></dl>
+</dd>
+<dd><dl><dt><a name="LocCliffOp-op setter"><strong>op setter</strong></a> = LocCliffOp_op_set(...)</dt></dl>
+</dd>
+</dl>
+<hr>
+Data and non-method functions defined here:<br>
+<dl><dt><strong>__dict__</strong> = &lt;dict-proxy object&gt;</dl>
+
+<dl><dt><strong>__doc__</strong> = 'Proxy of C++ LocCliffOp class'</dl>
+
+<dl><dt><strong>__module__</strong> = 'graphsim'</dl>
+
+<dl><dt><strong>__swig_getmethods__</strong> = {'mult_phase': &lt;function &lt;lambda&gt;&gt;, 'op': &lt;built-in function LocCliffOp_op_get&gt;}</dl>
+
+<dl><dt><strong>__swig_setmethods__</strong> = {'op': &lt;built-in function LocCliffOp_op_set&gt;}</dl>
+
+<dl><dt><strong>__weakref__</strong> = &lt;member '__weakref__' of 'LocCliffOp' objects&gt;</dl>
+
+<hr>
+Methods inherited from <a href="__builtin__.html#object">__builtin__.object</a>:<br>
+<dl><dt><a name="LocCliffOp-__delattr__"><strong>__delattr__</strong></a>(...)</dt><dd><tt>x.<a href="#LocCliffOp-__delattr__">__delattr__</a>('name')&nbsp;&lt;==&gt;&nbsp;del&nbsp;x.name</tt></dd></dl>
+
+<dl><dt><a name="LocCliffOp-__getattribute__"><strong>__getattribute__</strong></a>(...)</dt><dd><tt>x.<a href="#LocCliffOp-__getattribute__">__getattribute__</a>('name')&nbsp;&lt;==&gt;&nbsp;x.name</tt></dd></dl>
+
+<dl><dt><a name="LocCliffOp-__hash__"><strong>__hash__</strong></a>(...)</dt><dd><tt>x.<a href="#LocCliffOp-__hash__">__hash__</a>()&nbsp;&lt;==&gt;&nbsp;hash(x)</tt></dd></dl>
+
+<dl><dt><a name="LocCliffOp-__reduce__"><strong>__reduce__</strong></a>(...)</dt><dd><tt>helper&nbsp;for&nbsp;pickle</tt></dd></dl>
+
+<dl><dt><a name="LocCliffOp-__str__"><strong>__str__</strong></a>(...)</dt><dd><tt>x.<a href="#LocCliffOp-__str__">__str__</a>()&nbsp;&lt;==&gt;&nbsp;str(x)</tt></dd></dl>
+
+<hr>
+Data and non-method functions inherited from <a href="__builtin__.html#object">__builtin__.object</a>:<br>
+<dl><dt><strong>__class__</strong> = &lt;type 'type'&gt;</dl>
+
+<dl><dt><strong>__new__</strong> = &lt;built-in method __new__ of type object&gt;<dd><tt>T.<a href="#LocCliffOp-__new__">__new__</a>(S,&nbsp;...)&nbsp;-&gt;&nbsp;a&nbsp;new&nbsp;<a href="__builtin__.html#object">object</a>&nbsp;with&nbsp;type&nbsp;S,&nbsp;a&nbsp;subtype&nbsp;of&nbsp;T</tt></dl>
+
+</td></tr></table> 
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="LocCliffOpPtr">class <strong>LocCliffOpPtr</strong></a>(<a href="graphsim.html#LocCliffOp">LocCliffOp</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2>&nbsp;</td></tr>
+<tr><td>&nbsp;&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="graphsim.html#LocCliffOpPtr">LocCliffOpPtr</a></dd>
+<dd><a href="graphsim.html#LocCliffOp">LocCliffOp</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="LocCliffOpPtr-__init__"><strong>__init__</strong></a>(self, this)</dt></dl>
+
+<hr>
+Data and non-method functions defined here:<br>
+<dl><dt><strong>__doc__</strong> = None</dl>
+
+<dl><dt><strong>__module__</strong> = 'graphsim'</dl>
+
+<hr>
+Methods inherited from <a href="graphsim.html#LocCliffOp">LocCliffOp</a>:<br>
+<dl><dt><a name="LocCliffOpPtr-__del__"><strong>__del__</strong></a>(self, destroy<font color="#909090">=&lt;built-in function delete_LocCliffOp&gt;</font>)</dt><dd><tt><a href="#LocCliffOpPtr-__del__">__del__</a>(self)</tt></dd></dl>
+
+<dl><dt><strong>__getattr__</strong> <em>lambda</em> self, name</dt></dl>
+
+<dl><dt><a name="LocCliffOpPtr-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><strong>__setattr__</strong> <em>lambda</em> self, name, value</dt></dl>
+
+<dl><dt><a name="LocCliffOpPtr-conjugate"><strong>conjugate</strong></a>(*args)</dt><dd><tt><a href="#LocCliffOpPtr-conjugate">conjugate</a>(self,&nbsp;<a href="#LocCliffOp">LocCliffOp</a>&nbsp;trans)&nbsp;-&gt;&nbsp;<a href="#RightPhase">RightPhase</a></tt></dd></dl>
+
+<dl><dt><a name="LocCliffOpPtr-get_matrix"><strong>get_matrix</strong></a>(*args)</dt><dd><tt><a href="#LocCliffOpPtr-get_matrix">get_matrix</a>(self)&nbsp;-&gt;&nbsp;RightMatrix</tt></dd></dl>
+
+<dl><dt><a name="LocCliffOpPtr-get_name"><strong>get_name</strong></a>(*args)</dt><dd><tt><a href="#LocCliffOpPtr-get_name">get_name</a>(self)&nbsp;-&gt;&nbsp;string</tt></dd></dl>
+
+<dl><dt><a name="LocCliffOpPtr-herm_adjoint"><strong>herm_adjoint</strong></a>(*args)</dt><dd><tt><a href="#LocCliffOpPtr-herm_adjoint">herm_adjoint</a>(self)&nbsp;-&gt;&nbsp;<a href="#LocCliffOp">LocCliffOp</a></tt></dd></dl>
+
+<dl><dt><a name="LocCliffOpPtr-isXY"><strong>isXY</strong></a>(*args)</dt><dd><tt><a href="#LocCliffOpPtr-isXY">isXY</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="LocCliffOpPtr-is_diagonal"><strong>is_diagonal</strong></a>(*args)</dt><dd><tt><a href="#LocCliffOpPtr-is_diagonal">is_diagonal</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<hr>
+Static methods inherited from <a href="graphsim.html#LocCliffOp">LocCliffOp</a>:<br>
+<dl><dt><a name="LocCliffOpPtr-mult_phase"><strong>mult_phase</strong></a> = LocCliffOp_mult_phase(...)</dt></dl>
+
+<hr>
+Properties inherited from <a href="graphsim.html#LocCliffOp">LocCliffOp</a>:<br>
+<dl><dt><strong>op</strong></dt>
+<dd><dl><dt><a name="LocCliffOpPtr-op getter"><strong>op getter</strong></a> = LocCliffOp_op_get(...)</dt></dl>
+</dd>
+<dd><dl><dt><a name="LocCliffOpPtr-op setter"><strong>op setter</strong></a> = LocCliffOp_op_set(...)</dt></dl>
+</dd>
+</dl>
+<hr>
+Data and non-method functions inherited from <a href="graphsim.html#LocCliffOp">LocCliffOp</a>:<br>
+<dl><dt><strong>__dict__</strong> = &lt;dict-proxy object&gt;</dl>
+
+<dl><dt><strong>__swig_getmethods__</strong> = {'mult_phase': &lt;function &lt;lambda&gt;&gt;, 'op': &lt;built-in function LocCliffOp_op_get&gt;}</dl>
+
+<dl><dt><strong>__swig_setmethods__</strong> = {'op': &lt;built-in function LocCliffOp_op_set&gt;}</dl>
+
+<dl><dt><strong>__weakref__</strong> = &lt;member '__weakref__' of 'LocCliffOp' objects&gt;</dl>
+
+<hr>
+Methods inherited from <a href="__builtin__.html#object">__builtin__.object</a>:<br>
+<dl><dt><a name="LocCliffOpPtr-__delattr__"><strong>__delattr__</strong></a>(...)</dt><dd><tt>x.<a href="#LocCliffOpPtr-__delattr__">__delattr__</a>('name')&nbsp;&lt;==&gt;&nbsp;del&nbsp;x.name</tt></dd></dl>
+
+<dl><dt><a name="LocCliffOpPtr-__getattribute__"><strong>__getattribute__</strong></a>(...)</dt><dd><tt>x.<a href="#LocCliffOpPtr-__getattribute__">__getattribute__</a>('name')&nbsp;&lt;==&gt;&nbsp;x.name</tt></dd></dl>
+
+<dl><dt><a name="LocCliffOpPtr-__hash__"><strong>__hash__</strong></a>(...)</dt><dd><tt>x.<a href="#LocCliffOpPtr-__hash__">__hash__</a>()&nbsp;&lt;==&gt;&nbsp;hash(x)</tt></dd></dl>
+
+<dl><dt><a name="LocCliffOpPtr-__reduce__"><strong>__reduce__</strong></a>(...)</dt><dd><tt>helper&nbsp;for&nbsp;pickle</tt></dd></dl>
+
+<dl><dt><a name="LocCliffOpPtr-__str__"><strong>__str__</strong></a>(...)</dt><dd><tt>x.<a href="#LocCliffOpPtr-__str__">__str__</a>()&nbsp;&lt;==&gt;&nbsp;str(x)</tt></dd></dl>
+
+<hr>
+Data and non-method functions inherited from <a href="__builtin__.html#object">__builtin__.object</a>:<br>
+<dl><dt><strong>__class__</strong> = &lt;type 'type'&gt;</dl>
+
+<dl><dt><strong>__new__</strong> = &lt;built-in method __new__ of type object&gt;<dd><tt>T.<a href="#LocCliffOpPtr-__new__">__new__</a>(S,&nbsp;...)&nbsp;-&gt;&nbsp;a&nbsp;new&nbsp;<a href="__builtin__.html#object">object</a>&nbsp;with&nbsp;type&nbsp;S,&nbsp;a&nbsp;subtype&nbsp;of&nbsp;T</tt></dl>
+
+</td></tr></table> 
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="QubitVertex">class <strong>QubitVertex</strong></a>(<a href="__builtin__.html#object">__builtin__.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Proxy&nbsp;of&nbsp;C++&nbsp;<a href="#QubitVertex">QubitVertex</a>&nbsp;class<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="QubitVertex-__del__"><strong>__del__</strong></a>(self, destroy<font color="#909090">=&lt;built-in function delete_QubitVertex&gt;</font>)</dt><dd><tt><a href="#QubitVertex-__del__">__del__</a>(self)</tt></dd></dl>
+
+<dl><dt><strong>__getattr__</strong> <em>lambda</em> self, name</dt></dl>
+
+<dl><dt><a name="QubitVertex-__init__"><strong>__init__</strong></a>(self, *args)</dt><dd><tt><a href="#QubitVertex-__init__">__init__</a>(self)&nbsp;-&gt;&nbsp;<a href="#QubitVertex">QubitVertex</a></tt></dd></dl>
+
+<dl><dt><a name="QubitVertex-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><strong>__setattr__</strong> <em>lambda</em> self, name, value</dt></dl>
+
+<hr>
+Properties defined here:<br>
+<dl><dt><strong>byprod</strong></dt>
+<dd><dl><dt><a name="QubitVertex-byprod getter"><strong>byprod getter</strong></a> = QubitVertex_byprod_get(...)</dt></dl>
+</dd>
+<dd><dl><dt><a name="QubitVertex-byprod setter"><strong>byprod setter</strong></a> = QubitVertex_byprod_set(...)</dt></dl>
+</dd>
+</dl>
+<dl><dt><strong>neighbors</strong></dt>
+<dd><dl><dt><a name="QubitVertex-neighbors getter"><strong>neighbors getter</strong></a> = QubitVertex_neighbors_get(...)</dt></dl>
+</dd>
+<dd><dl><dt><a name="QubitVertex-neighbors setter"><strong>neighbors setter</strong></a> = QubitVertex_neighbors_set(...)</dt></dl>
+</dd>
+</dl>
+<hr>
+Data and non-method functions defined here:<br>
+<dl><dt><strong>__dict__</strong> = &lt;dict-proxy object&gt;</dl>
+
+<dl><dt><strong>__doc__</strong> = 'Proxy of C++ QubitVertex class'</dl>
+
+<dl><dt><strong>__module__</strong> = 'graphsim'</dl>
+
+<dl><dt><strong>__swig_getmethods__</strong> = {'byprod': &lt;built-in function QubitVertex_byprod_get&gt;, 'neighbors': &lt;built-in function QubitVertex_neighbors_get&gt;}</dl>
+
+<dl><dt><strong>__swig_setmethods__</strong> = {'byprod': &lt;built-in function QubitVertex_byprod_set&gt;, 'neighbors': &lt;built-in function QubitVertex_neighbors_set&gt;}</dl>
+
+<dl><dt><strong>__weakref__</strong> = &lt;member '__weakref__' of 'QubitVertex' objects&gt;</dl>
+
+<hr>
+Methods inherited from <a href="__builtin__.html#object">__builtin__.object</a>:<br>
+<dl><dt><a name="QubitVertex-__delattr__"><strong>__delattr__</strong></a>(...)</dt><dd><tt>x.<a href="#QubitVertex-__delattr__">__delattr__</a>('name')&nbsp;&lt;==&gt;&nbsp;del&nbsp;x.name</tt></dd></dl>
+
+<dl><dt><a name="QubitVertex-__getattribute__"><strong>__getattribute__</strong></a>(...)</dt><dd><tt>x.<a href="#QubitVertex-__getattribute__">__getattribute__</a>('name')&nbsp;&lt;==&gt;&nbsp;x.name</tt></dd></dl>
+
+<dl><dt><a name="QubitVertex-__hash__"><strong>__hash__</strong></a>(...)</dt><dd><tt>x.<a href="#QubitVertex-__hash__">__hash__</a>()&nbsp;&lt;==&gt;&nbsp;hash(x)</tt></dd></dl>
+
+<dl><dt><a name="QubitVertex-__reduce__"><strong>__reduce__</strong></a>(...)</dt><dd><tt>helper&nbsp;for&nbsp;pickle</tt></dd></dl>
+
+<dl><dt><a name="QubitVertex-__str__"><strong>__str__</strong></a>(...)</dt><dd><tt>x.<a href="#QubitVertex-__str__">__str__</a>()&nbsp;&lt;==&gt;&nbsp;str(x)</tt></dd></dl>
+
+<hr>
+Data and non-method functions inherited from <a href="__builtin__.html#object">__builtin__.object</a>:<br>
+<dl><dt><strong>__class__</strong> = &lt;type 'type'&gt;</dl>
+
+<dl><dt><strong>__new__</strong> = &lt;built-in method __new__ of type object&gt;<dd><tt>T.<a href="#QubitVertex-__new__">__new__</a>(S,&nbsp;...)&nbsp;-&gt;&nbsp;a&nbsp;new&nbsp;<a href="__builtin__.html#object">object</a>&nbsp;with&nbsp;type&nbsp;S,&nbsp;a&nbsp;subtype&nbsp;of&nbsp;T</tt></dl>
+
+</td></tr></table> 
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="QubitVertexPtr">class <strong>QubitVertexPtr</strong></a>(<a href="graphsim.html#QubitVertex">QubitVertex</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2>&nbsp;</td></tr>
+<tr><td>&nbsp;&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="graphsim.html#QubitVertexPtr">QubitVertexPtr</a></dd>
+<dd><a href="graphsim.html#QubitVertex">QubitVertex</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="QubitVertexPtr-__init__"><strong>__init__</strong></a>(self, this)</dt></dl>
+
+<hr>
+Data and non-method functions defined here:<br>
+<dl><dt><strong>__doc__</strong> = None</dl>
+
+<dl><dt><strong>__module__</strong> = 'graphsim'</dl>
+
+<hr>
+Methods inherited from <a href="graphsim.html#QubitVertex">QubitVertex</a>:<br>
+<dl><dt><a name="QubitVertexPtr-__del__"><strong>__del__</strong></a>(self, destroy<font color="#909090">=&lt;built-in function delete_QubitVertex&gt;</font>)</dt><dd><tt><a href="#QubitVertexPtr-__del__">__del__</a>(self)</tt></dd></dl>
+
+<dl><dt><strong>__getattr__</strong> <em>lambda</em> self, name</dt></dl>
+
+<dl><dt><a name="QubitVertexPtr-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><strong>__setattr__</strong> <em>lambda</em> self, name, value</dt></dl>
+
+<hr>
+Properties inherited from <a href="graphsim.html#QubitVertex">QubitVertex</a>:<br>
+<dl><dt><strong>byprod</strong></dt>
+<dd><dl><dt><a name="QubitVertexPtr-byprod getter"><strong>byprod getter</strong></a> = QubitVertex_byprod_get(...)</dt></dl>
+</dd>
+<dd><dl><dt><a name="QubitVertexPtr-byprod setter"><strong>byprod setter</strong></a> = QubitVertex_byprod_set(...)</dt></dl>
+</dd>
+</dl>
+<dl><dt><strong>neighbors</strong></dt>
+<dd><dl><dt><a name="QubitVertexPtr-neighbors getter"><strong>neighbors getter</strong></a> = QubitVertex_neighbors_get(...)</dt></dl>
+</dd>
+<dd><dl><dt><a name="QubitVertexPtr-neighbors setter"><strong>neighbors setter</strong></a> = QubitVertex_neighbors_set(...)</dt></dl>
+</dd>
+</dl>
+<hr>
+Data and non-method functions inherited from <a href="graphsim.html#QubitVertex">QubitVertex</a>:<br>
+<dl><dt><strong>__dict__</strong> = &lt;dict-proxy object&gt;</dl>
+
+<dl><dt><strong>__swig_getmethods__</strong> = {'byprod': &lt;built-in function QubitVertex_byprod_get&gt;, 'neighbors': &lt;built-in function QubitVertex_neighbors_get&gt;}</dl>
+
+<dl><dt><strong>__swig_setmethods__</strong> = {'byprod': &lt;built-in function QubitVertex_byprod_set&gt;, 'neighbors': &lt;built-in function QubitVertex_neighbors_set&gt;}</dl>
+
+<dl><dt><strong>__weakref__</strong> = &lt;member '__weakref__' of 'QubitVertex' objects&gt;</dl>
+
+<hr>
+Methods inherited from <a href="__builtin__.html#object">__builtin__.object</a>:<br>
+<dl><dt><a name="QubitVertexPtr-__delattr__"><strong>__delattr__</strong></a>(...)</dt><dd><tt>x.<a href="#QubitVertexPtr-__delattr__">__delattr__</a>('name')&nbsp;&lt;==&gt;&nbsp;del&nbsp;x.name</tt></dd></dl>
+
+<dl><dt><a name="QubitVertexPtr-__getattribute__"><strong>__getattribute__</strong></a>(...)</dt><dd><tt>x.<a href="#QubitVertexPtr-__getattribute__">__getattribute__</a>('name')&nbsp;&lt;==&gt;&nbsp;x.name</tt></dd></dl>
+
+<dl><dt><a name="QubitVertexPtr-__hash__"><strong>__hash__</strong></a>(...)</dt><dd><tt>x.<a href="#QubitVertexPtr-__hash__">__hash__</a>()&nbsp;&lt;==&gt;&nbsp;hash(x)</tt></dd></dl>
+
+<dl><dt><a name="QubitVertexPtr-__reduce__"><strong>__reduce__</strong></a>(...)</dt><dd><tt>helper&nbsp;for&nbsp;pickle</tt></dd></dl>
+
+<dl><dt><a name="QubitVertexPtr-__str__"><strong>__str__</strong></a>(...)</dt><dd><tt>x.<a href="#QubitVertexPtr-__str__">__str__</a>()&nbsp;&lt;==&gt;&nbsp;str(x)</tt></dd></dl>
+
+<hr>
+Data and non-method functions inherited from <a href="__builtin__.html#object">__builtin__.object</a>:<br>
+<dl><dt><strong>__class__</strong> = &lt;type 'type'&gt;</dl>
+
+<dl><dt><strong>__new__</strong> = &lt;built-in method __new__ of type object&gt;<dd><tt>T.<a href="#QubitVertexPtr-__new__">__new__</a>(S,&nbsp;...)&nbsp;-&gt;&nbsp;a&nbsp;new&nbsp;<a href="__builtin__.html#object">object</a>&nbsp;with&nbsp;type&nbsp;S,&nbsp;a&nbsp;subtype&nbsp;of&nbsp;T</tt></dl>
+
+</td></tr></table> 
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="RightPhase">class <strong>RightPhase</strong></a>(<a href="__builtin__.html#object">__builtin__.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Proxy&nbsp;of&nbsp;C++&nbsp;<a href="#RightPhase">RightPhase</a>&nbsp;class<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="RightPhase-__del__"><strong>__del__</strong></a>(self, destroy<font color="#909090">=&lt;built-in function delete_RightPhase&gt;</font>)</dt><dd><tt><a href="#RightPhase-__del__">__del__</a>(self)</tt></dd></dl>
+
+<dl><dt><strong>__getattr__</strong> <em>lambda</em> self, name</dt></dl>
+
+<dl><dt><a name="RightPhase-__init__"><strong>__init__</strong></a>(self, *args)</dt><dd><tt><a href="#RightPhase-__init__">__init__</a>(self)&nbsp;-&gt;&nbsp;<a href="#RightPhase">RightPhase</a><br>
+<a href="#RightPhase-__init__">__init__</a>(self,&nbsp;unsigned&nbsp;short&nbsp;ph_)&nbsp;-&gt;&nbsp;<a href="#RightPhase">RightPhase</a></tt></dd></dl>
+
+<dl><dt><a name="RightPhase-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><strong>__setattr__</strong> <em>lambda</em> self, name, value</dt></dl>
+
+<dl><dt><a name="RightPhase-get_name"><strong>get_name</strong></a>(*args)</dt><dd><tt><a href="#RightPhase-get_name">get_name</a>(self)&nbsp;-&gt;&nbsp;string</tt></dd></dl>
+
+<hr>
+Properties defined here:<br>
+<dl><dt><strong>ph</strong></dt>
+<dd><dl><dt><a name="RightPhase-ph getter"><strong>ph getter</strong></a> = RightPhase_ph_get(...)</dt></dl>
+</dd>
+<dd><dl><dt><a name="RightPhase-ph setter"><strong>ph setter</strong></a> = RightPhase_ph_set(...)</dt></dl>
+</dd>
+</dl>
+<hr>
+Data and non-method functions defined here:<br>
+<dl><dt><strong>__dict__</strong> = &lt;dict-proxy object&gt;</dl>
+
+<dl><dt><strong>__doc__</strong> = 'Proxy of C++ RightPhase class'</dl>
+
+<dl><dt><strong>__module__</strong> = 'graphsim'</dl>
+
+<dl><dt><strong>__swig_getmethods__</strong> = {'ph': &lt;built-in function RightPhase_ph_get&gt;}</dl>
+
+<dl><dt><strong>__swig_setmethods__</strong> = {'ph': &lt;built-in function RightPhase_ph_set&gt;}</dl>
+
+<dl><dt><strong>__weakref__</strong> = &lt;member '__weakref__' of 'RightPhase' objects&gt;</dl>
+
+<hr>
+Methods inherited from <a href="__builtin__.html#object">__builtin__.object</a>:<br>
+<dl><dt><a name="RightPhase-__delattr__"><strong>__delattr__</strong></a>(...)</dt><dd><tt>x.<a href="#RightPhase-__delattr__">__delattr__</a>('name')&nbsp;&lt;==&gt;&nbsp;del&nbsp;x.name</tt></dd></dl>
+
+<dl><dt><a name="RightPhase-__getattribute__"><strong>__getattribute__</strong></a>(...)</dt><dd><tt>x.<a href="#RightPhase-__getattribute__">__getattribute__</a>('name')&nbsp;&lt;==&gt;&nbsp;x.name</tt></dd></dl>
+
+<dl><dt><a name="RightPhase-__hash__"><strong>__hash__</strong></a>(...)</dt><dd><tt>x.<a href="#RightPhase-__hash__">__hash__</a>()&nbsp;&lt;==&gt;&nbsp;hash(x)</tt></dd></dl>
+
+<dl><dt><a name="RightPhase-__reduce__"><strong>__reduce__</strong></a>(...)</dt><dd><tt>helper&nbsp;for&nbsp;pickle</tt></dd></dl>
+
+<dl><dt><a name="RightPhase-__str__"><strong>__str__</strong></a>(...)</dt><dd><tt>x.<a href="#RightPhase-__str__">__str__</a>()&nbsp;&lt;==&gt;&nbsp;str(x)</tt></dd></dl>
+
+<hr>
+Data and non-method functions inherited from <a href="__builtin__.html#object">__builtin__.object</a>:<br>
+<dl><dt><strong>__class__</strong> = &lt;type 'type'&gt;</dl>
+
+<dl><dt><strong>__new__</strong> = &lt;built-in method __new__ of type object&gt;<dd><tt>T.<a href="#RightPhase-__new__">__new__</a>(S,&nbsp;...)&nbsp;-&gt;&nbsp;a&nbsp;new&nbsp;<a href="__builtin__.html#object">object</a>&nbsp;with&nbsp;type&nbsp;S,&nbsp;a&nbsp;subtype&nbsp;of&nbsp;T</tt></dl>
+
+</td></tr></table> 
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="RightPhasePtr">class <strong>RightPhasePtr</strong></a>(<a href="graphsim.html#RightPhase">RightPhase</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2>&nbsp;</td></tr>
+<tr><td>&nbsp;&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="graphsim.html#RightPhasePtr">RightPhasePtr</a></dd>
+<dd><a href="graphsim.html#RightPhase">RightPhase</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="RightPhasePtr-__init__"><strong>__init__</strong></a>(self, this)</dt></dl>
+
+<hr>
+Data and non-method functions defined here:<br>
+<dl><dt><strong>__doc__</strong> = None</dl>
+
+<dl><dt><strong>__module__</strong> = 'graphsim'</dl>
+
+<hr>
+Methods inherited from <a href="graphsim.html#RightPhase">RightPhase</a>:<br>
+<dl><dt><a name="RightPhasePtr-__del__"><strong>__del__</strong></a>(self, destroy<font color="#909090">=&lt;built-in function delete_RightPhase&gt;</font>)</dt><dd><tt><a href="#RightPhasePtr-__del__">__del__</a>(self)</tt></dd></dl>
+
+<dl><dt><strong>__getattr__</strong> <em>lambda</em> self, name</dt></dl>
+
+<dl><dt><a name="RightPhasePtr-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><strong>__setattr__</strong> <em>lambda</em> self, name, value</dt></dl>
+
+<dl><dt><a name="RightPhasePtr-get_name"><strong>get_name</strong></a>(*args)</dt><dd><tt><a href="#RightPhasePtr-get_name">get_name</a>(self)&nbsp;-&gt;&nbsp;string</tt></dd></dl>
+
+<hr>
+Properties inherited from <a href="graphsim.html#RightPhase">RightPhase</a>:<br>
+<dl><dt><strong>ph</strong></dt>
+<dd><dl><dt><a name="RightPhasePtr-ph getter"><strong>ph getter</strong></a> = RightPhase_ph_get(...)</dt></dl>
+</dd>
+<dd><dl><dt><a name="RightPhasePtr-ph setter"><strong>ph setter</strong></a> = RightPhase_ph_set(...)</dt></dl>
+</dd>
+</dl>
+<hr>
+Data and non-method functions inherited from <a href="graphsim.html#RightPhase">RightPhase</a>:<br>
+<dl><dt><strong>__dict__</strong> = &lt;dict-proxy object&gt;</dl>
+
+<dl><dt><strong>__swig_getmethods__</strong> = {'ph': &lt;built-in function RightPhase_ph_get&gt;}</dl>
+
+<dl><dt><strong>__swig_setmethods__</strong> = {'ph': &lt;built-in function RightPhase_ph_set&gt;}</dl>
+
+<dl><dt><strong>__weakref__</strong> = &lt;member '__weakref__' of 'RightPhase' objects&gt;</dl>
+
+<hr>
+Methods inherited from <a href="__builtin__.html#object">__builtin__.object</a>:<br>
+<dl><dt><a name="RightPhasePtr-__delattr__"><strong>__delattr__</strong></a>(...)</dt><dd><tt>x.<a href="#RightPhasePtr-__delattr__">__delattr__</a>('name')&nbsp;&lt;==&gt;&nbsp;del&nbsp;x.name</tt></dd></dl>
+
+<dl><dt><a name="RightPhasePtr-__getattribute__"><strong>__getattribute__</strong></a>(...)</dt><dd><tt>x.<a href="#RightPhasePtr-__getattribute__">__getattribute__</a>('name')&nbsp;&lt;==&gt;&nbsp;x.name</tt></dd></dl>
+
+<dl><dt><a name="RightPhasePtr-__hash__"><strong>__hash__</strong></a>(...)</dt><dd><tt>x.<a href="#RightPhasePtr-__hash__">__hash__</a>()&nbsp;&lt;==&gt;&nbsp;hash(x)</tt></dd></dl>
+
+<dl><dt><a name="RightPhasePtr-__reduce__"><strong>__reduce__</strong></a>(...)</dt><dd><tt>helper&nbsp;for&nbsp;pickle</tt></dd></dl>
+
+<dl><dt><a name="RightPhasePtr-__str__"><strong>__str__</strong></a>(...)</dt><dd><tt>x.<a href="#RightPhasePtr-__str__">__str__</a>()&nbsp;&lt;==&gt;&nbsp;str(x)</tt></dd></dl>
+
+<hr>
+Data and non-method functions inherited from <a href="__builtin__.html#object">__builtin__.object</a>:<br>
+<dl><dt><strong>__class__</strong> = &lt;type 'type'&gt;</dl>
+
+<dl><dt><strong>__new__</strong> = &lt;built-in method __new__ of type object&gt;<dd><tt>T.<a href="#RightPhasePtr-__new__">__new__</a>(S,&nbsp;...)&nbsp;-&gt;&nbsp;a&nbsp;new&nbsp;<a href="__builtin__.html#object">object</a>&nbsp;with&nbsp;type&nbsp;S,&nbsp;a&nbsp;subtype&nbsp;of&nbsp;T</tt></dl>
+
+</td></tr></table> 
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Stabilizer">class <strong>Stabilizer</strong></a>(<a href="__builtin__.html#object">__builtin__.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Proxy&nbsp;of&nbsp;C++&nbsp;<a href="#Stabilizer">Stabilizer</a>&nbsp;class<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Stabilizer-__del__"><strong>__del__</strong></a>(self, destroy<font color="#909090">=&lt;built-in function delete_Stabilizer&gt;</font>)</dt><dd><tt><a href="#Stabilizer-__del__">__del__</a>(self)</tt></dd></dl>
+
+<dl><dt><strong>__getattr__</strong> <em>lambda</em> self, name</dt></dl>
+
+<dl><dt><a name="Stabilizer-__init__"><strong>__init__</strong></a>(self, *args)</dt><dd><tt><a href="#Stabilizer-__init__">__init__</a>(self,&nbsp;VertexIndex&nbsp;numQubits_)&nbsp;-&gt;&nbsp;<a href="#Stabilizer">Stabilizer</a><br>
+<a href="#Stabilizer-__init__">__init__</a>(self,&nbsp;<a href="#GraphRegister">GraphRegister</a>&nbsp;gr,&nbsp;hash_set&lt;(VertexIndex)&gt;&nbsp;qubits)&nbsp;-&gt;&nbsp;<a href="#Stabilizer">Stabilizer</a><br>
+<a href="#Stabilizer-__init__">__init__</a>(self,&nbsp;QState&nbsp;qs)&nbsp;-&gt;&nbsp;<a href="#Stabilizer">Stabilizer</a></tt></dd></dl>
+
+<dl><dt><a name="Stabilizer-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><strong>__setattr__</strong> <em>lambda</em> self, name, value</dt></dl>
+
+<dl><dt><a name="Stabilizer-add_row"><strong>add_row</strong></a>(*args)</dt><dd><tt><a href="#Stabilizer-add_row">add_row</a>(self,&nbsp;unsigned&nbsp;int&nbsp;target,&nbsp;unsigned&nbsp;int&nbsp;addend)</tt></dd></dl>
+
+<dl><dt><a name="Stabilizer-compare"><strong>compare</strong></a>(*args)</dt><dd><tt><a href="#Stabilizer-compare">compare</a>(self,&nbsp;<a href="#Stabilizer">Stabilizer</a>&nbsp;diag)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="Stabilizer-conjugate"><strong>conjugate</strong></a>(*args)</dt><dd><tt><a href="#Stabilizer-conjugate">conjugate</a>(self,&nbsp;unsigned&nbsp;int&nbsp;row,&nbsp;unsigned&nbsp;int&nbsp;col,&nbsp;<a href="#LocCliffOp">LocCliffOp</a>&nbsp;trans)</tt></dd></dl>
+
+<dl><dt><a name="Stabilizer-conjugate_column"><strong>conjugate_column</strong></a>(*args)</dt><dd><tt><a href="#Stabilizer-conjugate_column">conjugate_column</a>(self,&nbsp;unsigned&nbsp;int&nbsp;col,&nbsp;<a href="#LocCliffOp">LocCliffOp</a>&nbsp;trans)</tt></dd></dl>
+
+<dl><dt><a name="Stabilizer-print_tbl"><strong>print_tbl</strong></a>(*args)</dt><dd><tt><a href="#Stabilizer-print_tbl">print_tbl</a>(self,&nbsp;ostream&nbsp;os=cout)<br>
+<a href="#Stabilizer-print_tbl">print_tbl</a>(self)</tt></dd></dl>
+
+<hr>
+Properties defined here:<br>
+<dl><dt><strong>numQubits</strong></dt>
+<dd><dl><dt><a name="Stabilizer-numQubits getter"><strong>numQubits getter</strong></a> = Stabilizer_numQubits_get(...)</dt></dl>
+</dd>
+<dd><dl><dt><a name="Stabilizer-numQubits setter"><strong>numQubits setter</strong></a> = Stabilizer_numQubits_set(...)</dt></dl>
+</dd>
+</dl>
+<dl><dt><strong>paulis</strong></dt>
+<dd><dl><dt><a name="Stabilizer-paulis getter"><strong>paulis getter</strong></a> = Stabilizer_paulis_get(...)</dt></dl>
+</dd>
+<dd><dl><dt><a name="Stabilizer-paulis setter"><strong>paulis setter</strong></a> = Stabilizer_paulis_set(...)</dt></dl>
+</dd>
+</dl>
+<dl><dt><strong>rowsigns</strong></dt>
+<dd><dl><dt><a name="Stabilizer-rowsigns getter"><strong>rowsigns getter</strong></a> = Stabilizer_rowsigns_get(...)</dt></dl>
+</dd>
+<dd><dl><dt><a name="Stabilizer-rowsigns setter"><strong>rowsigns setter</strong></a> = Stabilizer_rowsigns_set(...)</dt></dl>
+</dd>
+</dl>
+<dl><dt><strong>vtxidx</strong></dt>
+<dd><dl><dt><a name="Stabilizer-vtxidx getter"><strong>vtxidx getter</strong></a> = Stabilizer_vtxidx_get(...)</dt></dl>
+</dd>
+<dd><dl><dt><a name="Stabilizer-vtxidx setter"><strong>vtxidx setter</strong></a> = Stabilizer_vtxidx_set(...)</dt></dl>
+</dd>
+</dl>
+<hr>
+Data and non-method functions defined here:<br>
+<dl><dt><strong>__dict__</strong> = &lt;dict-proxy object&gt;</dl>
+
+<dl><dt><strong>__doc__</strong> = 'Proxy of C++ Stabilizer class'</dl>
+
+<dl><dt><strong>__module__</strong> = 'graphsim'</dl>
+
+<dl><dt><strong>__swig_getmethods__</strong> = {'numQubits': &lt;built-in function Stabilizer_numQubits_get&gt;, 'paulis': &lt;built-in function Stabilizer_paulis_get&gt;, 'rowsigns': &lt;built-in function Stabilizer_rowsigns_get&gt;, 'vtxidx': &lt;built-in function Stabilizer_vtxidx_get&gt;}</dl>
+
+<dl><dt><strong>__swig_setmethods__</strong> = {'numQubits': &lt;built-in function Stabilizer_numQubits_set&gt;, 'paulis': &lt;built-in function Stabilizer_paulis_set&gt;, 'rowsigns': &lt;built-in function Stabilizer_rowsigns_set&gt;, 'vtxidx': &lt;built-in function Stabilizer_vtxidx_set&gt;}</dl>
+
+<dl><dt><strong>__weakref__</strong> = &lt;member '__weakref__' of 'Stabilizer' objects&gt;</dl>
+
+<hr>
+Methods inherited from <a href="__builtin__.html#object">__builtin__.object</a>:<br>
+<dl><dt><a name="Stabilizer-__delattr__"><strong>__delattr__</strong></a>(...)</dt><dd><tt>x.<a href="#Stabilizer-__delattr__">__delattr__</a>('name')&nbsp;&lt;==&gt;&nbsp;del&nbsp;x.name</tt></dd></dl>
+
+<dl><dt><a name="Stabilizer-__getattribute__"><strong>__getattribute__</strong></a>(...)</dt><dd><tt>x.<a href="#Stabilizer-__getattribute__">__getattribute__</a>('name')&nbsp;&lt;==&gt;&nbsp;x.name</tt></dd></dl>
+
+<dl><dt><a name="Stabilizer-__hash__"><strong>__hash__</strong></a>(...)</dt><dd><tt>x.<a href="#Stabilizer-__hash__">__hash__</a>()&nbsp;&lt;==&gt;&nbsp;hash(x)</tt></dd></dl>
+
+<dl><dt><a name="Stabilizer-__reduce__"><strong>__reduce__</strong></a>(...)</dt><dd><tt>helper&nbsp;for&nbsp;pickle</tt></dd></dl>
+
+<dl><dt><a name="Stabilizer-__str__"><strong>__str__</strong></a>(...)</dt><dd><tt>x.<a href="#Stabilizer-__str__">__str__</a>()&nbsp;&lt;==&gt;&nbsp;str(x)</tt></dd></dl>
+
+<hr>
+Data and non-method functions inherited from <a href="__builtin__.html#object">__builtin__.object</a>:<br>
+<dl><dt><strong>__class__</strong> = &lt;type 'type'&gt;</dl>
+
+<dl><dt><strong>__new__</strong> = &lt;built-in method __new__ of type object&gt;<dd><tt>T.<a href="#Stabilizer-__new__">__new__</a>(S,&nbsp;...)&nbsp;-&gt;&nbsp;a&nbsp;new&nbsp;<a href="__builtin__.html#object">object</a>&nbsp;with&nbsp;type&nbsp;S,&nbsp;a&nbsp;subtype&nbsp;of&nbsp;T</tt></dl>
+
+</td></tr></table> 
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="StabilizerPtr">class <strong>StabilizerPtr</strong></a>(<a href="graphsim.html#Stabilizer">Stabilizer</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2>&nbsp;</td></tr>
+<tr><td>&nbsp;&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="graphsim.html#StabilizerPtr">StabilizerPtr</a></dd>
+<dd><a href="graphsim.html#Stabilizer">Stabilizer</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="StabilizerPtr-__init__"><strong>__init__</strong></a>(self, this)</dt></dl>
+
+<hr>
+Data and non-method functions defined here:<br>
+<dl><dt><strong>__doc__</strong> = None</dl>
+
+<dl><dt><strong>__module__</strong> = 'graphsim'</dl>
+
+<hr>
+Methods inherited from <a href="graphsim.html#Stabilizer">Stabilizer</a>:<br>
+<dl><dt><a name="StabilizerPtr-__del__"><strong>__del__</strong></a>(self, destroy<font color="#909090">=&lt;built-in function delete_Stabilizer&gt;</font>)</dt><dd><tt><a href="#StabilizerPtr-__del__">__del__</a>(self)</tt></dd></dl>
+
+<dl><dt><strong>__getattr__</strong> <em>lambda</em> self, name</dt></dl>
+
+<dl><dt><a name="StabilizerPtr-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><strong>__setattr__</strong> <em>lambda</em> self, name, value</dt></dl>
+
+<dl><dt><a name="StabilizerPtr-add_row"><strong>add_row</strong></a>(*args)</dt><dd><tt><a href="#StabilizerPtr-add_row">add_row</a>(self,&nbsp;unsigned&nbsp;int&nbsp;target,&nbsp;unsigned&nbsp;int&nbsp;addend)</tt></dd></dl>
+
+<dl><dt><a name="StabilizerPtr-compare"><strong>compare</strong></a>(*args)</dt><dd><tt><a href="#StabilizerPtr-compare">compare</a>(self,&nbsp;<a href="#Stabilizer">Stabilizer</a>&nbsp;diag)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="StabilizerPtr-conjugate"><strong>conjugate</strong></a>(*args)</dt><dd><tt><a href="#StabilizerPtr-conjugate">conjugate</a>(self,&nbsp;unsigned&nbsp;int&nbsp;row,&nbsp;unsigned&nbsp;int&nbsp;col,&nbsp;<a href="#LocCliffOp">LocCliffOp</a>&nbsp;trans)</tt></dd></dl>
+
+<dl><dt><a name="StabilizerPtr-conjugate_column"><strong>conjugate_column</strong></a>(*args)</dt><dd><tt><a href="#StabilizerPtr-conjugate_column">conjugate_column</a>(self,&nbsp;unsigned&nbsp;int&nbsp;col,&nbsp;<a href="#LocCliffOp">LocCliffOp</a>&nbsp;trans)</tt></dd></dl>
+
+<dl><dt><a name="StabilizerPtr-print_tbl"><strong>print_tbl</strong></a>(*args)</dt><dd><tt><a href="#StabilizerPtr-print_tbl">print_tbl</a>(self,&nbsp;ostream&nbsp;os=cout)<br>
+<a href="#StabilizerPtr-print_tbl">print_tbl</a>(self)</tt></dd></dl>
+
+<hr>
+Properties inherited from <a href="graphsim.html#Stabilizer">Stabilizer</a>:<br>
+<dl><dt><strong>numQubits</strong></dt>
+<dd><dl><dt><a name="StabilizerPtr-numQubits getter"><strong>numQubits getter</strong></a> = Stabilizer_numQubits_get(...)</dt></dl>
+</dd>
+<dd><dl><dt><a name="StabilizerPtr-numQubits setter"><strong>numQubits setter</strong></a> = Stabilizer_numQubits_set(...)</dt></dl>
+</dd>
+</dl>
+<dl><dt><strong>paulis</strong></dt>
+<dd><dl><dt><a name="StabilizerPtr-paulis getter"><strong>paulis getter</strong></a> = Stabilizer_paulis_get(...)</dt></dl>
+</dd>
+<dd><dl><dt><a name="StabilizerPtr-paulis setter"><strong>paulis setter</strong></a> = Stabilizer_paulis_set(...)</dt></dl>
+</dd>
+</dl>
+<dl><dt><strong>rowsigns</strong></dt>
+<dd><dl><dt><a name="StabilizerPtr-rowsigns getter"><strong>rowsigns getter</strong></a> = Stabilizer_rowsigns_get(...)</dt></dl>
+</dd>
+<dd><dl><dt><a name="StabilizerPtr-rowsigns setter"><strong>rowsigns setter</strong></a> = Stabilizer_rowsigns_set(...)</dt></dl>
+</dd>
+</dl>
+<dl><dt><strong>vtxidx</strong></dt>
+<dd><dl><dt><a name="StabilizerPtr-vtxidx getter"><strong>vtxidx getter</strong></a> = Stabilizer_vtxidx_get(...)</dt></dl>
+</dd>
+<dd><dl><dt><a name="StabilizerPtr-vtxidx setter"><strong>vtxidx setter</strong></a> = Stabilizer_vtxidx_set(...)</dt></dl>
+</dd>
+</dl>
+<hr>
+Data and non-method functions inherited from <a href="graphsim.html#Stabilizer">Stabilizer</a>:<br>
+<dl><dt><strong>__dict__</strong> = &lt;dict-proxy object&gt;</dl>
+
+<dl><dt><strong>__swig_getmethods__</strong> = {'numQubits': &lt;built-in function Stabilizer_numQubits_get&gt;, 'paulis': &lt;built-in function Stabilizer_paulis_get&gt;, 'rowsigns': &lt;built-in function Stabilizer_rowsigns_get&gt;, 'vtxidx': &lt;built-in function Stabilizer_vtxidx_get&gt;}</dl>
+
+<dl><dt><strong>__swig_setmethods__</strong> = {'numQubits': &lt;built-in function Stabilizer_numQubits_set&gt;, 'paulis': &lt;built-in function Stabilizer_paulis_set&gt;, 'rowsigns': &lt;built-in function Stabilizer_rowsigns_set&gt;, 'vtxidx': &lt;built-in function Stabilizer_vtxidx_set&gt;}</dl>
+
+<dl><dt><strong>__weakref__</strong> = &lt;member '__weakref__' of 'Stabilizer' objects&gt;</dl>
+
+<hr>
+Methods inherited from <a href="__builtin__.html#object">__builtin__.object</a>:<br>
+<dl><dt><a name="StabilizerPtr-__delattr__"><strong>__delattr__</strong></a>(...)</dt><dd><tt>x.<a href="#StabilizerPtr-__delattr__">__delattr__</a>('name')&nbsp;&lt;==&gt;&nbsp;del&nbsp;x.name</tt></dd></dl>
+
+<dl><dt><a name="StabilizerPtr-__getattribute__"><strong>__getattribute__</strong></a>(...)</dt><dd><tt>x.<a href="#StabilizerPtr-__getattribute__">__getattribute__</a>('name')&nbsp;&lt;==&gt;&nbsp;x.name</tt></dd></dl>
+
+<dl><dt><a name="StabilizerPtr-__hash__"><strong>__hash__</strong></a>(...)</dt><dd><tt>x.<a href="#StabilizerPtr-__hash__">__hash__</a>()&nbsp;&lt;==&gt;&nbsp;hash(x)</tt></dd></dl>
+
+<dl><dt><a name="StabilizerPtr-__reduce__"><strong>__reduce__</strong></a>(...)</dt><dd><tt>helper&nbsp;for&nbsp;pickle</tt></dd></dl>
+
+<dl><dt><a name="StabilizerPtr-__str__"><strong>__str__</strong></a>(...)</dt><dd><tt>x.<a href="#StabilizerPtr-__str__">__str__</a>()&nbsp;&lt;==&gt;&nbsp;str(x)</tt></dd></dl>
+
+<hr>
+Data and non-method functions inherited from <a href="__builtin__.html#object">__builtin__.object</a>:<br>
+<dl><dt><strong>__class__</strong> = &lt;type 'type'&gt;</dl>
+
+<dl><dt><strong>__new__</strong> = &lt;built-in method __new__ of type object&gt;<dd><tt>T.<a href="#StabilizerPtr-__new__">__new__</a>(S,&nbsp;...)&nbsp;-&gt;&nbsp;a&nbsp;new&nbsp;<a href="__builtin__.html#object">object</a>&nbsp;with&nbsp;type&nbsp;S,&nbsp;a&nbsp;subtype&nbsp;of&nbsp;T</tt></dl>
+
+</td></tr></table> 
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="boolpc">class <strong>boolpc</strong></a>(<a href="__builtin__.html#object">__builtin__.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2>&nbsp;</td></tr>
+<tr><td>&nbsp;&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="boolpc-__del__"><strong>__del__</strong></a>(self, destroy<font color="#909090">=&lt;built-in function delete_boolpc&gt;</font>)</dt></dl>
+
+<dl><dt><strong>__getattr__</strong> <em>lambda</em> self, name</dt></dl>
+
+<dl><dt><a name="boolpc-__init__"><strong>__init__</strong></a>(self, *args)</dt></dl>
+
+<dl><dt><a name="boolpc-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><strong>__setattr__</strong> <em>lambda</em> self, name, value</dt></dl>
+
+<dl><dt><a name="boolpc-assign"><strong>assign</strong></a>(*args)</dt></dl>
+
+<dl><dt><a name="boolpc-cast"><strong>cast</strong></a>(*args)</dt></dl>
+
+<dl><dt><a name="boolpc-value"><strong>value</strong></a>(*args)</dt></dl>
+
+<hr>
+Static methods defined here:<br>
+<dl><dt><a name="boolpc-frompointer"><strong>frompointer</strong></a> = boolpc_frompointer(...)</dt></dl>
+
+<hr>
+Data and non-method functions defined here:<br>
+<dl><dt><strong>__dict__</strong> = &lt;dict-proxy object&gt;</dl>
+
+<dl><dt><strong>__doc__</strong> = None</dl>
+
+<dl><dt><strong>__module__</strong> = 'graphsim'</dl>
+
+<dl><dt><strong>__swig_getmethods__</strong> = {'frompointer': &lt;function &lt;lambda&gt;&gt;}</dl>
+
+<dl><dt><strong>__swig_setmethods__</strong> = {}</dl>
+
+<dl><dt><strong>__weakref__</strong> = &lt;member '__weakref__' of 'boolpc' objects&gt;</dl>
+
+<hr>
+Methods inherited from <a href="__builtin__.html#object">__builtin__.object</a>:<br>
+<dl><dt><a name="boolpc-__delattr__"><strong>__delattr__</strong></a>(...)</dt><dd><tt>x.<a href="#boolpc-__delattr__">__delattr__</a>('name')&nbsp;&lt;==&gt;&nbsp;del&nbsp;x.name</tt></dd></dl>
+
+<dl><dt><a name="boolpc-__getattribute__"><strong>__getattribute__</strong></a>(...)</dt><dd><tt>x.<a href="#boolpc-__getattribute__">__getattribute__</a>('name')&nbsp;&lt;==&gt;&nbsp;x.name</tt></dd></dl>
+
+<dl><dt><a name="boolpc-__hash__"><strong>__hash__</strong></a>(...)</dt><dd><tt>x.<a href="#boolpc-__hash__">__hash__</a>()&nbsp;&lt;==&gt;&nbsp;hash(x)</tt></dd></dl>
+
+<dl><dt><a name="boolpc-__reduce__"><strong>__reduce__</strong></a>(...)</dt><dd><tt>helper&nbsp;for&nbsp;pickle</tt></dd></dl>
+
+<dl><dt><a name="boolpc-__str__"><strong>__str__</strong></a>(...)</dt><dd><tt>x.<a href="#boolpc-__str__">__str__</a>()&nbsp;&lt;==&gt;&nbsp;str(x)</tt></dd></dl>
+
+<hr>
+Data and non-method functions inherited from <a href="__builtin__.html#object">__builtin__.object</a>:<br>
+<dl><dt><strong>__class__</strong> = &lt;type 'type'&gt;</dl>
+
+<dl><dt><strong>__new__</strong> = &lt;built-in method __new__ of type object&gt;<dd><tt>T.<a href="#boolpc-__new__">__new__</a>(S,&nbsp;...)&nbsp;-&gt;&nbsp;a&nbsp;new&nbsp;<a href="__builtin__.html#object">object</a>&nbsp;with&nbsp;type&nbsp;S,&nbsp;a&nbsp;subtype&nbsp;of&nbsp;T</tt></dl>
+
+</td></tr></table> 
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="boolpcPtr">class <strong>boolpcPtr</strong></a>(<a href="graphsim.html#boolpc">boolpc</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2>&nbsp;</td></tr>
+<tr><td>&nbsp;&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="graphsim.html#boolpcPtr">boolpcPtr</a></dd>
+<dd><a href="graphsim.html#boolpc">boolpc</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="boolpcPtr-__init__"><strong>__init__</strong></a>(self, this)</dt></dl>
+
+<hr>
+Data and non-method functions defined here:<br>
+<dl><dt><strong>__doc__</strong> = None</dl>
+
+<dl><dt><strong>__module__</strong> = 'graphsim'</dl>
+
+<hr>
+Methods inherited from <a href="graphsim.html#boolpc">boolpc</a>:<br>
+<dl><dt><a name="boolpcPtr-__del__"><strong>__del__</strong></a>(self, destroy<font color="#909090">=&lt;built-in function delete_boolpc&gt;</font>)</dt></dl>
+
+<dl><dt><strong>__getattr__</strong> <em>lambda</em> self, name</dt></dl>
+
+<dl><dt><a name="boolpcPtr-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><strong>__setattr__</strong> <em>lambda</em> self, name, value</dt></dl>
+
+<dl><dt><a name="boolpcPtr-assign"><strong>assign</strong></a>(*args)</dt></dl>
+
+<dl><dt><a name="boolpcPtr-cast"><strong>cast</strong></a>(*args)</dt></dl>
+
+<dl><dt><a name="boolpcPtr-value"><strong>value</strong></a>(*args)</dt></dl>
+
+<hr>
+Static methods inherited from <a href="graphsim.html#boolpc">boolpc</a>:<br>
+<dl><dt><a name="boolpcPtr-frompointer"><strong>frompointer</strong></a> = boolpc_frompointer(...)</dt></dl>
+
+<hr>
+Data and non-method functions inherited from <a href="graphsim.html#boolpc">boolpc</a>:<br>
+<dl><dt><strong>__dict__</strong> = &lt;dict-proxy object&gt;</dl>
+
+<dl><dt><strong>__swig_getmethods__</strong> = {'frompointer': &lt;function &lt;lambda&gt;&gt;}</dl>
+
+<dl><dt><strong>__swig_setmethods__</strong> = {}</dl>
+
+<dl><dt><strong>__weakref__</strong> = &lt;member '__weakref__' of 'boolpc' objects&gt;</dl>
+
+<hr>
+Methods inherited from <a href="__builtin__.html#object">__builtin__.object</a>:<br>
+<dl><dt><a name="boolpcPtr-__delattr__"><strong>__delattr__</strong></a>(...)</dt><dd><tt>x.<a href="#boolpcPtr-__delattr__">__delattr__</a>('name')&nbsp;&lt;==&gt;&nbsp;del&nbsp;x.name</tt></dd></dl>
+
+<dl><dt><a name="boolpcPtr-__getattribute__"><strong>__getattribute__</strong></a>(...)</dt><dd><tt>x.<a href="#boolpcPtr-__getattribute__">__getattribute__</a>('name')&nbsp;&lt;==&gt;&nbsp;x.name</tt></dd></dl>
+
+<dl><dt><a name="boolpcPtr-__hash__"><strong>__hash__</strong></a>(...)</dt><dd><tt>x.<a href="#boolpcPtr-__hash__">__hash__</a>()&nbsp;&lt;==&gt;&nbsp;hash(x)</tt></dd></dl>
+
+<dl><dt><a name="boolpcPtr-__reduce__"><strong>__reduce__</strong></a>(...)</dt><dd><tt>helper&nbsp;for&nbsp;pickle</tt></dd></dl>
+
+<dl><dt><a name="boolpcPtr-__str__"><strong>__str__</strong></a>(...)</dt><dd><tt>x.<a href="#boolpcPtr-__str__">__str__</a>()&nbsp;&lt;==&gt;&nbsp;str(x)</tt></dd></dl>
+
+<hr>
+Data and non-method functions inherited from <a href="__builtin__.html#object">__builtin__.object</a>:<br>
+<dl><dt><strong>__class__</strong> = &lt;type 'type'&gt;</dl>
+
+<dl><dt><strong>__new__</strong> = &lt;built-in method __new__ of type object&gt;<dd><tt>T.<a href="#boolpcPtr-__new__">__new__</a>(S,&nbsp;...)&nbsp;-&gt;&nbsp;a&nbsp;new&nbsp;<a href="__builtin__.html#object">object</a>&nbsp;with&nbsp;type&nbsp;S,&nbsp;a&nbsp;subtype&nbsp;of&nbsp;T</tt></dl>
+
+</td></tr></table></td></tr></table>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;&nbsp;</td>
+<td width="100%"><dl><dt><a name="-LocCliffOp_mult_phase"><strong>LocCliffOp_mult_phase</strong></a>(*args)</dt><dd><tt><a href="#-LocCliffOp_mult_phase">LocCliffOp_mult_phase</a>(<a href="#LocCliffOp">LocCliffOp</a>&nbsp;op1,&nbsp;<a href="#LocCliffOp">LocCliffOp</a>&nbsp;op2)&nbsp;-&gt;&nbsp;<a href="#RightPhase">RightPhase</a></tt></dd></dl>
+ <dl><dt><a name="-_swig_getattr"><strong>_swig_getattr</strong></a>(self, class_type, name)</dt></dl>
+ <dl><dt><a name="-_swig_setattr"><strong>_swig_setattr</strong></a>(self, class_type, name, value)</dt></dl>
+ <dl><dt><a name="-_swig_setattr_nondynamic"><strong>_swig_setattr_nondynamic</strong></a>(self, class_type, name, value, static<font color="#909090">=1</font>)</dt></dl>
+ <dl><dt><a name="-boolpc_frompointer"><strong>boolpc_frompointer</strong></a>(...)</dt></dl>
+</td></tr></table>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;&nbsp;</td>
+<td width="100%"><strong>__file__</strong> = './graphsim.py'<br>
+<strong>__name__</strong> = 'graphsim'<br>
+<strong>_newclass</strong> = 1<br>
+<strong>consts</strong> = &lt;Global variables&gt;<br>
+<strong>lco_H</strong> = &lt;graphsim.LocCliffOpPtr; proxy of C++ LocCliffOp instance at &lt;PyCObject object&gt;&gt;<br>
+<strong>lco_Id</strong> = &lt;graphsim.LocCliffOpPtr; proxy of C++ LocCliffOp instance at &lt;PyCObject object&gt;&gt;<br>
+<strong>lco_S</strong> = &lt;graphsim.LocCliffOpPtr; proxy of C++ LocCliffOp instance at &lt;PyCObject object&gt;&gt;<br>
+<strong>lco_Sh</strong> = &lt;graphsim.LocCliffOpPtr; proxy of C++ LocCliffOp instance at &lt;PyCObject object&gt;&gt;<br>
+<strong>lco_X</strong> = &lt;graphsim.LocCliffOpPtr; proxy of C++ LocCliffOp instance at &lt;PyCObject object&gt;&gt;<br>
+<strong>lco_Y</strong> = &lt;graphsim.LocCliffOpPtr; proxy of C++ LocCliffOp instance at &lt;PyCObject object&gt;&gt;<br>
+<strong>lco_Z</strong> = &lt;graphsim.LocCliffOpPtr; proxy of C++ LocCliffOp instance at &lt;PyCObject object&gt;&gt;<br>
+<strong>lco_smiX</strong> = &lt;graphsim.LocCliffOpPtr; proxy of C++ LocCliffOp instance at &lt;PyCObject object&gt;&gt;<br>
+<strong>lco_smiY</strong> = &lt;graphsim.LocCliffOpPtr; proxy of C++ LocCliffOp instance at &lt;PyCObject object&gt;&gt;<br>
+<strong>lco_smiZ</strong> = &lt;graphsim.LocCliffOpPtr; proxy of C++ LocCliffOp instance at &lt;PyCObject object&gt;&gt;<br>
+<strong>lco_spiX</strong> = &lt;graphsim.LocCliffOpPtr; proxy of C++ LocCliffOp instance at &lt;PyCObject object&gt;&gt;<br>
+<strong>lco_spiY</strong> = &lt;graphsim.LocCliffOpPtr; proxy of C++ LocCliffOp instance at &lt;PyCObject object&gt;&gt;<br>
+<strong>lco_spiZ</strong> = &lt;graphsim.LocCliffOpPtr; proxy of C++ LocCliffOp instance at &lt;PyCObject object&gt;&gt;<br>
+<strong>num_LocCliffOps</strong> = 24<br>
+<strong>rp_m1</strong> = &lt;graphsim.RightPhasePtr; proxy of C++ RightPhase instance at &lt;PyCObject object&gt;&gt;<br>
+<strong>rp_mI</strong> = &lt;graphsim.RightPhasePtr; proxy of C++ RightPhase instance at &lt;PyCObject object&gt;&gt;<br>
+<strong>rp_p1</strong> = &lt;graphsim.RightPhasePtr; proxy of C++ RightPhase instance at &lt;PyCObject object&gt;&gt;<br>
+<strong>rp_pI</strong> = &lt;graphsim.RightPhasePtr; proxy of C++ RightPhase instance at &lt;PyCObject object&gt;&gt;</td></tr></table>
+</body></html>

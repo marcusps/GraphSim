@@ -1,0 +1,352 @@
+<?xml version='1.0' encoding='iso-8859-1' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.3.4">
+  <compounddef id="stabilizer_8cpp" kind="file">
+    <compoundname>stabilizer.cpp</compoundname>
+    <includes refid="stabilizer_8h" local="yes">stabilizer.h</includes>
+    <includes refid="graphsim_8h" local="yes">graphsim.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <incdepgraph>
+      <node id="60">
+        <label>ext/hash_set</label>
+      </node>
+      <node id="52">
+        <label>stabilizer.cpp</label>
+        <link refid="stabilizer.cpp"/>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="61" relation="include">
+        </childnode>
+        <childnode refid="62" relation="include">
+        </childnode>
+      </node>
+      <node id="61">
+        <label>graphsim.h</label>
+        <link refid="graphsim_8h"/>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="62" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+      </node>
+      <node id="62">
+        <label>stdlib.h</label>
+      </node>
+      <node id="56">
+        <label>cassert</label>
+      </node>
+      <node id="58">
+        <label>string</label>
+      </node>
+      <node id="59">
+        <label>multtbl.tbl</label>
+      </node>
+      <node id="57">
+        <label>loccliff.h</label>
+        <link refid="loccliff_8h"/>
+        <childnode refid="58" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="59" relation="include">
+        </childnode>
+      </node>
+      <node id="55">
+        <label>vector</label>
+      </node>
+      <node id="54">
+        <label>iostream</label>
+      </node>
+      <node id="53">
+        <label>stabilizer.h</label>
+        <link refid="stabilizer_8h"/>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
+        <childnode refid="60" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="stabilizer_8h" kindref="compound">stabilizer.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="graphsim_8h" kindref="compound">graphsim.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>WITH_MATHLINK</highlight></codeline>
+<codeline lineno="4"><highlight class="preprocessor"></highlight><highlight class="preprocessor"><sp/><sp/><sp/>#include<sp/>&lt;mathlink.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="6"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal">Stabilizer::Stabilizer<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="graphsim_8h_1a1" kindref="member">VertexIndex</ref><sp/>numQubits_):</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/>paulis<sp/>(numQubits_,<sp/>vector&lt;<ref refid="structLocCliffOp" kindref="compound">LocCliffOp</ref>&gt;<sp/>(numQubits_,<sp/><ref refid="loccliff_8h_1a1" kindref="member">lco_Id</ref>)),</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/>rowsigns<sp/>(numQubits_,<sp/><ref refid="loccliff_8h_1a14" kindref="member">rp_p1</ref>),</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/>vtxidx<sp/>(numQubits_,<sp/>0)</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/>numQubits<sp/>=<sp/>numQubits_;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal">Stabilizer::Stabilizer<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classGraphRegister" kindref="compound">GraphRegister</ref>&amp;<sp/>gr,<sp/></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>hash_set&lt;VertexIndex&gt;&amp;<sp/>qubits):</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/>paulis<sp/>(qubits.size(),<sp/>vector&lt;<ref refid="structLocCliffOp" kindref="compound">LocCliffOp</ref>&gt;<sp/>(qubits.size(),<sp/><ref refid="loccliff_8h_1a1" kindref="member">lco_Id</ref>)),</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/>rowsigns<sp/>(qubits.size()),</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/>vtxidx<sp/>(qubits.size())</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/>numQubits<sp/>=<sp/>qubits.size<sp/>();</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Build<sp/>the<sp/>graph<sp/>adjacency<sp/>matrix<sp/>with<sp/>Z&apos;s<sp/>and<sp/>X&apos;s<sp/>in<sp/>the<sp/>diagonal</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>and<sp/>apply<sp/>the<sp/>local<sp/>Clifford<sp/>unitaries:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>in<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<ref refid="graphsim_8h_1a3" kindref="member">VtxIdxIter</ref><sp/>i<sp/>=<sp/>qubits.begin();<sp/>i<sp/>!=<sp/>qubits.end();<sp/>i++,<sp/>in++)<sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>rowsigns[in]<sp/>=<sp/><ref refid="structRightPhase" kindref="compound">RightPhase</ref><sp/>(0);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal">	<sp/><sp/><sp/>vtxidx[in]<sp/>=<sp/>*i;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>jn<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<ref refid="graphsim_8h_1a3" kindref="member">VtxIdxIter</ref><sp/>j<sp/>=<sp/>qubits.begin();<sp/>j<sp/>!=<sp/>qubits.end();<sp/>j++,<sp/>jn++)<sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(i==j)<sp/>{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>paulis[in][jn]<sp/>=<sp/><ref refid="loccliff_8h_1a2" kindref="member">lco_X</ref>;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(gr.<ref refid="classGraphRegister_1o0" kindref="member">vertices</ref>[*i].neighbors.find(*j)<sp/>!=</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gr.<ref refid="classGraphRegister_1o0" kindref="member">vertices</ref>[*i].neighbors.end())<sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>paulis[in][jn]<sp/>=<sp/><ref refid="loccliff_8h_1a4" kindref="member">lco_Z</ref>;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>paulis[in][jn]<sp/>=<sp/><ref refid="loccliff_8h_1a1" kindref="member">lco_Id</ref>;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Now<sp/>the<sp/>local<sp/>Clifford<sp/>unitaries:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>conjugate<sp/>(in,<sp/>jn,<sp/>gr.<ref refid="classGraphRegister_1o0" kindref="member">vertices</ref>[*j].byprod);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="46"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal">Stabilizer::Stabilizer<sp/>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>QState<sp/>*<sp/>qs)<sp/>:</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/>paulis<sp/>(qs-&gt;n,<sp/>vector&lt;<ref refid="structLocCliffOp" kindref="compound">LocCliffOp</ref>&gt;<sp/>(qs-&gt;n,<sp/><ref refid="loccliff_8h_1a1" kindref="member">lco_Id</ref>)),</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/>rowsigns<sp/>(qs-&gt;n),</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/>vtxidx<sp/>(qs-&gt;n)</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>optbl[4]<sp/>=<sp/>{0,<sp/>1,<sp/>3,<sp/>2};</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/>numQubits<sp/>=<sp/>qs-&gt;n;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>numQubits;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>rowsigns[i]<sp/>=<sp/><ref refid="structRightPhase" kindref="compound">RightPhase</ref><sp/>(qs-&gt;r[numQubits<sp/>+<sp/>i]);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal">	<sp/><sp/><sp/>vtxidx[i]<sp/>=<sp/>i;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j<sp/>=<sp/>0;<sp/>j<sp/>&lt;<sp/>numQubits;<sp/>j++)<sp/>{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>xhere<sp/>=<sp/>((qs-&gt;x<sp/>[numQubits+i]<sp/>[j<sp/>&gt;&gt;<sp/>5])<sp/>&amp;<sp/>(1<sp/>&lt;&lt;<sp/>(j<sp/>&amp;<sp/>0x1f)))<sp/>&gt;<sp/>0;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>zhere<sp/>=<sp/>((qs-&gt;z<sp/>[numQubits+i]<sp/>[j<sp/>&gt;&gt;<sp/>5])<sp/>&amp;<sp/>(1<sp/>&lt;&lt;<sp/>(j<sp/>&amp;<sp/>0x1f)))<sp/>&gt;<sp/>0;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>paulis[i][j]<sp/>=<sp/><ref refid="structLocCliffOp" kindref="compound">LocCliffOp</ref><sp/>(optbl<sp/>[(zhere&lt;&lt;1)<sp/>|<sp/>xhere]);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Stabilizer::add_row<sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>target,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>addend)</highlight></codeline>
+<codeline lineno="68"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//D<sp/>cerr<sp/>&lt;&lt;<sp/>&quot;adding<sp/>row<sp/>&quot;<sp/>&lt;&lt;<sp/>addend<sp/>&lt;&lt;<sp/>&quot;<sp/>to<sp/>row<sp/>&quot;<sp/>&lt;&lt;<sp/>target<sp/>&lt;&lt;<sp/>endl;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>col<sp/>=<sp/>0;<sp/>col<sp/>&lt;<sp/>numQubits;<sp/>col++)<sp/>{</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>rowsigns[target]<sp/>=<sp/>rowsigns[target]<sp/>+<sp/></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structLocCliffOp_1e0" kindref="member">LocCliffOp::mult_phase</ref><sp/>(paulis[target][col],<sp/>paulis[addend][col]);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>paulis[target][col]<sp/>=<sp/>paulis[target][col]<sp/>*<sp/>paulis[addend][col];</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="75"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Stabilizer::conjugate<sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>row,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>col,<sp/></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structLocCliffOp" kindref="compound">LocCliffOp</ref><sp/>trans)</highlight></codeline>
+<codeline lineno="79"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/>rowsigns[row]<sp/>=<sp/>rowsigns[row]<sp/>+<sp/>paulis[row][col].conjugate<sp/>(trans);<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="81"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Stabilizer::conjugate_column<sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>col,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structLocCliffOp" kindref="compound">LocCliffOp</ref><sp/>trans)</highlight></codeline>
+<codeline lineno="84"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>row<sp/>=<sp/>0;<sp/>row<sp/>&lt;<sp/>numQubits;<sp/>row++)<sp/>{</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>conjugate<sp/>(row,<sp/>col,<sp/>trans);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="88"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Stabilizer::print<sp/>(ostream<sp/>&amp;os)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="91"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>numQubits;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>os<sp/>&lt;&lt;<sp/>rowsigns[i].get_name()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>j<sp/>=<sp/>0;<sp/>j<sp/>&lt;<sp/>numQubits;<sp/>j++)<sp/>{</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>os<sp/>&lt;&lt;<sp/>paulis[i][j].get_name().substr(0,1)<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>os<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="99"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>WITH_MATHLINK</highlight></codeline>
+<codeline lineno="102"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal">MLENV<sp/>mathlinkenv<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal">MLINK<sp/>mathlink<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>close_mathlink<sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="107"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(mathlink)<sp/>{</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>MLPutFunction<sp/>(mathlink,<sp/></highlight><highlight class="stringliteral">&quot;Exit&quot;</highlight><highlight class="normal">,<sp/>0);<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>MLClose<sp/>(mathlink);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(mathlinkenv)<sp/>{</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>MLDeinitialize<sp/>(mathlinkenv);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="115"><highlight class="normal">}<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>establish_mathlink<sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="118"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>err;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/>mathlinkenv<sp/>=<sp/>MLInitialize<sp/>(NULL);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!mathlinkenv)<sp/>{</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>cerr<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;failed<sp/>to<sp/>initialize<sp/>MathLink<sp/>library\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>exit<sp/>(1);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/>atexit<sp/>(close_mathlink);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/>mathlink<sp/>=<sp/>MLOpenString<sp/>(mathlinkenv,<sp/></highlight><highlight class="stringliteral">&quot;-linkname<sp/>\&quot;math<sp/>-mathlink\&quot;&quot;</highlight><highlight class="normal">,<sp/>&amp;err);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>for<sp/>Windows<sp/>or<sp/>Mac,<sp/>replace<sp/>line<sp/>above<sp/>with:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>mathlink<sp/>=<sp/>MLOpenString<sp/>(ep,<sp/>&quot;-linkmode<sp/>launch&quot;,<sp/>&amp;err);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!mathlink)<sp/>{</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>MLDeinitialize<sp/>(mathlinkenv);</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>cerr<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;failed<sp/>to<sp/>establish<sp/>MathLink\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>exit<sp/>(1);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/>MLPutFunction<sp/>(mathlink,<sp/></highlight><highlight class="stringliteral">&quot;EvaluatePacket&quot;</highlight><highlight class="normal">,<sp/>1L);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/>MLPutFunction<sp/>(mathlink,<sp/></highlight><highlight class="stringliteral">&quot;Get&quot;</highlight><highlight class="normal">,<sp/>1L);</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/>MLPutString<sp/>(mathlink,<sp/></highlight><highlight class="stringliteral">&quot;GaussTrans.m&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/>MLEndPacket<sp/>(mathlink);</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>pkt;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>((pkt<sp/>=<sp/>MLNextPacket<sp/>(mathlink))<sp/>&amp;&amp;<sp/>pkt<sp/>!=<sp/>RETURNPKT)</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>MLNewPacket<sp/>(mathlink);</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!pkt)<sp/>{</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>cerr<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;no<sp/>packet.\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/>MLNewPacket<sp/>(mathlink);<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/>DBGOUT<sp/>(</highlight><highlight class="stringliteral">&quot;MathLink<sp/>ready.\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="151"><highlight class="normal">}<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>Stabilizer::compare<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structStabilizer" kindref="compound">Stabilizer</ref><sp/>&amp;othr)</highlight></codeline>
+<codeline lineno="155"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/>assert<sp/>(numQubits<sp/>==<sp/>othr.<ref refid="structStabilizer_1o0" kindref="member">numQubits</ref>);</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*thismatr<sp/>=<sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*)<sp/>malloc<sp/>(2*numQubits*numQubits<sp/>*<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*othrmatr<sp/>=<sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*)<sp/>malloc<sp/>(2*numQubits*numQubits<sp/>*<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>r<sp/>=<sp/>0;<sp/>r<sp/>&lt;<sp/>numQubits;<sp/>r++)<sp/>{</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>c<sp/>=<sp/>0;<sp/>c<sp/>&lt;<sp/>numQubits;<sp/>c++)<sp/>{</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>thismatr<sp/>[numQubits<sp/>*<sp/>2*r<sp/>+<sp/>c]<sp/>=<sp/></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(paulis[r][c]<sp/>==<sp/><ref refid="loccliff_8h_1a2" kindref="member">lco_X</ref><sp/>||<sp/>paulis[r][c]<sp/>==<sp/><ref refid="loccliff_8h_1a3" kindref="member">lco_Y</ref>)<sp/>?<sp/>1<sp/>:<sp/>0;</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>thismatr<sp/>[numQubits<sp/>*<sp/>(2*r+1)<sp/>+<sp/>c]<sp/>=<sp/></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(paulis[r][c]<sp/>==<sp/><ref refid="loccliff_8h_1a4" kindref="member">lco_Z</ref><sp/>||<sp/>paulis[r][c]<sp/>==<sp/><ref refid="loccliff_8h_1a3" kindref="member">lco_Y</ref>)<sp/>?<sp/>1<sp/>:<sp/>0;</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>othrmatr<sp/>[numQubits<sp/>*<sp/>2*r<sp/>+<sp/>c]<sp/>=<sp/></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(othr.<ref refid="structStabilizer_1o1" kindref="member">paulis</ref>[r][c]<sp/>==<sp/><ref refid="loccliff_8h_1a2" kindref="member">lco_X</ref><sp/>||<sp/>othr.<ref refid="structStabilizer_1o1" kindref="member">paulis</ref>[r][c]<sp/>==<sp/><ref refid="loccliff_8h_1a3" kindref="member">lco_Y</ref>)<sp/>?<sp/>1<sp/>:<sp/>0;</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>othrmatr<sp/>[numQubits<sp/>*<sp/>(2*r+1)<sp/>+<sp/>c]<sp/>=<sp/></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(othr.<ref refid="structStabilizer_1o1" kindref="member">paulis</ref>[r][c]<sp/>==<sp/><ref refid="loccliff_8h_1a4" kindref="member">lco_Z</ref><sp/>||<sp/>othr.<ref refid="structStabilizer_1o1" kindref="member">paulis</ref>[r][c]<sp/>==<sp/><ref refid="loccliff_8h_1a3" kindref="member">lco_Y</ref>)<sp/>?<sp/>1<sp/>:<sp/>0;</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!mathlink)<sp/>{</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>establish_mathlink<sp/>();</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/>DBGOUT<sp/>(</highlight><highlight class="stringliteral">&quot;Querying<sp/>Mathematica\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/>MLPutFunction<sp/>(mathlink,<sp/></highlight><highlight class="stringliteral">&quot;EvaluatePacket&quot;</highlight><highlight class="normal">,<sp/>1L);</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//MLPutFunction<sp/>(mathlink,<sp/>&quot;ToString&quot;,<sp/>1L);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/>MLPutFunction<sp/>(mathlink,<sp/></highlight><highlight class="stringliteral">&quot;getGaussTrans&quot;</highlight><highlight class="normal">,<sp/>2L);</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>dims[]<sp/>=<sp/>{numQubits,<sp/>2*numQubits};</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/>MLPutIntegerArray<sp/>(mathlink,<sp/>thismatr,<sp/>dims,<sp/>NULL,<sp/>2);</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/>MLPutIntegerArray<sp/>(mathlink,<sp/>othrmatr,<sp/>dims,<sp/>NULL,<sp/>2);</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/>MLEndPacket<sp/>(mathlink);</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(MLNextPacket<sp/>(mathlink)<sp/>!=<sp/>RETURNPKT)<sp/>{</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>MLNewPacket<sp/>(mathlink);</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(MLError<sp/>(mathlink))<sp/>{</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cerr<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;MathLink<sp/>error:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>MLErrorMessage<sp/>(mathlink)<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cerr<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Exiting.&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>exit<sp/>(1);</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//char<sp/>*reply;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//MLGetString<sp/>(mathlink,<sp/>(const<sp/>char<sp/>**)<sp/>&amp;reply);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//cout<sp/>&lt;&lt;<sp/>&quot;Mathematika<sp/>says:<sp/>&quot;<sp/>&lt;&lt;<sp/>reply<sp/>&lt;&lt;<sp/>endl;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//MLDisownString<sp/>(mathlink,<sp/>reply);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//return<sp/>true;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*trans;</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>*rdims;</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**heads;</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>depth;</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/>MLGetIntegerArray<sp/>(mathlink,<sp/>&amp;trans,<sp/>&amp;rdims,<sp/>&amp;heads,<sp/>&amp;depth);</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/>DBGOUT<sp/>(</highlight><highlight class="stringliteral">&quot;Got<sp/>reply.\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/>assert<sp/>(depth<sp/>==<sp/>2);</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/>assert<sp/>(heads[0]<sp/>==<sp/>string<sp/>(</highlight><highlight class="stringliteral">&quot;List&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/>assert<sp/>(heads[1]<sp/>==<sp/>string<sp/>(</highlight><highlight class="stringliteral">&quot;List&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/>assert<sp/>(rdims[0]<sp/>==<sp/>numQubits);</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/>assert<sp/>(rdims[1]<sp/>==<sp/>numQubits);</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(trans[0]<sp/>==<sp/>-1)<sp/>{</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>DBGOUT<sp/>(</highlight><highlight class="stringliteral">&quot;Stabilizers<sp/>differ.<sp/>No<sp/>transformation<sp/>found!&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/>}<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>What<sp/>we<sp/>now<sp/>have<sp/>in<sp/>trans<sp/>is<sp/>a<sp/>description<sp/>on<sp/>how<sp/>to<sp/>transform</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>this<sp/>stabilizer<sp/>to<sp/>get<sp/>the<sp/>other<sp/>one.<sp/>trans<sp/>is<sp/>to<sp/>be<sp/>read<sp/>as<sp/>a<sp/>matrix</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>to<sp/>be<sp/>left-multiplied<sp/>with<sp/>the<sp/>stabilizer.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Do<sp/>the<sp/>transformation,<sp/>i.e.<sp/>multiply<sp/>trans<sp/>with<sp/>this<sp/>stab</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>and<sp/>store<sp/>the<sp/>result<sp/>in<sp/>trstab.<sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><ref refid="structStabilizer" kindref="compound">Stabilizer</ref><sp/>trstab<sp/>(numQubits);</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>r<sp/>=<sp/>0;<sp/>r<sp/>&lt;<sp/>numQubits;<sp/>r++)<sp/>{</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>c<sp/>=<sp/>0;<sp/>c<sp/>&lt;<sp/>numQubits;<sp/>c++)<sp/>{</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert<sp/>(trans<sp/>[r*numQubits<sp/>+<sp/>c]<sp/>==<sp/>0<sp/>||<sp/>trans<sp/>[r*numQubits<sp/>+<sp/>c]<sp/>==<sp/>1);</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(trans<sp/>[r*numQubits<sp/>+<sp/>c])<sp/>{</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>add<sp/>row<sp/>c<sp/>of<sp/>this<sp/>stab<sp/>to<sp/>row<sp/>r<sp/>of<sp/>trstab</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>trstab.<ref refid="structStabilizer_1o2" kindref="member">rowsigns</ref>[r]<sp/>=<sp/>trstab.<ref refid="structStabilizer_1o2" kindref="member">rowsigns</ref>[r]<sp/>+<sp/>rowsigns[c];</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>cc<sp/>=<sp/>0;<sp/>cc<sp/>&lt;<sp/>numQubits;<sp/>cc++)<sp/>{</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>trstab.<ref refid="structStabilizer_1o1" kindref="member">paulis</ref>[r][cc]<sp/>=<sp/>trstab.<ref refid="structStabilizer_1o1" kindref="member">paulis</ref>[r][cc]<sp/>*<sp/>paulis[c][cc];</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>trstab.<ref refid="structStabilizer_1o2" kindref="member">rowsigns</ref>[r]<sp/>=<sp/>trstab.<ref refid="structStabilizer_1o2" kindref="member">rowsigns</ref>[r]<sp/>+</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structLocCliffOp_1e0" kindref="member">LocCliffOp::mult_phase</ref><sp/>(trstab.<ref refid="structStabilizer_1o1" kindref="member">paulis</ref>[r][cc],<sp/>paulis[c][cc]);</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>We<sp/>don&apos;t<sp/>need<sp/>these<sp/>anymore:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/>free<sp/>(thismatr);</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/>free<sp/>(othrmatr);</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/>MLDisownIntegerArray<sp/>(mathlink,<sp/>trans,<sp/>rdims,<sp/>heads,<sp/>depth);<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//Now,<sp/>compare<sp/>the<sp/>other<sp/>stab<sp/>with<sp/>trstab:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>r<sp/>=<sp/>0;<sp/>r<sp/>&lt;<sp/>numQubits;<sp/>r++)<sp/>{</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(othr.<ref refid="structStabilizer_1o2" kindref="member">rowsigns</ref>[r]<sp/>!=<sp/>trstab.<ref refid="structStabilizer_1o2" kindref="member">rowsigns</ref>[r])<sp/>{</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DBGOUT<sp/>(</highlight><highlight class="stringliteral">&quot;Stabilizer<sp/>differ:<sp/>Mismatch<sp/>of<sp/>rowsigns<sp/>in<sp/>row<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>r<sp/>&lt;&lt;<sp/>endl);</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>c<sp/>=<sp/>0;<sp/>c<sp/>&lt;<sp/>numQubits;<sp/>c++)<sp/>{</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>this<sp/>fails<sp/>there<sp/>is<sp/>something<sp/>wrong<sp/>with<sp/>the<sp/>Mathematica<sp/>part:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert<sp/>(othr.<ref refid="structStabilizer_1o1" kindref="member">paulis</ref>[r][c]<sp/>==<sp/>trstab.<ref refid="structStabilizer_1o1" kindref="member">paulis</ref>[r][c]);</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="253"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"></highlight></codeline>
+<codeline lineno="255"><highlight class="normal"></highlight><highlight class="preprocessor">#else<sp/>//WITH_MATHLINK<sp/></highlight></codeline>
+<codeline lineno="256"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="257"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>Stabilizer::compare<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structStabilizer" kindref="compound">Stabilizer</ref><sp/>&amp;othr)</highlight></codeline>
+<codeline lineno="258"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/>cerr<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;not<sp/>compiled<sp/>for<sp/>use<sp/>with<sp/>MathLink&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/>exit<sp/>(1);</highlight></codeline>
+<codeline lineno="261"><highlight class="normal">}<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="262"><highlight class="normal"></highlight></codeline>
+<codeline lineno="263"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//WITH_MATHLINK</highlight></codeline>
+    </programlisting>
+    <location file="/net/dopey1/sanders/work/graphsim-0.10/stabilizer.cpp"/>
+  </compounddef>
+</doxygen>

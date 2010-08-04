@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='iso-8859-1' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.3.4">
+  <compounddef id="structEdge" kind="struct">
+    <compoundname>Edge</compoundname>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structEdge_1a0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Edge::Edge</definition>
+        <argsstring>(const  VertexIndex a, const  VertexIndex b)</argsstring>
+        <name>Edge</name>
+        <param>
+          <type>const <ref refid="graphsim_8h_1a1" kindref="member">VertexIndex</ref></type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const <ref refid="graphsim_8h_1a1" kindref="member">VertexIndex</ref></type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <location file="/net/dopey1/sanders/work/graphsim-0.10/graphsim.cpp" line="206" bodystart="206" bodyend="212"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This structure is needed only by toggle_edges. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/net/dopey1/sanders/work/graphsim-0.10/graphsim.cpp" line="205" bodystart="205" bodyend="213"/>
+    <listofallmembers>
+      <member refid="structEdge_1a0" prot="public" virt="non-virtual"><scope>Edge</scope><name>Edge</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

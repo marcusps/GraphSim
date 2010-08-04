@@ -1,0 +1,131 @@
+\section{Graph\-Register Class Reference}
+\label{classGraphRegister}\index{GraphRegister@{GraphRegister}}
+A quantum register.  
+
+
+{\tt \#include $<$graphsim.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+{\bf Graph\-Register} ({\bf Vertex\-Index} num\-Qubits, int randomize=-1)
+\begin{CompactList}\small\item\em Instantiate a quantum register with 'num\-Qubits' qubits, initally all in state $|$0$>$. \item\end{CompactList}\item 
+{\bf Graph\-Register} ({\bf Graph\-Register} \&gr)
+\begin{CompactList}\small\item\em Copy constructor. \item\end{CompactList}\item 
+void {\bf local\_\-op} ({\bf Vertex\-Index} v, {\bf Loc\-Cliff\-Op} o)
+\item 
+void {\bf hadamard} ({\bf Vertex\-Index} v)
+\item 
+void {\bf phaserot} ({\bf Vertex\-Index} v)
+\item 
+void {\bf bitflip} ({\bf Vertex\-Index} v)
+\item 
+void {\bf phaseflip} ({\bf Vertex\-Index} v)
+\item 
+void {\bf cphase} ({\bf Vertex\-Index} v1, {\bf Vertex\-Index} v2)\label{classGraphRegister_a8}
+
+\begin{CompactList}\small\item\em Do a conditional phase gate between the two qubits. \item\end{CompactList}\item 
+void {\bf cnot} ({\bf Vertex\-Index} vc, {\bf Vertex\-Index} vt)\label{classGraphRegister_a9}
+
+\begin{CompactList}\small\item\em Do a controlled not gate between the vertices vc (control) and vt (target). \item\end{CompactList}\item 
+int {\bf measure} ({\bf Vertex\-Index} v, {\bf Loc\-Cliff\-Op} basis={\bf lco\_\-Z}, bool $\ast$determined=NULL, int force=-1)\label{classGraphRegister_a10}
+
+\begin{CompactList}\small\item\em Measure qubit v in basis 'basis'. \item\end{CompactList}\item 
+{\bf Stabilizer} \& {\bf get\_\-full\_\-stabilizer} (void) const 
+\begin{CompactList}\small\item\em Create the {\bf Stabilizer}{\rm (p.\,\pageref{structStabilizer})} of the state. \item\end{CompactList}\item 
+void {\bf invert\_\-neighborhood} ({\bf Vertex\-Index} v)\label{classGraphRegister_a12}
+
+\begin{CompactList}\small\item\em Do a neighborhood inversion (i.e. local complementation) about vertex v. \item\end{CompactList}\item 
+void {\bf print\_\-adj\_\-list} (ostream \&os=cout) const 
+\begin{CompactList}\small\item\em Prints out the description of the current state. \item\end{CompactList}\item 
+void {\bf print\_\-adj\_\-list\_\-line} (ostream \&os, {\bf Vertex\-Index} i) const \label{classGraphRegister_a14}
+
+\begin{CompactList}\small\item\em Prints the line for Vertex i in the adjacency list representation of the state. \item\end{CompactList}\item 
+void {\bf print\_\-stabilizer} (ostream \&os=cout) const \label{classGraphRegister_a15}
+
+\begin{CompactList}\small\item\em Print the current state in stabilizer representation. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Public Attributes}
+\begin{CompactItemize}
+\item 
+vector$<$ {\bf Qubit\-Vertex} $>$ {\bf vertices}
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+A quantum register. 
+
+Graph\-Register is the central class of graphsim. It represents a register of qubits that can be entangled with each other. It offers functions to initialize the register, let gates operate on the qubits, do measurements and print out the state. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{GraphRegister@{Graph\-Register}!GraphRegister@{GraphRegister}}
+\index{GraphRegister@{GraphRegister}!GraphRegister@{Graph\-Register}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Graph\-Register::Graph\-Register ({\bf Vertex\-Index} {\em num\-Qubits}, int {\em randomize} = -1)}\label{classGraphRegister_a0}
+
+
+Instantiate a quantum register with 'num\-Qubits' qubits, initally all in state $|$0$>$. 
+
+If randomize $>$ -1 the RNG will be seeded with the current time plus the value of randomize. (Otherwise, it is not seeded.) That the value of randomize is added to the seed is useful in parallel processing settings where you want to ensure different seeds. (If you call this from Python, remember, that Python's RNG is not seeded.) \index{GraphRegister@{Graph\-Register}!GraphRegister@{GraphRegister}}
+\index{GraphRegister@{GraphRegister}!GraphRegister@{Graph\-Register}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Graph\-Register::Graph\-Register ({\bf Graph\-Register} \& {\em gr})}\label{classGraphRegister_a1}
+
+
+Copy constructor. 
+
+Clones a register 
+
+\subsection{Member Function Documentation}
+\index{GraphRegister@{Graph\-Register}!bitflip@{bitflip}}
+\index{bitflip@{bitflip}!GraphRegister@{Graph\-Register}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void Graph\-Register::bitflip ({\bf Vertex\-Index} {\em v})\hspace{0.3cm}{\tt  [inline]}}\label{classGraphRegister_a6}
+
+
+Apply a bitflip gate (i.e. a Pauli X) on vertex v \index{GraphRegister@{Graph\-Register}!get_full_stabilizer@{get\_\-full\_\-stabilizer}}
+\index{get_full_stabilizer@{get\_\-full\_\-stabilizer}!GraphRegister@{Graph\-Register}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf Stabilizer} \& Graph\-Register::get\_\-full\_\-stabilizer (void) const}\label{classGraphRegister_a11}
+
+
+Create the {\bf Stabilizer}{\rm (p.\,\pageref{structStabilizer})} of the state. 
+
+This is useful to print out the stabilizer (or to compare with CHP). You can also use print\_\-stabilizer. \index{GraphRegister@{Graph\-Register}!hadamard@{hadamard}}
+\index{hadamard@{hadamard}!GraphRegister@{Graph\-Register}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void Graph\-Register::hadamard ({\bf Vertex\-Index} {\em v})\hspace{0.3cm}{\tt  [inline]}}\label{classGraphRegister_a4}
+
+
+Apply a Hadamard gate on vertex v \index{GraphRegister@{Graph\-Register}!local_op@{local\_\-op}}
+\index{local_op@{local\_\-op}!GraphRegister@{Graph\-Register}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void Graph\-Register::local\_\-op ({\bf Vertex\-Index} {\em v}, {\bf Loc\-Cliff\-Op} {\em o})\hspace{0.3cm}{\tt  [inline]}}\label{classGraphRegister_a3}
+
+
+Apply the local (i.e. single-qubit) operation o on vertex v. \index{GraphRegister@{Graph\-Register}!phaseflip@{phaseflip}}
+\index{phaseflip@{phaseflip}!GraphRegister@{Graph\-Register}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void Graph\-Register::phaseflip ({\bf Vertex\-Index} {\em v})\hspace{0.3cm}{\tt  [inline]}}\label{classGraphRegister_a7}
+
+
+Apply a phaseflip gate (i.e. a Pauli Z) on vertex v \index{GraphRegister@{Graph\-Register}!phaserot@{phaserot}}
+\index{phaserot@{phaserot}!GraphRegister@{Graph\-Register}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void Graph\-Register::phaserot ({\bf Vertex\-Index} {\em v})\hspace{0.3cm}{\tt  [inline]}}\label{classGraphRegister_a5}
+
+
+Apply a phaserot gate on vertex v. Phaserot means the gate S = $|$0$>$$<$0$|$ + i $|$1$>$$<$1$|$. \index{GraphRegister@{Graph\-Register}!print_adj_list@{print\_\-adj\_\-list}}
+\index{print_adj_list@{print\_\-adj\_\-list}!GraphRegister@{Graph\-Register}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void Graph\-Register::print\_\-adj\_\-list (ostream \& {\em os} = cout) const}\label{classGraphRegister_a13}
+
+
+Prints out the description of the current state. 
+
+in terms of adjacency lists of the graph and the VOps. 
+
+\subsection{Member Data Documentation}
+\index{GraphRegister@{Graph\-Register}!vertices@{vertices}}
+\index{vertices@{vertices}!GraphRegister@{Graph\-Register}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf Qubit\-Vertex}$>$ {\bf Graph\-Register::vertices}}\label{classGraphRegister_o0}
+
+
+This vector stores all the qubits, represented as {\bf Qubit\-Vertex}{\rm (p.\,\pageref{structQubitVertex})} objects. The index of the vector is usually taken as of type Vertex\-Index. 
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+{\bf graphsim.h}\item 
+graphsim.cpp\end{CompactItemize}

@@ -1,0 +1,82 @@
+\section{Loc\-Cliff\-Op Struct Reference}
+\label{structLocCliffOp}\index{LocCliffOp@{LocCliffOp}}
+An operator in the local Clifford group.  
+
+
+{\tt \#include $<$loccliff.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+{\bf Loc\-Cliff\-Op} (unsigned short int op\_\-)\label{structLocCliffOp_a0}
+
+\begin{CompactList}\small\item\em constructor, takes an integer in 0..23. \item\end{CompactList}\item 
+{\bf Loc\-Cliff\-Op} (unsigned short int signsymb, unsigned short int permsymb)
+\begin{CompactList}\small\item\em constructor, takes a sign symbol in 0..3 (for I, X, Y, Z) and a \item\end{CompactList}\item 
+string {\bf get\_\-name} (void) const \label{structLocCliffOp_a2}
+
+\begin{CompactList}\small\item\em returns something like e.g. \char`\"{}YC\char`\"{} for Hadamard=Y$^\wedge$C \item\end{CompactList}\item 
+{\bf Right\-Phase} {\bf conjugate} (const  {\bf Loc\-Cliff\-Op} trans)
+\begin{CompactList}\small\item\em replaces op by trans $\ast$ op $\ast$ trans$^\wedge$dagger and returns a phase, \item\end{CompactList}\item 
+{\bf Loc\-Cliff\-Op} {\bf herm\_\-adjoint} (void) const \label{structLocCliffOp_a4}
+
+\begin{CompactList}\small\item\em returns the Hermitian adjoint of op \item\end{CompactList}\item 
+bool {\bf is\-XY} (void) const \label{structLocCliffOp_a5}
+
+\begin{CompactList}\small\item\em returns True if op is XA or YA. \item\end{CompactList}\item 
+bool {\bf is\_\-diagonal} (void) const \label{structLocCliffOp_a6}
+
+\begin{CompactList}\small\item\em returns True if op is an operator diagonal in the computational basis \item\end{CompactList}\item 
+Right\-Matrix {\bf get\_\-matrix} (void) const \label{structLocCliffOp_a7}
+
+\end{CompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{CompactItemize}
+\item 
+{\bf Right\-Phase} {\bf mult\_\-phase} ({\bf Loc\-Cliff\-Op} op1, {\bf Loc\-Cliff\-Op} op2)\label{structLocCliffOp_e0}
+
+\begin{CompactList}\small\item\em returns the phase of the multiplication of op1 $\ast$ op2 \item\end{CompactList}\end{CompactItemize}
+\subsection*{Public Attributes}
+\begin{CompactItemize}
+\item 
+unsigned short {\bf op}
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+An operator in the local Clifford group. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{LocCliffOp@{Loc\-Cliff\-Op}!LocCliffOp@{LocCliffOp}}
+\index{LocCliffOp@{LocCliffOp}!LocCliffOp@{Loc\-Cliff\-Op}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Loc\-Cliff\-Op::Loc\-Cliff\-Op (unsigned short int {\em signsymb}, unsigned short int {\em permsymb})\hspace{0.3cm}{\tt  [inline]}}\label{structLocCliffOp_a1}
+
+
+constructor, takes a sign symbol in 0..3 (for I, X, Y, Z) and a 
+
+permutation symbol 0..5 (for A, B, ..., F) 
+
+\subsection{Member Function Documentation}
+\index{LocCliffOp@{Loc\-Cliff\-Op}!conjugate@{conjugate}}
+\index{conjugate@{conjugate}!LocCliffOp@{Loc\-Cliff\-Op}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf Right\-Phase} Loc\-Cliff\-Op::conjugate (const {\bf Loc\-Cliff\-Op} {\em trans})}\label{structLocCliffOp_a3}
+
+
+replaces op by trans $\ast$ op $\ast$ trans$^\wedge$dagger and returns a phase, 
+
+either +1 or -1 (as Right\-Phase(0) or Right\-Phase(2)) 
+
+\subsection{Member Data Documentation}
+\index{LocCliffOp@{Loc\-Cliff\-Op}!op@{op}}
+\index{op@{op}!LocCliffOp@{Loc\-Cliff\-Op}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}unsigned short {\bf Loc\-Cliff\-Op::op}}\label{structLocCliffOp_o0}
+
+
+The field 'op' identifies the operator. 0 is identity I, 1 is Pauli X, 2 is Pauli Y, 3 is Pauli Z, 4 is I$^\wedge$B, 5 is I$^\wedge$C etc. 
+
+The documentation for this struct was generated from the following files:\begin{CompactItemize}
+\item 
+{\bf loccliff.h}\item 
+loccliff.cpp\end{CompactItemize}

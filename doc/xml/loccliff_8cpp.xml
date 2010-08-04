@@ -1,0 +1,203 @@
+<?xml version='1.0' encoding='iso-8859-1' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.3.4">
+  <compounddef id="loccliff_8cpp" kind="file">
+    <compoundname>loccliff.cpp</compoundname>
+    <includes refid="loccliff_8h" local="yes">loccliff.h</includes>
+    <includes local="no">iostream</includes>
+    <incdepgraph>
+      <node id="38">
+        <label>loccliff.cpp</label>
+        <link refid="loccliff.cpp"/>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+      </node>
+      <node id="40">
+        <label>string</label>
+      </node>
+      <node id="42">
+        <label>multtbl.tbl</label>
+      </node>
+      <node id="39">
+        <label>loccliff.h</label>
+        <link refid="loccliff_8h"/>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+      </node>
+      <node id="41">
+        <label>vector</label>
+      </node>
+      <node id="43">
+        <label>iostream</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>loccliff.cpp</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>version<sp/>v0.10,<sp/>of<sp/>2004-10-28</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Copyright<sp/>(C)<sp/>2004<sp/><sp/>Simon<sp/>Anders<sp/><sp/>&lt;sanders@fs.tum.de&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Institute<sp/>of<sp/>Theoretical<sp/>Physics,<sp/>University<sp/>of<sp/>Innsbruck,<sp/>Austria</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//<sp/>----------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/>This<sp/>file<sp/>is<sp/>free<sp/>software;<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or<sp/>modify</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License<sp/>as<sp/>published<sp/>by</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/>the<sp/>Free<sp/>Software<sp/>Foundation;<sp/>either<sp/>version<sp/>2,<sp/>or<sp/>(at<sp/>your<sp/>option)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//<sp/>any<sp/>later<sp/>version.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//<sp/>This<sp/>file<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//<sp/>but<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">//<sp/>MERCHANTABILITY<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">//<sp/>GNU<sp/>General<sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">//<sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">//<sp/>along<sp/>with<sp/>this<sp/>file;<sp/>see<sp/>the<sp/>file<sp/>COPYING.<sp/><sp/>If<sp/>not,<sp/>browse<sp/>to<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">//<sp/>http://www.fsf.org/licenses/gpl.html</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">//<sp/>----------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="loccliff_8h" kindref="compound">loccliff.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">std;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="structLocCliffOp_1a2" refkind="member"><highlight class="normal">string<sp/><ref refid="structLocCliffOp_1a2" kindref="member">LocCliffOp::get_name</ref><sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="31"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>paulinames[]<sp/>=<sp/>{</highlight><highlight class="stringliteral">&quot;I&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;X&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Y&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Z&quot;</highlight><highlight class="normal">};</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>string<sp/>(paulinames[<ref refid="structLocCliffOp_1o0" kindref="member">op</ref><sp/>&amp;<sp/>0x03])<sp/>+<sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">)<sp/>(</highlight><highlight class="charliteral">&apos;A&apos;</highlight><highlight class="normal"><sp/>+<sp/><ref refid="structLocCliffOp_1o0" kindref="member">op</ref><sp/>/<sp/>4);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="structLocCliffOp_1a3" refkind="member"><highlight class="normal"><ref refid="structRightPhase" kindref="compound">RightPhase</ref><sp/><ref refid="structLocCliffOp_1a3" kindref="member">LocCliffOp::conjugate</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structLocCliffOp" kindref="compound">LocCliffOp</ref><sp/>trans)<sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//If<sp/>*this<sp/>is<sp/>the<sp/>identity,<sp/>we<sp/>don&apos;t<sp/>have<sp/>to<sp/>do<sp/>anything</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(*</highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>==<sp/><ref refid="loccliff_8h_1a1" kindref="member">lco_Id</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structRightPhase" kindref="compound">RightPhase</ref><sp/>(0);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//This<sp/>is<sp/>meant<sp/>to<sp/>be<sp/>used<sp/>only<sp/>if<sp/>*this<sp/>is<sp/>a<sp/>Pauli:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/>assert<sp/>(<ref refid="structLocCliffOp_1o0" kindref="member">op</ref><sp/>&gt;=<sp/><ref refid="loccliff_8h_1a2" kindref="member">lco_X</ref>.<ref refid="structLocCliffOp_1o0" kindref="member">op</ref><sp/>&amp;&amp;<sp/><ref refid="structLocCliffOp_1o0" kindref="member">op</ref><sp/>&lt;=<sp/><ref refid="loccliff_8h_1a4" kindref="member">lco_Z</ref>.<ref refid="structLocCliffOp_1o0" kindref="member">op</ref>);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>First<sp/>the<sp/>sign:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><ref refid="structRightPhase" kindref="compound">RightPhase</ref><sp/>zeta;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((trans.<ref refid="structLocCliffOp_1o0" kindref="member">op</ref><sp/>&amp;<sp/>0x03)<sp/>==<sp/>0<sp/>||<sp/>(trans.<ref refid="structLocCliffOp_1o0" kindref="member">op</ref><sp/>&amp;<sp/>0x03)<sp/>==<sp/><ref refid="structLocCliffOp_1o0" kindref="member">op</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>zeta<sp/>=<sp/>+<sp/>sgn<sp/>pi</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>sgn<sp/>pi<sp/>=<sp/>-1<sp/>iff<sp/>trans.op<sp/>&gt;=<sp/>4<sp/>&amp;&amp;<sp/>trans.op<sp/>&lt;=<sp/>15</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(trans.<ref refid="structLocCliffOp_1o0" kindref="member">op</ref><sp/>&gt;=<sp/>4<sp/>&amp;&amp;<sp/>trans.<ref refid="structLocCliffOp_1o0" kindref="member">op</ref><sp/>&lt;=<sp/>15)<sp/>{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>zeta<sp/>=<sp/><ref refid="structRightPhase" kindref="compound">RightPhase</ref><sp/>(2);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>zeta<sp/>=<sp/><ref refid="structRightPhase" kindref="compound">RightPhase</ref><sp/>(0);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>zeta<sp/>=<sp/>-<sp/>sgn<sp/>pi</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>sgn<sp/>pi<sp/>=<sp/>-1<sp/>iff<sp/>trans.op<sp/>&gt;=<sp/>4<sp/>&amp;&amp;<sp/>trans.op<sp/>&lt;=<sp/>15</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(trans.<ref refid="structLocCliffOp_1o0" kindref="member">op</ref><sp/>&gt;=<sp/>4<sp/>&amp;&amp;<sp/>trans.<ref refid="structLocCliffOp_1o0" kindref="member">op</ref><sp/>&lt;=<sp/>15)<sp/>{</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>zeta<sp/>=<sp/><ref refid="structRightPhase" kindref="compound">RightPhase</ref><sp/>(0);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>zeta<sp/>=<sp/><ref refid="structRightPhase" kindref="compound">RightPhase</ref><sp/>(2);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Now<sp/>the<sp/>operator:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>First<sp/>check<sp/>the<sp/>table<sp/>(to<sp/>be<sp/>removed!):</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/>assert<sp/>(loccliff_tables::meas_conj_tbl<sp/>[<ref refid="structLocCliffOp_1o0" kindref="member">op</ref>-<ref refid="loccliff_8h_1a2" kindref="member">lco_X</ref>.<ref refid="structLocCliffOp_1o0" kindref="member">op</ref>]<sp/>[trans.<ref refid="structLocCliffOp_1o0" kindref="member">op</ref>]<sp/></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>==<sp/>trans<sp/>*<sp/><ref refid="structLocCliffOp_1o0" kindref="member">op</ref><sp/>*<sp/>trans.<ref refid="structLocCliffOp_1a4" kindref="member">herm_adjoint</ref>());<sp/></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><ref refid="structLocCliffOp_1o0" kindref="member">op</ref><sp/>=<sp/>loccliff_tables::meas_conj_tbl<sp/>[<ref refid="structLocCliffOp_1o0" kindref="member">op</ref>-<ref refid="loccliff_8h_1a2" kindref="member">lco_X</ref>.<ref refid="structLocCliffOp_1o0" kindref="member">op</ref>]<sp/>[trans.<ref refid="structLocCliffOp_1o0" kindref="member">op</ref>];</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>zeta;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal">RightMatrix<sp/>LocCliffOp::get_matrix<sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="71"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/>matrices[24][2][2]<sp/>=<sp/></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>{{{0,<sp/>-1},<sp/>{-1,<sp/>0}},<sp/>{{-1,<sp/>0},<sp/>{0,<sp/>-1}},<sp/>{{-1,<sp/>3},<sp/>{1,<sp/>-1}},<sp/>{{0,<sp/>-1},<sp/>{-1,<sp/></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>2}},<sp/>{{-1,<sp/>0},<sp/>{3,<sp/>-1}},<sp/>{{0,<sp/>-1},<sp/>{-1,<sp/>3}},<sp/>{{0,<sp/>-1},<sp/>{-1,<sp/>1}},<sp/>{{-1,<sp/></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>0},<sp/>{1,<sp/>-1}},<sp/>{{0,<sp/>2},<sp/>{2,<sp/>2}},<sp/>{{0,<sp/>2},<sp/>{0,<sp/>0}},<sp/>{{0,<sp/>0},<sp/>{0,<sp/>2}},<sp/>{{0,</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0},<sp/>{2,<sp/>0}},<sp/>{{0,<sp/>1},<sp/>{3,<sp/>2}},<sp/>{{0,<sp/>3},<sp/>{1,<sp/>2}},<sp/>{{0,<sp/>1},<sp/>{1,<sp/>0}},<sp/>{{0,</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>3},<sp/>{3,<sp/>0}},<sp/>{{0,<sp/>3},<sp/>{0,<sp/>1}},<sp/>{{0,<sp/>1},<sp/>{2,<sp/>1}},<sp/>{{0,<sp/>3},<sp/>{2,<sp/>3}},<sp/>{{0,</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1},<sp/>{0,<sp/>3}},<sp/>{{0,<sp/>0},<sp/>{1,<sp/>3}},<sp/>{{0,<sp/>0},<sp/>{3,<sp/>1}},<sp/>{{0,<sp/>2},<sp/>{3,<sp/>3}},<sp/>{{0,</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>2},<sp/>{1,<sp/>1}}};</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/>RightMatrix<sp/>rm;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/>rm.sqrt2norm<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>2;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j<sp/>=<sp/>0;<sp/>j<sp/>&lt;<sp/>2;<sp/>j++)<sp/>{</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(matrices[<ref refid="structLocCliffOp_1o0" kindref="member">op</ref>][i][j]<sp/>==<sp/>-1)<sp/>{</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rm.ampls[i][j]<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rm.sqrt2norm<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rm.phases[i][j]<sp/>=<sp/><ref refid="structRightPhase" kindref="compound">RightPhase</ref><sp/>(0);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rm.ampls[i][j]<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rm.phases[i][j]<sp/>=<sp/><ref refid="structRightPhase" kindref="compound">RightPhase</ref><sp/>(matrices[op][i][j]);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>rm;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98" refid="structRightPhase_1a2" refkind="member"><highlight class="normal">string<sp/><ref refid="structRightPhase_1a2" kindref="member">RightPhase::get_name</ref><sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="99"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>names[]<sp/>=<sp/>{</highlight><highlight class="stringliteral">&quot;<sp/><sp/>&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;<sp/>i&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;<sp/>-&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;-i&quot;</highlight><highlight class="normal">};</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>string<sp/>(names[<ref refid="structRightPhase_1o0" kindref="member">ph</ref><sp/>&amp;<sp/>0x03]);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>RightMatrix::apply_on_state<sp/>(vector&lt;bool&gt;::reference<sp/>ampl1,<sp/></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>vector&lt;bool&gt;::reference<sp/>ampl2,<sp/><ref refid="structRightPhase" kindref="compound">RightPhase</ref>&amp;<sp/>ph1,<sp/><ref refid="structRightPhase" kindref="compound">RightPhase</ref>&amp;<sp/>ph2)</highlight></codeline>
+<codeline lineno="108"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/>vector&lt;bool&gt;::reference<sp/>amplV[2]<sp/>=<sp/>{ampl1,<sp/>ampl2};</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><ref refid="structRightPhase" kindref="compound">RightPhase</ref><sp/>*phV[2]<sp/>=<sp/>{&amp;ph1,<sp/>&amp;ph2};</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/>RightMatrix<sp/>sum;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>diag[2]<sp/>=<sp/>{</highlight><highlight class="keyword">false</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">};</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>r<sp/>=<sp/>0;<sp/>r<sp/>&lt;<sp/>2;<sp/>r++)<sp/>{</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>c<sp/>=<sp/>0;<sp/>c<sp/>&lt;<sp/>2;<sp/>c++)<sp/>{</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sum.ampls[r][c]<sp/>=<sp/>ampls[r][c]<sp/>&amp;&amp;<sp/>amplV[c];</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sum.phases[r][c]<sp/>=<sp/>phases[r][c]<sp/>+<sp/>*phV[c];</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>r<sp/>=<sp/>0;<sp/>r<sp/>&lt;<sp/>2;<sp/>r++)<sp/>{</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>amplV[r]<sp/>=<sp/>sum.ampls[r][0]<sp/>||<sp/>sum.ampls[r][1];</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!amplV[r])<sp/>{</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">continue</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<sp/>(sum.ampls[r][0]<sp/>&amp;&amp;<sp/>sum.ampls[r][1]))<sp/>{</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>not<sp/>both<sp/>ampls<sp/>present<sp/>-&gt;<sp/>just<sp/>copy<sp/>from<sp/>one</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*phV[r]<sp/>=<sp/>sum.phases[r][sum.ampls[r][0]<sp/>?<sp/>0:<sp/>1];</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>both<sp/>ampls<sp/>present.<sp/>We<sp/>have<sp/>to<sp/>add<sp/>them</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>((sum.phases[r][1].ph<sp/>-<sp/>sum.phases[r][0].ph<sp/>+<sp/>4)<sp/>%<sp/>4)<sp/>{</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>0:</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>They<sp/>are<sp/>the<sp/>same.<sp/>Take<sp/>one:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*phV[r]<sp/>=<sp/>sum.phases[r][0];<sp/></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>2:</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>They<sp/>cancel</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>amplV[r]<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>1:<sp/></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*phV[r]<sp/>=<sp/>sum.phases[r][0];<sp/></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>diag[r]<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>3:<sp/></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*phV[r]<sp/>=<sp/>sum.phases[r][1];<sp/></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>diag[r]<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:<sp/>assert<sp/>(0);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(amplV[0]<sp/>&amp;&amp;<sp/>amplV[1])<sp/>{</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>assert<sp/>(diag[0]<sp/>==<sp/>diag[1]);</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/>assert<sp/>(amplV[0]<sp/>||<sp/>amplV[1]);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>amplV[0]<sp/>?<sp/>diag[0]<sp/>:<sp/>diag[1];<sp/><sp/></highlight></codeline>
+<codeline lineno="156"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/net/dopey1/sanders/work/graphsim-0.10/loccliff.cpp"/>
+  </compounddef>
+</doxygen>

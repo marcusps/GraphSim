@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='iso-8859-1' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.3.4">
+  <compounddef id="structedge__hash" kind="struct">
+    <compoundname>edge_hash</compoundname>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structedge__hash_1a0" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t edge_hash::operator()</definition>
+        <argsstring>(const  Edge &amp;e) const </argsstring>
+        <name>operator()</name>
+        <param>
+          <type>const <ref refid="structEdge" kindref="compound">Edge</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <location file="/net/dopey1/sanders/work/graphsim-0.10/graphsim.cpp" line="218" bodystart="217" bodyend="220"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This structure is needed only by toggle_edges. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/net/dopey1/sanders/work/graphsim-0.10/graphsim.cpp" line="216" bodystart="216" bodyend="221"/>
+    <listofallmembers>
+      <member refid="structedge__hash_1a0" prot="public" virt="non-virtual"><scope>edge_hash</scope><name>operator()</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

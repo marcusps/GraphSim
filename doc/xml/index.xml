@@ -1,0 +1,152 @@
+<?xml version='1.0' encoding='iso-8859-1' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.3.4">
+  <compound refid="structConnectionInfo" kind="struct"><name>ConnectionInfo</name>
+    <member refid="structConnectionInfo_1o0" kind="variable"><name>wasEdge</name></member>
+    <member refid="structConnectionInfo_1o1" kind="variable"><name>non1</name></member>
+    <member refid="structConnectionInfo_1o2" kind="variable"><name>non2</name></member>
+  </compound>
+  <compound refid="structEdge" kind="struct"><name>Edge</name>
+    <member refid="structEdge_1a0" kind="function"><name>Edge</name></member>
+  </compound>
+  <compound refid="structedge__hash" kind="struct"><name>edge_hash</name>
+    <member refid="structedge__hash_1a0" kind="function"><name>operator()</name></member>
+  </compound>
+  <compound refid="classGraphRegister" kind="class"><name>GraphRegister</name>
+    <member refid="classGraphRegister_1a0" kind="function"><name>GraphRegister</name></member>
+    <member refid="classGraphRegister_1a1" kind="function"><name>GraphRegister</name></member>
+    <member refid="classGraphRegister_1a2" kind="function"><name>~GraphRegister</name></member>
+    <member refid="classGraphRegister_1a3" kind="function"><name>local_op</name></member>
+    <member refid="classGraphRegister_1a4" kind="function"><name>hadamard</name></member>
+    <member refid="classGraphRegister_1a5" kind="function"><name>phaserot</name></member>
+    <member refid="classGraphRegister_1a6" kind="function"><name>bitflip</name></member>
+    <member refid="classGraphRegister_1a7" kind="function"><name>phaseflip</name></member>
+    <member refid="classGraphRegister_1a8" kind="function"><name>cphase</name></member>
+    <member refid="classGraphRegister_1a9" kind="function"><name>cnot</name></member>
+    <member refid="classGraphRegister_1a10" kind="function"><name>measure</name></member>
+    <member refid="classGraphRegister_1a11" kind="function"><name>get_full_stabilizer</name></member>
+    <member refid="classGraphRegister_1a12" kind="function"><name>invert_neighborhood</name></member>
+    <member refid="classGraphRegister_1a13" kind="function"><name>print_adj_list</name></member>
+    <member refid="classGraphRegister_1a14" kind="function"><name>print_adj_list_line</name></member>
+    <member refid="classGraphRegister_1a15" kind="function"><name>print_stabilizer</name></member>
+    <member refid="classGraphRegister_1o0" kind="variable"><name>vertices</name></member>
+    <member refid="classGraphRegister_1d0" kind="function"><name>add_edge</name></member>
+    <member refid="classGraphRegister_1d1" kind="function"><name>del_edge</name></member>
+    <member refid="classGraphRegister_1d2" kind="function"><name>toggle_edge</name></member>
+    <member refid="classGraphRegister_1d3" kind="function"><name>graph_Z_measure</name></member>
+    <member refid="classGraphRegister_1d4" kind="function"><name>graph_Y_measure</name></member>
+    <member refid="classGraphRegister_1d5" kind="function"><name>graph_X_measure</name></member>
+    <member refid="classGraphRegister_1d6" kind="function"><name>toggle_edges</name></member>
+    <member refid="classGraphRegister_1d7" kind="function"><name>remove_byprod_op</name></member>
+    <member refid="classGraphRegister_1d8" kind="function"><name>cphase_with_table</name></member>
+    <member refid="classGraphRegister_1d9" kind="function"><name>getConnectionInfo</name></member>
+  </compound>
+  <compound refid="structLocCliffOp" kind="struct"><name>LocCliffOp</name>
+    <member refid="structLocCliffOp_1a0" kind="function"><name>LocCliffOp</name></member>
+    <member refid="structLocCliffOp_1a1" kind="function"><name>LocCliffOp</name></member>
+    <member refid="structLocCliffOp_1a2" kind="function"><name>get_name</name></member>
+    <member refid="structLocCliffOp_1a3" kind="function"><name>conjugate</name></member>
+    <member refid="structLocCliffOp_1a4" kind="function"><name>herm_adjoint</name></member>
+    <member refid="structLocCliffOp_1a5" kind="function"><name>isXY</name></member>
+    <member refid="structLocCliffOp_1a6" kind="function"><name>is_diagonal</name></member>
+    <member refid="structLocCliffOp_1a7" kind="function"><name>get_matrix</name></member>
+    <member refid="structLocCliffOp_1o0" kind="variable"><name>op</name></member>
+    <member refid="structLocCliffOp_1e0" kind="function"><name>mult_phase</name></member>
+  </compound>
+  <compound refid="structQState" kind="struct"><name>QState</name>
+    <member refid="structQState_1o0" kind="variable"><name>n</name></member>
+    <member refid="structQState_1o1" kind="variable"><name>x</name></member>
+    <member refid="structQState_1o2" kind="variable"><name>z</name></member>
+    <member refid="structQState_1o3" kind="variable"><name>r</name></member>
+    <member refid="structQState_1o4" kind="variable"><name>pw</name></member>
+    <member refid="structQState_1o5" kind="variable"><name>over32</name></member>
+  </compound>
+  <compound refid="structQubitVertex" kind="struct"><name>QubitVertex</name>
+    <member refid="structQubitVertex_1a0" kind="function"><name>QubitVertex</name></member>
+    <member refid="structQubitVertex_1o0" kind="variable"><name>byprod</name></member>
+    <member refid="structQubitVertex_1o1" kind="variable"><name>neighbors</name></member>
+  </compound>
+  <compound refid="structRightMatrix" kind="struct"><name>RightMatrix</name>
+    <member refid="structRightMatrix_1a0" kind="function"><name>apply_on_state</name></member>
+    <member refid="structRightMatrix_1o0" kind="variable"><name>sqrt2norm</name></member>
+    <member refid="structRightMatrix_1o1" kind="variable"><name>ampls</name></member>
+    <member refid="structRightMatrix_1o2" kind="variable"><name>phases</name></member>
+  </compound>
+  <compound refid="structRightPhase" kind="struct"><name>RightPhase</name>
+    <member refid="structRightPhase_1a0" kind="function"><name>RightPhase</name></member>
+    <member refid="structRightPhase_1a1" kind="function"><name>RightPhase</name></member>
+    <member refid="structRightPhase_1a2" kind="function"><name>get_name</name></member>
+    <member refid="structRightPhase_1o0" kind="variable"><name>ph</name></member>
+  </compound>
+  <compound refid="structStabilizer" kind="struct"><name>Stabilizer</name>
+    <member refid="structStabilizer_1a0" kind="function"><name>Stabilizer</name></member>
+    <member refid="structStabilizer_1a1" kind="function"><name>Stabilizer</name></member>
+    <member refid="structStabilizer_1a2" kind="function"><name>Stabilizer</name></member>
+    <member refid="structStabilizer_1a3" kind="function"><name>add_row</name></member>
+    <member refid="structStabilizer_1a4" kind="function"><name>conjugate</name></member>
+    <member refid="structStabilizer_1a5" kind="function"><name>conjugate_column</name></member>
+    <member refid="structStabilizer_1a6" kind="function"><name>print</name></member>
+    <member refid="structStabilizer_1a7" kind="function"><name>compare</name></member>
+    <member refid="structStabilizer_1o0" kind="variable"><name>numQubits</name></member>
+    <member refid="structStabilizer_1o1" kind="variable"><name>paulis</name></member>
+    <member refid="structStabilizer_1o2" kind="variable"><name>rowsigns</name></member>
+    <member refid="structStabilizer_1o3" kind="variable"><name>vtxidx</name></member>
+  </compound>
+  <compound refid="namespaceloccliff__tables" kind="namespace"><name>loccliff_tables</name>
+    <member refid="namespaceloccliff__tables_1a0" kind="variable"><name>meas_conj_tbl</name></member>
+    <member refid="namespaceloccliff__tables_1a1" kind="variable"><name>lco_mult_tbl</name></member>
+    <member refid="namespaceloccliff__tables_1a2" kind="variable"><name>adj_tbl</name></member>
+    <member refid="namespaceloccliff__tables_1a3" kind="variable"><name>phase_tbl</name></member>
+  </compound>
+  <compound refid="namespacestd" kind="namespace"><name>std</name>
+  </compound>
+  <compound refid="graphsim_8cpp" kind="file"><name>graphsim.cpp</name>
+    <member refid="graphsim_8cpp_1a0" kind="function"><name>bool_rand</name></member>
+  </compound>
+  <compound refid="graphsim_8h" kind="file"><name>graphsim.h</name>
+    <member refid="graphsim_8h_1a0" kind="define"><name>DBGOUT</name></member>
+    <member refid="graphsim_8h_1a1" kind="typedef"><name>VertexIndex</name></member>
+    <member refid="graphsim_8h_1a2" kind="typedef"><name>VertexIter</name></member>
+    <member refid="graphsim_8h_1a3" kind="typedef"><name>VtxIdxIter</name></member>
+    <member refid="graphsim_8h_1a4" kind="typedef"><name>VertexIterConst</name></member>
+    <member refid="graphsim_8h_1a5" kind="typedef"><name>VtxIdxIterConst</name></member>
+  </compound>
+  <compound refid="gstest_8cpp" kind="file"><name>gstest.cpp</name>
+    <member refid="gstest_8cpp_1a1" kind="function"><name>main</name></member>
+    <member refid="gstest_8cpp_1a0" kind="variable"><name>nbr_of_qubits</name></member>
+  </compound>
+  <compound refid="loccliff_8cpp" kind="file"><name>loccliff.cpp</name>
+  </compound>
+  <compound refid="loccliff_8h" kind="file"><name>loccliff.h</name>
+    <member refid="loccliff_8h_1a18" kind="function"><name>operator *</name></member>
+    <member refid="loccliff_8h_1a19" kind="function"><name>operator==</name></member>
+    <member refid="loccliff_8h_1a20" kind="function"><name>operator!=</name></member>
+    <member refid="loccliff_8h_1a21" kind="function"><name>operator+</name></member>
+    <member refid="loccliff_8h_1a22" kind="function"><name>operator==</name></member>
+    <member refid="loccliff_8h_1a23" kind="function"><name>operator!=</name></member>
+    <member refid="loccliff_8h_1a0" kind="variable"><name>num_LocCliffOps</name></member>
+    <member refid="loccliff_8h_1a1" kind="variable"><name>lco_Id</name></member>
+    <member refid="loccliff_8h_1a2" kind="variable"><name>lco_X</name></member>
+    <member refid="loccliff_8h_1a3" kind="variable"><name>lco_Y</name></member>
+    <member refid="loccliff_8h_1a4" kind="variable"><name>lco_Z</name></member>
+    <member refid="loccliff_8h_1a5" kind="variable"><name>lco_H</name></member>
+    <member refid="loccliff_8h_1a6" kind="variable"><name>lco_spiZ</name></member>
+    <member refid="loccliff_8h_1a7" kind="variable"><name>lco_smiZ</name></member>
+    <member refid="loccliff_8h_1a8" kind="variable"><name>lco_spiY</name></member>
+    <member refid="loccliff_8h_1a9" kind="variable"><name>lco_smiY</name></member>
+    <member refid="loccliff_8h_1a10" kind="variable"><name>lco_spiX</name></member>
+    <member refid="loccliff_8h_1a11" kind="variable"><name>lco_smiX</name></member>
+    <member refid="loccliff_8h_1a12" kind="variable"><name>lco_S</name></member>
+    <member refid="loccliff_8h_1a13" kind="variable"><name>lco_Sh</name></member>
+    <member refid="loccliff_8h_1a14" kind="variable"><name>rp_p1</name></member>
+    <member refid="loccliff_8h_1a15" kind="variable"><name>rp_pI</name></member>
+    <member refid="loccliff_8h_1a16" kind="variable"><name>rp_m1</name></member>
+    <member refid="loccliff_8h_1a17" kind="variable"><name>rp_mI</name></member>
+  </compound>
+  <compound refid="stabilizer_8cpp" kind="file"><name>stabilizer.cpp</name>
+  </compound>
+  <compound refid="stabilizer_8h" kind="file"><name>stabilizer.h</name>
+    <member refid="stabilizer_8h_1a0" kind="typedef"><name>VertexIndex</name></member>
+  </compound>
+  <compound refid="indexpage" kind="page"><name>index</name>
+  </compound>
+</doxygenindex>

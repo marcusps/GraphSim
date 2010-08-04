@@ -1,0 +1,643 @@
+<?xml version='1.0' encoding='iso-8859-1' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.3.4">
+  <compounddef id="loccliff_8h" kind="file">
+    <compoundname>loccliff.h</compoundname>
+    <includes local="no">string</includes>
+    <includes local="no">vector</includes>
+    <includes local="yes">multtbl.tbl</includes>
+    <includedby refid="graphsim_8h" local="yes">graphsim.h</includedby>
+    <includedby refid="stabilizer_8h" local="yes">stabilizer.h</includedby>
+    <includedby refid="loccliff_8cpp" local="yes">loccliff.cpp</includedby>
+    <incdepgraph>
+      <node id="46">
+        <label>string</label>
+      </node>
+      <node id="48">
+        <label>multtbl.tbl</label>
+      </node>
+      <node id="45">
+        <label>loccliff.h</label>
+        <link refid="loccliff.h"/>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+      </node>
+      <node id="47">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="50">
+        <label>graphsim.h</label>
+        <link refid="graphsim_8h"/>
+      </node>
+      <node id="49">
+        <label>loccliff.h</label>
+        <link refid="loccliff.h"/>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+      </node>
+      <node id="51">
+        <label>stabilizer.h</label>
+        <link refid="stabilizer_8h"/>
+        <childnode refid="50" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structLocCliffOp">LocCliffOp</innerclass>
+    <innerclass refid="structRightMatrix">RightMatrix</innerclass>
+    <innerclass refid="structRightPhase">RightPhase</innerclass>
+    <innernamespace refid="namespaceloccliff__tables">loccliff_tables</innernamespace>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="loccliff_8h_1a18" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structLocCliffOp" kindref="compound">LocCliffOp</ref></type>
+        <definition>LocCliffOp operator *</definition>
+        <argsstring>(LocCliffOp a, LocCliffOp b)</argsstring>
+        <name>operator *</name>
+        <param>
+          <type><ref refid="structLocCliffOp" kindref="compound">LocCliffOp</ref></type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type><ref refid="structLocCliffOp" kindref="compound">LocCliffOp</ref></type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+<para>muliplies two local Clifford operators. Not commutative! </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <location file="/net/dopey1/sanders/work/graphsim-0.10/loccliff.h" line="113" bodystart="227" bodyend="230"/>
+        <references refid="structLocCliffOp_1o0" compoundref="loccliff_8h" startline="75">LocCliffOp::op</references>
+      </memberdef>
+      <memberdef kind="function" id="loccliff_8h_1a19" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool operator==</definition>
+        <argsstring>(LocCliffOp a, LocCliffOp b)</argsstring>
+        <name>operator==</name>
+        <param>
+          <type><ref refid="structLocCliffOp" kindref="compound">LocCliffOp</ref></type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type><ref refid="structLocCliffOp" kindref="compound">LocCliffOp</ref></type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+<para>Check two LC operators for equality. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <location file="/net/dopey1/sanders/work/graphsim-0.10/loccliff.h" line="116" bodystart="232" bodyend="235"/>
+        <references refid="structLocCliffOp_1o0" compoundref="loccliff_8h" startline="75">LocCliffOp::op</references>
+      </memberdef>
+      <memberdef kind="function" id="loccliff_8h_1a20" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool operator!=</definition>
+        <argsstring>(LocCliffOp a, LocCliffOp b)</argsstring>
+        <name>operator!=</name>
+        <param>
+          <type><ref refid="structLocCliffOp" kindref="compound">LocCliffOp</ref></type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type><ref refid="structLocCliffOp" kindref="compound">LocCliffOp</ref></type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+<para>Check two LC operators for inequality. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <location file="/net/dopey1/sanders/work/graphsim-0.10/loccliff.h" line="118" bodystart="237" bodyend="240"/>
+        <references refid="structLocCliffOp_1o0" compoundref="loccliff_8h" startline="75">LocCliffOp::op</references>
+      </memberdef>
+      <memberdef kind="function" id="loccliff_8h_1a21" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structRightPhase" kindref="compound">RightPhase</ref></type>
+        <definition>RightPhase operator+</definition>
+        <argsstring>(RightPhase ph1, RightPhase ph2)</argsstring>
+        <name>operator+</name>
+        <param>
+          <type><ref refid="structRightPhase" kindref="compound">RightPhase</ref></type>
+          <declname>ph1</declname>
+        </param>
+        <param>
+          <type><ref refid="structRightPhase" kindref="compound">RightPhase</ref></type>
+          <declname>ph2</declname>
+        </param>
+        <briefdescription>
+<para>Adds two phases (modulo 4). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <location file="/net/dopey1/sanders/work/graphsim-0.10/loccliff.h" line="121" bodystart="250" bodyend="253"/>
+        <references refid="structRightPhase_1o0" compoundref="loccliff_8h" startline="46">RightPhase::ph</references>
+      </memberdef>
+      <memberdef kind="function" id="loccliff_8h_1a22" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool operator==</definition>
+        <argsstring>(RightPhase ph1, RightPhase ph2)</argsstring>
+        <name>operator==</name>
+        <param>
+          <type><ref refid="structRightPhase" kindref="compound">RightPhase</ref></type>
+          <declname>ph1</declname>
+          <defname>a</defname>
+        </param>
+        <param>
+          <type><ref refid="structRightPhase" kindref="compound">RightPhase</ref></type>
+          <declname>ph2</declname>
+          <defname>b</defname>
+        </param>
+        <briefdescription>
+<para>Check two phases for equality. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <location file="/net/dopey1/sanders/work/graphsim-0.10/loccliff.h" line="124" bodystart="255" bodyend="258"/>
+        <references refid="structRightPhase_1o0" compoundref="loccliff_8h" startline="46">RightPhase::ph</references>
+      </memberdef>
+      <memberdef kind="function" id="loccliff_8h_1a23" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool operator!=</definition>
+        <argsstring>(RightPhase ph1, RightPhase ph2)</argsstring>
+        <name>operator!=</name>
+        <param>
+          <type><ref refid="structRightPhase" kindref="compound">RightPhase</ref></type>
+          <declname>ph1</declname>
+          <defname>a</defname>
+        </param>
+        <param>
+          <type><ref refid="structRightPhase" kindref="compound">RightPhase</ref></type>
+          <declname>ph2</declname>
+          <defname>b</defname>
+        </param>
+        <briefdescription>
+<para>Check two phases for inequality. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <location file="/net/dopey1/sanders/work/graphsim-0.10/loccliff.h" line="126" bodystart="259" bodyend="262"/>
+        <references refid="structRightPhase_1o0" compoundref="loccliff_8h" startline="46">RightPhase::ph</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="loccliff_8h_1a0" prot="public" static="no" volatile="no" mutable="no">
+        <type>const  unsigned short</type>
+        <definition>const unsigned short num_LocCliffOps</definition>
+        <argsstring></argsstring>
+        <name>num_LocCliffOps</name>
+        <initializer> 24</initializer>
+        <briefdescription>
+<para>There are 24 local Clifford operators. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <location file="/net/dopey1/sanders/work/graphsim-0.10/loccliff.h" line="133" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="loccliff_8h_1a1" prot="public" static="no" volatile="no" mutable="no">
+        <type>const  <ref refid="structLocCliffOp" kindref="compound">LocCliffOp</ref></type>
+        <definition>const LocCliffOp lco_Id</definition>
+        <argsstring></argsstring>
+        <name>lco_Id</name>
+        <initializer> 0</initializer>
+        <briefdescription>
+<para>Identity. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <location file="/net/dopey1/sanders/work/graphsim-0.10/loccliff.h" line="137" bodystart="136" bodyend="-1"/>
+        <referencedby refid="structLocCliffOp_1a3" compoundref="loccliff_8cpp" startline="36" endline="68">LocCliffOp::conjugate</referencedby>
+        <referencedby refid="structLocCliffOp_1a6" compoundref="loccliff_8h" startline="221" endline="225">LocCliffOp::is_diagonal</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="loccliff_8h_1a2" prot="public" static="no" volatile="no" mutable="no">
+        <type>const  <ref refid="structLocCliffOp" kindref="compound">LocCliffOp</ref></type>
+        <definition>const LocCliffOp lco_X</definition>
+        <argsstring></argsstring>
+        <name>lco_X</name>
+        <initializer> 1</initializer>
+        <briefdescription>
+<para>Pauli X. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <location file="/net/dopey1/sanders/work/graphsim-0.10/loccliff.h" line="138" bodystart="137" bodyend="-1"/>
+        <referencedby refid="classGraphRegister_1a6" compoundref="graphsim_8h" startline="187" endline="189">GraphRegister::bitflip</referencedby>
+        <referencedby refid="structLocCliffOp_1a3" compoundref="loccliff_8cpp" startline="36" endline="68">LocCliffOp::conjugate</referencedby>
+        <referencedby refid="structLocCliffOp_1a5" compoundref="loccliff_8h" startline="216" endline="219">LocCliffOp::isXY</referencedby>
+        <referencedby refid="classGraphRegister_1a10" compoundref="graphsim_8cpp" startline="397" endline="430">GraphRegister::measure</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="loccliff_8h_1a3" prot="public" static="no" volatile="no" mutable="no">
+        <type>const  <ref refid="structLocCliffOp" kindref="compound">LocCliffOp</ref></type>
+        <definition>const LocCliffOp lco_Y</definition>
+        <argsstring></argsstring>
+        <name>lco_Y</name>
+        <initializer> 2</initializer>
+        <briefdescription>
+<para>Pauli Y. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <location file="/net/dopey1/sanders/work/graphsim-0.10/loccliff.h" line="139" bodystart="138" bodyend="-1"/>
+        <referencedby refid="structLocCliffOp_1a5" compoundref="loccliff_8h" startline="216" endline="219">LocCliffOp::isXY</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="loccliff_8h_1a4" prot="public" static="no" volatile="no" mutable="no">
+        <type>const  <ref refid="structLocCliffOp" kindref="compound">LocCliffOp</ref></type>
+        <definition>const LocCliffOp lco_Z</definition>
+        <argsstring></argsstring>
+        <name>lco_Z</name>
+        <initializer> 3</initializer>
+        <briefdescription>
+<para>Pauli Z. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <location file="/net/dopey1/sanders/work/graphsim-0.10/loccliff.h" line="140" bodystart="139" bodyend="-1"/>
+        <referencedby refid="structLocCliffOp_1a3" compoundref="loccliff_8cpp" startline="36" endline="68">LocCliffOp::conjugate</referencedby>
+        <referencedby refid="structLocCliffOp_1a6" compoundref="loccliff_8h" startline="221" endline="225">LocCliffOp::is_diagonal</referencedby>
+        <referencedby refid="classGraphRegister_1a10" compoundref="graphsim_8cpp" startline="397" endline="430">GraphRegister::measure</referencedby>
+        <referencedby refid="structLocCliffOp_1e0" compoundref="loccliff_8h" startline="209" endline="213">LocCliffOp::mult_phase</referencedby>
+        <referencedby refid="classGraphRegister_1a7" compoundref="graphsim_8h" startline="192" endline="194">GraphRegister::phaseflip</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="loccliff_8h_1a5" prot="public" static="no" volatile="no" mutable="no">
+        <type>const  <ref refid="structLocCliffOp" kindref="compound">LocCliffOp</ref></type>
+        <definition>const LocCliffOp lco_H</definition>
+        <argsstring></argsstring>
+        <name>lco_H</name>
+        <initializer> 10</initializer>
+        <briefdescription>
+<para>Hadamard. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <location file="/net/dopey1/sanders/work/graphsim-0.10/loccliff.h" line="141" bodystart="140" bodyend="-1"/>
+        <referencedby refid="classGraphRegister_1a4" compoundref="graphsim_8h" startline="176" endline="178">GraphRegister::hadamard</referencedby>
+        <referencedby refid="structQubitVertex_1a0" compoundref="graphsim_8h" startline="102" endline="103">QubitVertex::QubitVertex</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="loccliff_8h_1a6" prot="public" static="no" volatile="no" mutable="no">
+        <type>const  <ref refid="structLocCliffOp" kindref="compound">LocCliffOp</ref></type>
+        <definition>const LocCliffOp lco_spiZ</definition>
+        <argsstring></argsstring>
+        <name>lco_spiZ</name>
+        <initializer> 5</initializer>
+        <briefdescription>
+<para>Sqrt (+iZ). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <location file="/net/dopey1/sanders/work/graphsim-0.10/loccliff.h" line="142" bodystart="141" bodyend="-1"/>
+        <referencedby refid="classGraphRegister_1a12" compoundref="graphsim_8cpp" startline="435" endline="455">GraphRegister::invert_neighborhood</referencedby>
+        <referencedby refid="structLocCliffOp_1a6" compoundref="loccliff_8h" startline="221" endline="225">LocCliffOp::is_diagonal</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="loccliff_8h_1a7" prot="public" static="no" volatile="no" mutable="no">
+        <type>const  <ref refid="structLocCliffOp" kindref="compound">LocCliffOp</ref></type>
+        <definition>const LocCliffOp lco_smiZ</definition>
+        <argsstring></argsstring>
+        <name>lco_smiZ</name>
+        <initializer> 6</initializer>
+        <briefdescription>
+<para>Sqrt (-iZ). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <location file="/net/dopey1/sanders/work/graphsim-0.10/loccliff.h" line="143" bodystart="142" bodyend="-1"/>
+        <referencedby refid="structLocCliffOp_1a6" compoundref="loccliff_8h" startline="221" endline="225">LocCliffOp::is_diagonal</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="loccliff_8h_1a8" prot="public" static="no" volatile="no" mutable="no">
+        <type>const  <ref refid="structLocCliffOp" kindref="compound">LocCliffOp</ref></type>
+        <definition>const LocCliffOp lco_spiY</definition>
+        <argsstring></argsstring>
+        <name>lco_spiY</name>
+        <initializer> 11</initializer>
+        <briefdescription>
+<para>Sqrt (+iY). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <location file="/net/dopey1/sanders/work/graphsim-0.10/loccliff.h" line="144" bodystart="143" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="loccliff_8h_1a9" prot="public" static="no" volatile="no" mutable="no">
+        <type>const  <ref refid="structLocCliffOp" kindref="compound">LocCliffOp</ref></type>
+        <definition>const LocCliffOp lco_smiY</definition>
+        <argsstring></argsstring>
+        <name>lco_smiY</name>
+        <initializer> 9</initializer>
+        <briefdescription>
+<para>Sqrt (-iY). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <location file="/net/dopey1/sanders/work/graphsim-0.10/loccliff.h" line="145" bodystart="144" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="loccliff_8h_1a10" prot="public" static="no" volatile="no" mutable="no">
+        <type>const  <ref refid="structLocCliffOp" kindref="compound">LocCliffOp</ref></type>
+        <definition>const LocCliffOp lco_spiX</definition>
+        <argsstring></argsstring>
+        <name>lco_spiX</name>
+        <initializer> 14</initializer>
+        <briefdescription>
+<para>Sqrt (+iX). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <location file="/net/dopey1/sanders/work/graphsim-0.10/loccliff.h" line="146" bodystart="145" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="loccliff_8h_1a11" prot="public" static="no" volatile="no" mutable="no">
+        <type>const  <ref refid="structLocCliffOp" kindref="compound">LocCliffOp</ref></type>
+        <definition>const LocCliffOp lco_smiX</definition>
+        <argsstring></argsstring>
+        <name>lco_smiX</name>
+        <initializer> 15</initializer>
+        <briefdescription>
+<para>Sqrt (-iX). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <location file="/net/dopey1/sanders/work/graphsim-0.10/loccliff.h" line="147" bodystart="146" bodyend="-1"/>
+        <referencedby refid="classGraphRegister_1a12" compoundref="graphsim_8cpp" startline="435" endline="455">GraphRegister::invert_neighborhood</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="loccliff_8h_1a12" prot="public" static="no" volatile="no" mutable="no">
+        <type>const  <ref refid="structLocCliffOp" kindref="compound">LocCliffOp</ref></type>
+        <definition>const LocCliffOp lco_S</definition>
+        <argsstring></argsstring>
+        <name>lco_S</name>
+        <initializer> <ref refid="loccliff_8h_1a7" kindref="member">lco_smiZ</ref></initializer>
+        <briefdescription>
+<para>Pi/4 phase rot. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <location file="/net/dopey1/sanders/work/graphsim-0.10/loccliff.h" line="148" bodystart="147" bodyend="-1"/>
+        <referencedby refid="classGraphRegister_1a5" compoundref="graphsim_8h" startline="182" endline="184">GraphRegister::phaserot</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="loccliff_8h_1a13" prot="public" static="no" volatile="no" mutable="no">
+        <type>const  <ref refid="structLocCliffOp" kindref="compound">LocCliffOp</ref></type>
+        <definition>const LocCliffOp lco_Sh</definition>
+        <argsstring></argsstring>
+        <name>lco_Sh</name>
+        <initializer> <ref refid="loccliff_8h_1a6" kindref="member">lco_spiZ</ref></initializer>
+        <briefdescription>
+<para>herm. conj. of Pi/4 phase rot </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <location file="/net/dopey1/sanders/work/graphsim-0.10/loccliff.h" line="149" bodystart="148" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="loccliff_8h_1a14" prot="public" static="no" volatile="no" mutable="no">
+        <type>const  <ref refid="structRightPhase" kindref="compound">RightPhase</ref></type>
+        <definition>const RightPhase rp_p1</definition>
+        <argsstring></argsstring>
+        <name>rp_p1</name>
+        <initializer> 0</initializer>
+        <briefdescription>
+<para>+1 </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <location file="/net/dopey1/sanders/work/graphsim-0.10/loccliff.h" line="152" bodystart="151" bodyend="-1"/>
+        <referencedby refid="classGraphRegister_1a10" compoundref="graphsim_8cpp" startline="397" endline="430">GraphRegister::measure</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="loccliff_8h_1a15" prot="public" static="no" volatile="no" mutable="no">
+        <type>const  <ref refid="structRightPhase" kindref="compound">RightPhase</ref></type>
+        <definition>const RightPhase rp_pI</definition>
+        <argsstring></argsstring>
+        <name>rp_pI</name>
+        <initializer> 1</initializer>
+        <briefdescription>
+<para>+i </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <location file="/net/dopey1/sanders/work/graphsim-0.10/loccliff.h" line="153" bodystart="152" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="loccliff_8h_1a16" prot="public" static="no" volatile="no" mutable="no">
+        <type>const  <ref refid="structRightPhase" kindref="compound">RightPhase</ref></type>
+        <definition>const RightPhase rp_m1</definition>
+        <argsstring></argsstring>
+        <name>rp_m1</name>
+        <initializer> 2</initializer>
+        <briefdescription>
+<para>-1 </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <location file="/net/dopey1/sanders/work/graphsim-0.10/loccliff.h" line="154" bodystart="153" bodyend="-1"/>
+        <referencedby refid="classGraphRegister_1a10" compoundref="graphsim_8cpp" startline="397" endline="430">GraphRegister::measure</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="loccliff_8h_1a17" prot="public" static="no" volatile="no" mutable="no">
+        <type>const  <ref refid="structRightPhase" kindref="compound">RightPhase</ref></type>
+        <definition>const RightPhase rp_mI</definition>
+        <argsstring></argsstring>
+        <name>rp_mI</name>
+        <initializer> 3</initializer>
+        <briefdescription>
+<para>-i </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <location file="/net/dopey1/sanders/work/graphsim-0.10/loccliff.h" line="155" bodystart="154" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="loccliff_8h" kindref="compound">loccliff.h</ref> -- a class for operators in the Clifford group</para><para>version v0.11, of 2005-01-27</para><para>Copyright (C) 2004 Simon Anders &lt;<ulink url="mailto:sanders@fs.tum.de">sanders@fs.tum.de</ulink>&gt; Institute of Theoretical Physics, University of Innsbruck, Austria</para><para>----------</para><para>This file is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2, or (at your option) any later version.</para><para>This file is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</para><para>You should have received a copy of the GNU General Public License along with this file; see the file COPYING. If not, browse to <ulink url="http://www.fsf.org/licenses/gpl.html">http://www.fsf.org/licenses/gpl.html</ulink></para><para>----------</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="28"><highlight class="preprocessor">#ifndef<sp/>LOCCLIFF_H</highlight></codeline>
+<codeline lineno="29"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>LOCCLIFF_H</highlight></codeline>
+<codeline lineno="30"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">std;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="comment">//<sp/>----===<sp/>RightPhase<sp/>===----</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="structRightPhase" refkind="compound"><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structRightPhase" kindref="compound">RightPhase</ref><sp/>{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="46" refid="structRightPhase_1o0" refkind="member"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/><ref refid="structRightPhase_1o0" kindref="member">ph</ref>;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><ref refid="structRightPhase_1a0" kindref="member">RightPhase</ref><sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><ref refid="structRightPhase_1a0" kindref="member">RightPhase</ref><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/>ph_);<sp/></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/>string<sp/><ref refid="structRightPhase_1a2" kindref="member">get_name</ref><sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="52"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="comment">//<sp/>----===<sp/>RightMatrix<sp/>===----</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>SWIG</highlight></codeline>
+<codeline lineno="58"><highlight class="preprocessor"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">RightMatrix<sp/>{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>sqrt2norm;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>ampls[2][2];</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><ref refid="structRightPhase" kindref="compound">RightPhase</ref><sp/>phases[2][2];</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>apply_on_state<sp/>(vector&lt;bool&gt;::reference<sp/>ampl1,<sp/></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>vector&lt;bool&gt;::reference<sp/>ampl2,<sp/><ref refid="structRightPhase" kindref="compound">RightPhase</ref>&amp;<sp/>ph1,<sp/><ref refid="structRightPhase" kindref="compound">RightPhase</ref>&amp;<sp/>ph2);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="66"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="comment">//<sp/>----===<sp/>LocCliffOp<sp/>===----</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71" refid="structLocCliffOp" refkind="compound"><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structLocCliffOp" kindref="compound">LocCliffOp</ref><sp/>{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75" refid="structLocCliffOp_1o0" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/><ref refid="structLocCliffOp_1o0" kindref="member">op</ref>;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><ref refid="structLocCliffOp_1a0" kindref="member">LocCliffOp</ref><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>op_);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><ref refid="structLocCliffOp_1a0" kindref="member">LocCliffOp</ref><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>signsymb,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>permsymb);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/>string<sp/><ref refid="structLocCliffOp_1a2" kindref="member">get_name</ref><sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="88"></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><ref refid="structRightPhase" kindref="compound">RightPhase</ref><sp/><ref refid="structLocCliffOp_1a3" kindref="member">conjugate</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structLocCliffOp" kindref="compound">LocCliffOp</ref><sp/>trans);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><ref refid="structLocCliffOp" kindref="compound">LocCliffOp</ref><sp/><ref refid="structLocCliffOp_1a4" kindref="member">herm_adjoint</ref><sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="structRightPhase" kindref="compound">RightPhase</ref><sp/><ref refid="structLocCliffOp_1e0" kindref="member">mult_phase</ref><sp/>(<ref refid="structLocCliffOp" kindref="compound">LocCliffOp</ref><sp/>op1,<sp/><ref refid="structLocCliffOp" kindref="compound">LocCliffOp</ref><sp/>op2);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structLocCliffOp_1a5" kindref="member">isXY</ref><sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structLocCliffOp_1a6" kindref="member">is_diagonal</ref><sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/>RightMatrix<sp/>get_matrix<sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight><highlight class="comment">//<sp/>----===<sp/>operators<sp/>===----</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>SWIG<sp/><sp/><sp/>//<sp/>I<sp/>should<sp/>add<sp/>names<sp/>for<sp/>the<sp/>operators<sp/>so<sp/>that<sp/>SWIG</highlight></codeline>
+<codeline lineno="110"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>can<sp/>handle<sp/>them</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><ref refid="structLocCliffOp" kindref="compound">LocCliffOp</ref><sp/><ref refid="loccliff_8h_1a18" kindref="member">operator* </ref>(<ref refid="structLocCliffOp" kindref="compound">LocCliffOp</ref><sp/>a,<sp/><ref refid="structLocCliffOp" kindref="compound">LocCliffOp</ref><sp/>b);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="loccliff_8h_1a22" kindref="member">operator== </ref>(<ref refid="structLocCliffOp" kindref="compound">LocCliffOp</ref><sp/>a,<sp/><ref refid="structLocCliffOp" kindref="compound">LocCliffOp</ref><sp/>b);</highlight></codeline>
+<codeline lineno="118"><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="loccliff_8h_1a23" kindref="member">operator!= </ref>(<ref refid="structLocCliffOp" kindref="compound">LocCliffOp</ref><sp/>a,<sp/><ref refid="structLocCliffOp" kindref="compound">LocCliffOp</ref><sp/>b);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><ref refid="structRightPhase" kindref="compound">RightPhase</ref><sp/><ref refid="loccliff_8h_1a21" kindref="member">operator+ </ref>(<ref refid="structRightPhase" kindref="compound">RightPhase</ref><sp/>ph1,<sp/><ref refid="structRightPhase" kindref="compound">RightPhase</ref><sp/>ph2);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="loccliff_8h_1a22" kindref="member">operator== </ref>(<ref refid="structRightPhase" kindref="compound">RightPhase</ref><sp/>ph1,<sp/><ref refid="structRightPhase" kindref="compound">RightPhase</ref><sp/>ph2);</highlight></codeline>
+<codeline lineno="126"><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="loccliff_8h_1a23" kindref="member">operator!= </ref>(<ref refid="structRightPhase" kindref="compound">RightPhase</ref><sp/>ph1,<sp/><ref refid="structRightPhase" kindref="compound">RightPhase</ref><sp/>ph2);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//SWIG</highlight></codeline>
+<codeline lineno="129"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight><highlight class="comment">//<sp/>---===<sp/>constants<sp/>===---</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133" refid="loccliff_8h_1a0" refkind="member"><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/><ref refid="loccliff_8h_1a0" kindref="member">num_LocCliffOps</ref><sp/>=<sp/>24;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight><highlight class="comment">//<sp/>special<sp/>local<sp/>Clifford<sp/>operators:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136" refid="loccliff_8h_1a1" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structLocCliffOp" kindref="compound">LocCliffOp</ref><sp/><ref refid="loccliff_8h_1a1" kindref="member">lco_Id</ref><sp/><sp/><sp/>=<sp/>0;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="137" refid="loccliff_8h_1a2" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structLocCliffOp" kindref="compound">LocCliffOp</ref><sp/><ref refid="loccliff_8h_1a2" kindref="member">lco_X</ref><sp/><sp/><sp/><sp/>=<sp/>1;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="138" refid="loccliff_8h_1a3" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structLocCliffOp" kindref="compound">LocCliffOp</ref><sp/><ref refid="loccliff_8h_1a3" kindref="member">lco_Y</ref><sp/><sp/><sp/><sp/>=<sp/>2;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="139" refid="loccliff_8h_1a4" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structLocCliffOp" kindref="compound">LocCliffOp</ref><sp/><ref refid="loccliff_8h_1a4" kindref="member">lco_Z</ref><sp/><sp/><sp/><sp/>=<sp/>3;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="140" refid="loccliff_8h_1a5" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structLocCliffOp" kindref="compound">LocCliffOp</ref><sp/><ref refid="loccliff_8h_1a5" kindref="member">lco_H</ref><sp/><sp/><sp/><sp/>=<sp/>10;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="141" refid="loccliff_8h_1a6" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structLocCliffOp" kindref="compound">LocCliffOp</ref><sp/><ref refid="loccliff_8h_1a6" kindref="member">lco_spiZ</ref><sp/>=<sp/>5;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="142" refid="loccliff_8h_1a7" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structLocCliffOp" kindref="compound">LocCliffOp</ref><sp/><ref refid="loccliff_8h_1a7" kindref="member">lco_smiZ</ref><sp/>=<sp/>6;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="143" refid="loccliff_8h_1a8" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structLocCliffOp" kindref="compound">LocCliffOp</ref><sp/><ref refid="loccliff_8h_1a8" kindref="member">lco_spiY</ref><sp/>=<sp/>11;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="144" refid="loccliff_8h_1a9" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structLocCliffOp" kindref="compound">LocCliffOp</ref><sp/><ref refid="loccliff_8h_1a9" kindref="member">lco_smiY</ref><sp/>=<sp/>9;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="145" refid="loccliff_8h_1a10" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structLocCliffOp" kindref="compound">LocCliffOp</ref><sp/><ref refid="loccliff_8h_1a10" kindref="member">lco_spiX</ref><sp/>=<sp/>14;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="146" refid="loccliff_8h_1a11" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structLocCliffOp" kindref="compound">LocCliffOp</ref><sp/><ref refid="loccliff_8h_1a11" kindref="member">lco_smiX</ref><sp/>=<sp/>15;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="147" refid="loccliff_8h_1a12" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structLocCliffOp" kindref="compound">LocCliffOp</ref><sp/><ref refid="loccliff_8h_1a12" kindref="member">lco_S</ref><sp/><sp/><sp/><sp/>=<sp/><ref refid="loccliff_8h_1a7" kindref="member">lco_smiZ</ref>;<sp/></highlight></codeline>
+<codeline lineno="148" refid="loccliff_8h_1a13" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structLocCliffOp" kindref="compound">LocCliffOp</ref><sp/><ref refid="loccliff_8h_1a13" kindref="member">lco_Sh</ref><sp/><sp/><sp/>=<sp/><ref refid="loccliff_8h_1a6" kindref="member">lco_spiZ</ref>;<sp/></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight><highlight class="comment">//<sp/>the<sp/>right<sp/>angles:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="151" refid="loccliff_8h_1a14" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structRightPhase" kindref="compound">RightPhase</ref><sp/><ref refid="loccliff_8h_1a14" kindref="member">rp_p1</ref><sp/>=<sp/>0;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="152" refid="loccliff_8h_1a15" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structRightPhase" kindref="compound">RightPhase</ref><sp/><ref refid="loccliff_8h_1a15" kindref="member">rp_pI</ref><sp/>=<sp/>1;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="153" refid="loccliff_8h_1a16" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structRightPhase" kindref="compound">RightPhase</ref><sp/><ref refid="loccliff_8h_1a16" kindref="member">rp_m1</ref><sp/>=<sp/>2;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="154" refid="loccliff_8h_1a17" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structRightPhase" kindref="compound">RightPhase</ref><sp/><ref refid="loccliff_8h_1a17" kindref="member">rp_mI</ref><sp/>=<sp/>3;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight><highlight class="comment">//<sp/>---===<sp/>internals<sp/>===---</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>SWIG</highlight></codeline>
+<codeline lineno="161"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="163"><highlight class="comment">//<sp/>(all<sp/>others<sp/>functions<sp/>in<sp/>loccliff.cpp)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="164" refid="namespaceloccliff__tables" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">loccliff_tables<sp/>{</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/>meas_conj_tbl<sp/>[3]<sp/>[<ref refid="loccliff_8h_1a0" kindref="member">num_LocCliffOps</ref>]<sp/>=<sp/></highlight></codeline>
+<codeline lineno="167"><highlight class="normal">{{1,<sp/>1,<sp/>1,<sp/>1,<sp/>2,<sp/>2,<sp/>2,<sp/>2,<sp/>3,<sp/>3,<sp/>3,<sp/>3,<sp/>1,<sp/>1,<sp/>1,<sp/>1,<sp/>2,<sp/>2,<sp/>2,<sp/>2,<sp/>3,<sp/>3,<sp/>3,<sp/>3},<sp/></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/>{2,<sp/>2,<sp/>2,<sp/>2,<sp/>1,<sp/>1,<sp/>1,<sp/>1,<sp/>2,<sp/>2,<sp/>2,<sp/>2,<sp/>3,<sp/>3,<sp/>3,<sp/>3,<sp/>3,<sp/>3,<sp/>3,<sp/>3,<sp/>1,<sp/>1,<sp/>1,<sp/>1},<sp/></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/>{3,<sp/>3,<sp/>3,<sp/>3,<sp/>3,<sp/>3,<sp/>3,<sp/>3,<sp/>1,<sp/>1,<sp/>1,<sp/>1,<sp/>2,<sp/>2,<sp/>2,<sp/>2,<sp/>1,<sp/>1,<sp/>1,<sp/>1,<sp/>2,<sp/>2,<sp/>2,<sp/>2}};</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/>lco_mult_tbl<sp/>[<ref refid="loccliff_8h_1a0" kindref="member">num_LocCliffOps</ref>]<sp/>[<ref refid="loccliff_8h_1a0" kindref="member">num_LocCliffOps</ref>]<sp/>=<sp/></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;multtbl.tbl&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal">;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/>adj_tbl<sp/>[24]<sp/>=</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/>{<sp/>0,<sp/><sp/>1,<sp/><sp/>2,<sp/><sp/>3,</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>4,<sp/><sp/>6,<sp/><sp/>5,<sp/><sp/>7,</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>8,<sp/>11,<sp/>10,<sp/><sp/>9,</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/>12,<sp/>13,<sp/>15,<sp/>14,</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/>20,<sp/>22,<sp/>23,<sp/>21,</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/>16,<sp/>19,<sp/>17,<sp/>18};<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/>phase_tbl[4][4]<sp/>=</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/>{{0,<sp/>0,<sp/>0,<sp/>0},</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/>{0,<sp/>0,<sp/>1,<sp/>3},</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/>{0,<sp/>3,<sp/>0,<sp/>1},</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/>{0,<sp/>1,<sp/>3,<sp/>0}};</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>end<sp/>namespace<sp/>loccliff_tables</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight></codeline>
+<codeline lineno="192" refid="structLocCliffOp_1a0" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="structLocCliffOp_1a0" kindref="member">LocCliffOp::LocCliffOp</ref><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>op_)<sp/></highlight></codeline>
+<codeline lineno="193"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><ref refid="structLocCliffOp_1o0" kindref="member">op</ref><sp/>=<sp/>op_;</highlight></codeline>
+<codeline lineno="195"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight></codeline>
+<codeline lineno="197" refid="structLocCliffOp_1a1" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="structLocCliffOp_1a0" kindref="member">LocCliffOp::LocCliffOp</ref><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>signsymb,<sp/></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>permsymb)<sp/></highlight></codeline>
+<codeline lineno="199"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/>assert<sp/>(signsymb<sp/>&lt;<sp/>4<sp/>&amp;&amp;<sp/>permsymb<sp/>&lt;<sp/>6);</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><ref refid="structLocCliffOp_1o0" kindref="member">op</ref><sp/>=<sp/>permsymb<sp/>*<sp/>4<sp/>+<sp/>signsymb;</highlight></codeline>
+<codeline lineno="202"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="204" refid="structLocCliffOp_1a4" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="structLocCliffOp" kindref="compound">LocCliffOp</ref><sp/><ref refid="structLocCliffOp_1a4" kindref="member">LocCliffOp::herm_adjoint</ref><sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="205"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>loccliff_tables::adj_tbl<sp/>[<ref refid="structLocCliffOp_1o0" kindref="member">op</ref>];</highlight></codeline>
+<codeline lineno="207"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight></codeline>
+<codeline lineno="209" refid="structLocCliffOp_1e0" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="structRightPhase" kindref="compound">RightPhase</ref><sp/><ref refid="structLocCliffOp_1e0" kindref="member">LocCliffOp::mult_phase</ref><sp/>(<ref refid="structLocCliffOp" kindref="compound">LocCliffOp</ref><sp/>op1,<sp/><ref refid="structLocCliffOp" kindref="compound">LocCliffOp</ref><sp/>op2)</highlight></codeline>
+<codeline lineno="210"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/>assert<sp/>(op1.<ref refid="structLocCliffOp_1o0" kindref="member">op</ref><sp/>&lt;=<sp/><ref refid="loccliff_8h_1a4" kindref="member">lco_Z</ref>.<ref refid="structLocCliffOp_1o0" kindref="member">op</ref><sp/>&amp;&amp;<sp/>op2.<ref refid="structLocCliffOp_1o0" kindref="member">op</ref><sp/>&lt;=<sp/><ref refid="loccliff_8h_1a4" kindref="member">lco_Z</ref>.<ref refid="structLocCliffOp_1o0" kindref="member">op</ref>);</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structRightPhase" kindref="compound">RightPhase</ref><sp/>(loccliff_tables::phase_tbl[op1.<ref refid="structLocCliffOp_1o0" kindref="member">op</ref>][op2.<ref refid="structLocCliffOp_1o0" kindref="member">op</ref>]);</highlight></codeline>
+<codeline lineno="213"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight></codeline>
+<codeline lineno="216" refid="structLocCliffOp_1a5" refkind="member"><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structLocCliffOp_1a5" kindref="member">LocCliffOp::isXY</ref><sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="217"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<ref refid="structLocCliffOp_1o0" kindref="member">op</ref><sp/>==<sp/><ref refid="loccliff_8h_1a2" kindref="member">lco_X</ref>.<ref refid="structLocCliffOp_1o0" kindref="member">op</ref><sp/>||<sp/><ref refid="structLocCliffOp_1o0" kindref="member">op</ref><sp/>==<sp/><ref refid="loccliff_8h_1a3" kindref="member">lco_Y</ref>.<ref refid="structLocCliffOp_1o0" kindref="member">op</ref>);</highlight></codeline>
+<codeline lineno="219"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"></highlight></codeline>
+<codeline lineno="221" refid="structLocCliffOp_1a6" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structLocCliffOp_1a6" kindref="member">LocCliffOp::is_diagonal</ref><sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="222"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<ref refid="structLocCliffOp_1o0" kindref="member">op</ref><sp/>==<sp/><ref refid="loccliff_8h_1a1" kindref="member">lco_Id</ref>.<ref refid="structLocCliffOp_1o0" kindref="member">op</ref><sp/><sp/><sp/>||<sp/><ref refid="structLocCliffOp_1o0" kindref="member">op</ref><sp/>==<sp/><ref refid="loccliff_8h_1a4" kindref="member">lco_Z</ref>.<ref refid="structLocCliffOp_1o0" kindref="member">op</ref><sp/>||<sp/></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structLocCliffOp_1o0" kindref="member">op</ref><sp/>==<sp/><ref refid="loccliff_8h_1a7" kindref="member">lco_smiZ</ref>.<ref refid="structLocCliffOp_1o0" kindref="member">op</ref><sp/>||<sp/><ref refid="structLocCliffOp_1o0" kindref="member">op</ref><sp/>==<sp/><ref refid="loccliff_8h_1a6" kindref="member">lco_spiZ</ref>.<ref refid="structLocCliffOp_1o0" kindref="member">op</ref>);</highlight></codeline>
+<codeline lineno="225"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"></highlight></codeline>
+<codeline lineno="227" refid="loccliff_8h_1a18" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="structLocCliffOp" kindref="compound">LocCliffOp</ref><sp/><ref refid="loccliff_8h_1a18" kindref="member">operator* </ref>(<ref refid="structLocCliffOp" kindref="compound">LocCliffOp</ref><sp/>a,<sp/><ref refid="structLocCliffOp" kindref="compound">LocCliffOp</ref><sp/>b)<sp/></highlight></codeline>
+<codeline lineno="228"><highlight class="normal">{<sp/></highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structLocCliffOp" kindref="compound">LocCliffOp</ref><sp/>(loccliff_tables::lco_mult_tbl<sp/>[a.<ref refid="structLocCliffOp_1o0" kindref="member">op</ref>]<sp/>[b.<ref refid="structLocCliffOp_1o0" kindref="member">op</ref>]);</highlight></codeline>
+<codeline lineno="230"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"></highlight></codeline>
+<codeline lineno="232" refid="loccliff_8h_1a19" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="loccliff_8h_1a22" kindref="member">operator== </ref>(<ref refid="structLocCliffOp" kindref="compound">LocCliffOp</ref><sp/>a,<sp/><ref refid="structLocCliffOp" kindref="compound">LocCliffOp</ref><sp/>b)<sp/></highlight></codeline>
+<codeline lineno="233"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>a.<ref refid="structLocCliffOp_1o0" kindref="member">op</ref><sp/>==<sp/>b.<ref refid="structLocCliffOp_1o0" kindref="member">op</ref>;</highlight></codeline>
+<codeline lineno="235"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"></highlight></codeline>
+<codeline lineno="237" refid="loccliff_8h_1a20" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="loccliff_8h_1a23" kindref="member">operator!= </ref>(<ref refid="structLocCliffOp" kindref="compound">LocCliffOp</ref><sp/>a,<sp/><ref refid="structLocCliffOp" kindref="compound">LocCliffOp</ref><sp/>b)<sp/></highlight></codeline>
+<codeline lineno="238"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>a.<ref refid="structLocCliffOp_1o0" kindref="member">op</ref><sp/>!=<sp/>b.<ref refid="structLocCliffOp_1o0" kindref="member">op</ref>;</highlight></codeline>
+<codeline lineno="240"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"></highlight></codeline>
+<codeline lineno="242" refid="structRightPhase_1a0" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="structRightPhase_1a0" kindref="member">RightPhase::RightPhase</ref><sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><ref refid="structRightPhase_1o0" kindref="member">ph</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="244"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"></highlight></codeline>
+<codeline lineno="246" refid="structRightPhase_1a1" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="structRightPhase_1a0" kindref="member">RightPhase::RightPhase</ref><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/>ph_)<sp/>{</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><ref refid="structRightPhase_1o0" kindref="member">ph</ref><sp/>=<sp/>ph_;</highlight></codeline>
+<codeline lineno="248"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"></highlight></codeline>
+<codeline lineno="250" refid="loccliff_8h_1a21" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="structRightPhase" kindref="compound">RightPhase</ref><sp/><ref refid="loccliff_8h_1a21" kindref="member">operator+ </ref>(<ref refid="structRightPhase" kindref="compound">RightPhase</ref><sp/>ph1,<sp/><ref refid="structRightPhase" kindref="compound">RightPhase</ref><sp/>ph2)</highlight></codeline>
+<codeline lineno="251"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structRightPhase" kindref="compound">RightPhase</ref><sp/>((ph1.<ref refid="structRightPhase_1o0" kindref="member">ph</ref><sp/>+<sp/>ph2.<ref refid="structRightPhase_1o0" kindref="member">ph</ref>)<sp/>&amp;<sp/>0x03);</highlight></codeline>
+<codeline lineno="253"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"></highlight></codeline>
+<codeline lineno="255" refid="loccliff_8h_1a22" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="loccliff_8h_1a22" kindref="member">operator== </ref>(<ref refid="structRightPhase" kindref="compound">RightPhase</ref><sp/>a,<sp/><ref refid="structRightPhase" kindref="compound">RightPhase</ref><sp/>b)<sp/></highlight></codeline>
+<codeline lineno="256"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>((a.<ref refid="structRightPhase_1o0" kindref="member">ph</ref><sp/>^<sp/>b.<ref refid="structRightPhase_1o0" kindref="member">ph</ref>)<sp/>&amp;<sp/>0x03)<sp/>==<sp/>0;</highlight></codeline>
+<codeline lineno="258"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="259" refid="loccliff_8h_1a23" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="loccliff_8h_1a23" kindref="member">operator!= </ref>(<ref refid="structRightPhase" kindref="compound">RightPhase</ref><sp/>a,<sp/><ref refid="structRightPhase" kindref="compound">RightPhase</ref><sp/>b)<sp/></highlight></codeline>
+<codeline lineno="260"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>((a.<ref refid="structRightPhase_1o0" kindref="member">ph</ref><sp/>^<sp/>b.<ref refid="structRightPhase_1o0" kindref="member">ph</ref>)<sp/>&amp;<sp/>0x03)<sp/>!=<sp/>0;</highlight></codeline>
+<codeline lineno="262"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//SWIG</highlight></codeline>
+<codeline lineno="264"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="265"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//LOCCLIFF_H</highlight></codeline>
+    </programlisting>
+    <location file="/net/dopey1/sanders/work/graphsim-0.10/loccliff.h"/>
+  </compounddef>
+</doxygen>

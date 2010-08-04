@@ -1,0 +1,77 @@
+\section{graphsim.h File Reference}
+\label{graphsim_8h}\index{graphsim.h@{graphsim.h}}
+{\tt \#include $<$iostream$>$}\par
+{\tt \#include $<$stdlib.h$>$}\par
+{\tt \#include $<$vector$>$}\par
+{\tt \#include $<$cassert$>$}\par
+{\tt \#include \char`\"{}loccliff.h\char`\"{}}\par
+{\tt \#include \char`\"{}stabilizer.h\char`\"{}}\par
+\subsection*{Namespaces}
+\begin{CompactItemize}
+\item 
+namespace {\bf std}
+\end{CompactItemize}
+\subsection*{Classes}
+\begin{CompactItemize}
+\item 
+struct {\bf Connection\-Info}
+\item 
+class {\bf Graph\-Register}
+\begin{CompactList}\small\item\em A quantum register. \item\end{CompactList}\item 
+struct {\bf Qubit\-Vertex}
+\end{CompactItemize}
+\subsection*{Defines}
+\begin{CompactItemize}
+\item 
+\#define {\bf DBGOUT}(a)\label{graphsim_8h_a0}
+
+\end{CompactItemize}
+\subsection*{Typedefs}
+\begin{CompactItemize}
+\item 
+typedef unsigned long {\bf Vertex\-Index}
+\item 
+typedef vector$<$ {\bf Qubit\-Vertex} $>$::iterator {\bf Vertex\-Iter}
+\item 
+typedef hash\_\-set$<$ {\bf Vertex\-Index} $>$::iterator {\bf Vtx\-Idx\-Iter}
+\item 
+typedef vector$<$ {\bf Qubit\-Vertex} $>$::const\_\-iterator {\bf Vertex\-Iter\-Const}
+\item 
+typedef hash\_\-set$<$ {\bf Vertex\-Index} $>$::const\_\-iterator {\bf Vtx\-Idx\-Iter\-Const}
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+This header file defines the main interface of graphsim.
+
+(c) Simon Anders, University of Innsbruck, 2005 released under GPL.
+
+Note: If you have trouble compiling this, please note: This file uses the \char`\"{}hash\_\-set\char`\"{} template, which is an extension to the Standard C++ Library and the Standard Template Library, specified by SGI. Most C++ compilers have this template. For GNU C++, the header file $<$ext/hash\_\-set$>$ hasa to be included and hash\_\-set has to be prefixed with namespace \_\-\_\-gnu\_\-cxx. If you use another compiler, you might have to change the include file and the namespace identifier.
+
+\subsection{Typedef Documentation}
+\index{graphsim.h@{graphsim.h}!VertexIndex@{VertexIndex}}
+\index{VertexIndex@{VertexIndex}!graphsim.h@{graphsim.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned long {\bf Vertex\-Index}}\label{graphsim_8h_a1}
+
+
+All vertices in a graph state are numbered beginning with 0. To specify auch an index, the type Vertex\-Index (which is just unsigned long) is always used \index{graphsim.h@{graphsim.h}!VertexIter@{VertexIter}}
+\index{VertexIter@{VertexIter}!graphsim.h@{graphsim.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}typedef vector$<${\bf Qubit\-Vertex}$>$::iterator {\bf Vertex\-Iter}}\label{graphsim_8h_a2}
+
+
+As we often iterate over sublists of {\bf Graph\-Register::vertices}{\rm (p.\,\pageref{classGraphRegister_o0})}, this iterator typedef is a handy abbreviation. \index{graphsim.h@{graphsim.h}!VertexIterConst@{VertexIterConst}}
+\index{VertexIterConst@{VertexIterConst}!graphsim.h@{graphsim.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}typedef vector$<${\bf Qubit\-Vertex}$>$::const\_\-iterator {\bf Vertex\-Iter\-Const}}\label{graphsim_8h_a4}
+
+
+A constant version of Vertex\-Iter \index{graphsim.h@{graphsim.h}!VtxIdxIter@{VtxIdxIter}}
+\index{VtxIdxIter@{VtxIdxIter}!graphsim.h@{graphsim.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}typedef hash\_\-set$<${\bf Vertex\-Index}$>$::iterator {\bf Vtx\-Idx\-Iter}}\label{graphsim_8h_a3}
+
+
+Another iterator, this one for the adjacency lists Qubit\-Vertex::neigbors, and subsets. \index{graphsim.h@{graphsim.h}!VtxIdxIterConst@{VtxIdxIterConst}}
+\index{VtxIdxIterConst@{VtxIdxIterConst}!graphsim.h@{graphsim.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}typedef hash\_\-set$<${\bf Vertex\-Index}$>$::const\_\-iterator {\bf Vtx\-Idx\-Iter\-Const}}\label{graphsim_8h_a5}
+
+
+A constant version of Vtx\-Idx\-Iter 

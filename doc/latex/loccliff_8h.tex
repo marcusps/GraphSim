@@ -1,0 +1,115 @@
+\section{loccliff.h File Reference}
+\label{loccliff_8h}\index{loccliff.h@{loccliff.h}}
+{\tt \#include $<$string$>$}\par
+{\tt \#include $<$vector$>$}\par
+{\tt \#include \char`\"{}multtbl.tbl\char`\"{}}\par
+\subsection*{Namespaces}
+\begin{CompactItemize}
+\item 
+namespace {\bf loccliff\_\-tables}
+\end{CompactItemize}
+\subsection*{Classes}
+\begin{CompactItemize}
+\item 
+struct {\bf Loc\-Cliff\-Op}
+\begin{CompactList}\small\item\em An operator in the local Clifford group. \item\end{CompactList}\item 
+struct {\bf Right\-Matrix}
+\item 
+struct {\bf Right\-Phase}
+\begin{CompactList}\small\item\em A phase, which is 0, 90, 180, or 270 degrees. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+{\bf Loc\-Cliff\-Op} {\bf operator $\ast$} ({\bf Loc\-Cliff\-Op} a, {\bf Loc\-Cliff\-Op} b)\label{loccliff_8h_a18}
+
+\begin{CompactList}\small\item\em muliplies two local Clifford operators. Not commutative! \item\end{CompactList}\item 
+bool {\bf operator==} ({\bf Loc\-Cliff\-Op} a, {\bf Loc\-Cliff\-Op} b)\label{loccliff_8h_a19}
+
+\begin{CompactList}\small\item\em Check two LC operators for equality. \item\end{CompactList}\item 
+bool {\bf operator!=} ({\bf Loc\-Cliff\-Op} a, {\bf Loc\-Cliff\-Op} b)\label{loccliff_8h_a20}
+
+\begin{CompactList}\small\item\em Check two LC operators for inequality. \item\end{CompactList}\item 
+{\bf Right\-Phase} {\bf operator+} ({\bf Right\-Phase} ph1, {\bf Right\-Phase} ph2)\label{loccliff_8h_a21}
+
+\begin{CompactList}\small\item\em Adds two phases (modulo 4). \item\end{CompactList}\item 
+bool {\bf operator==} ({\bf Right\-Phase} ph1, {\bf Right\-Phase} ph2)\label{loccliff_8h_a22}
+
+\begin{CompactList}\small\item\em Check two phases for equality. \item\end{CompactList}\item 
+bool {\bf operator!=} ({\bf Right\-Phase} ph1, {\bf Right\-Phase} ph2)\label{loccliff_8h_a23}
+
+\begin{CompactList}\small\item\em Check two phases for inequality. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Variables}
+\begin{CompactItemize}
+\item 
+const  unsigned short {\bf num\_\-Loc\-Cliff\-Ops} = 24\label{loccliff_8h_a0}
+
+\begin{CompactList}\small\item\em There are 24 local Clifford operators. \item\end{CompactList}\item 
+const  {\bf Loc\-Cliff\-Op} {\bf lco\_\-Id} = 0\label{loccliff_8h_a1}
+
+\begin{CompactList}\small\item\em Identity. \item\end{CompactList}\item 
+const  {\bf Loc\-Cliff\-Op} {\bf lco\_\-X} = 1\label{loccliff_8h_a2}
+
+\begin{CompactList}\small\item\em Pauli X. \item\end{CompactList}\item 
+const  {\bf Loc\-Cliff\-Op} {\bf lco\_\-Y} = 2\label{loccliff_8h_a3}
+
+\begin{CompactList}\small\item\em Pauli Y. \item\end{CompactList}\item 
+const  {\bf Loc\-Cliff\-Op} {\bf lco\_\-Z} = 3\label{loccliff_8h_a4}
+
+\begin{CompactList}\small\item\em Pauli Z. \item\end{CompactList}\item 
+const  {\bf Loc\-Cliff\-Op} {\bf lco\_\-H} = 10\label{loccliff_8h_a5}
+
+\begin{CompactList}\small\item\em Hadamard. \item\end{CompactList}\item 
+const  {\bf Loc\-Cliff\-Op} {\bf lco\_\-spi\-Z} = 5\label{loccliff_8h_a6}
+
+\begin{CompactList}\small\item\em Sqrt (+i\-Z). \item\end{CompactList}\item 
+const  {\bf Loc\-Cliff\-Op} {\bf lco\_\-smi\-Z} = 6\label{loccliff_8h_a7}
+
+\begin{CompactList}\small\item\em Sqrt (-i\-Z). \item\end{CompactList}\item 
+const  {\bf Loc\-Cliff\-Op} {\bf lco\_\-spi\-Y} = 11\label{loccliff_8h_a8}
+
+\begin{CompactList}\small\item\em Sqrt (+i\-Y). \item\end{CompactList}\item 
+const  {\bf Loc\-Cliff\-Op} {\bf lco\_\-smi\-Y} = 9\label{loccliff_8h_a9}
+
+\begin{CompactList}\small\item\em Sqrt (-i\-Y). \item\end{CompactList}\item 
+const  {\bf Loc\-Cliff\-Op} {\bf lco\_\-spi\-X} = 14\label{loccliff_8h_a10}
+
+\begin{CompactList}\small\item\em Sqrt (+i\-X). \item\end{CompactList}\item 
+const  {\bf Loc\-Cliff\-Op} {\bf lco\_\-smi\-X} = 15\label{loccliff_8h_a11}
+
+\begin{CompactList}\small\item\em Sqrt (-i\-X). \item\end{CompactList}\item 
+const  {\bf Loc\-Cliff\-Op} {\bf lco\_\-S} = {\bf lco\_\-smi\-Z}\label{loccliff_8h_a12}
+
+\begin{CompactList}\small\item\em Pi/4 phase rot. \item\end{CompactList}\item 
+const  {\bf Loc\-Cliff\-Op} {\bf lco\_\-Sh} = {\bf lco\_\-spi\-Z}\label{loccliff_8h_a13}
+
+\begin{CompactList}\small\item\em herm. conj. of Pi/4 phase rot \item\end{CompactList}\item 
+const  {\bf Right\-Phase} {\bf rp\_\-p1} = 0\label{loccliff_8h_a14}
+
+\begin{CompactList}\small\item\em +1 \item\end{CompactList}\item 
+const  {\bf Right\-Phase} {\bf rp\_\-p\-I} = 1\label{loccliff_8h_a15}
+
+\begin{CompactList}\small\item\em +i \item\end{CompactList}\item 
+const  {\bf Right\-Phase} {\bf rp\_\-m1} = 2\label{loccliff_8h_a16}
+
+\begin{CompactList}\small\item\em -1 \item\end{CompactList}\item 
+const  {\bf Right\-Phase} {\bf rp\_\-m\-I} = 3\label{loccliff_8h_a17}
+
+\begin{CompactList}\small\item\em -i \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+{\bf loccliff.h}{\rm (p.\,\pageref{loccliff_8h})} -- a class for operators in the Clifford group
+
+version v0.11, of 2005-01-27
+
+Copyright (C) 2004 Simon Anders $<${\tt sanders@fs.tum.de}$>$ Institute of Theoretical Physics, University of Innsbruck, Austria
+
+----------
+
+This file is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2, or (at your option) any later version.
+
+This file is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along with this file; see the file COPYING. If not, browse to {\tt http://www.fsf.org/licenses/gpl.html}
+
+----------
