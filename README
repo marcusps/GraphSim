@@ -17,6 +17,4 @@ For information about this package, please read
 If you use this paper for scientific work, please cite the paper 
 referenced above in your publication.
      
-The binaries included in the tgz file are for x86 Linux. For other 
-platforms, quo have to recompile. In case of question, please do not
-hesistate to send me an e-mail.
+In case of problems, please submit an issue: https://github.com/marcusps/GraphSim/issues
