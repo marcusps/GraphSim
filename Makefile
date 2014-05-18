@@ -102,7 +102,7 @@ _graphsim.so: graphsim.o graphsim_wrap.o loccliff.o stabilizer.o
 	stabilizer.o ${MLLIB} -o _graphsim.so
  
 graphsim_wrap.o: graphsim_wrap.cxx
-	${CXX} ${CFLAGS} ${NOLINK} -fpic graphsim_wrap.cxx -I/usr/include/python2.2/
+	${CXX} ${CFLAGS} ${NOLINK} -fpic graphsim_wrap.cxx -I/usr/include/python2.7/
 
 loccliff.h: multtbl.tbl
 
@@ -123,7 +123,7 @@ doc/timestamp.dummy: graphsim.h loccliff.h stabilizer.h
 chp.py: _chp.so
 
 chp_wrap.o: CHP/chp_wrap.c
-	${CC} ${CFLAGS} ${NOLINK} -fpic CHP/chp_wrap.c -I/usr/include/python2.2/
+	${CC} ${CFLAGS} ${NOLINK} -fpic CHP/chp_wrap.c -I/usr/include/python2.7/
 
 chp_wrap.c: CHP/chp.i CHP/chp.h
 	${SWIG} -python CHP/chp.i
