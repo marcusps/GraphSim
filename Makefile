@@ -34,7 +34,7 @@ WITH_MATHLINK=no
 CXX=g++
 CC=gcc
 
-CFLAGS=-Wall
+CFLAGS=-Wall -fPIC
 NOLINK=-c
 ifeq (${DEBUG}, yes)
    CFLAGS += -g
@@ -98,11 +98,11 @@ graphsim_wrap.cxx: graphsim.h loccliff.h
 	${SWIG} -python ${NOLINK}++ -globals consts graphsim.h
    
 _graphsim.so: graphsim.o graphsim_wrap.o loccliff.o stabilizer.o
-	${CXX} ${CFLAGS} -shared -fPIC graphsim.o graphsim_wrap.o loccliff.o \
+	${CXX} ${CFLAGS} -shared graphsim.o graphsim_wrap.o loccliff.o \
 	stabilizer.o ${MLLIB} -o _graphsim.so
  
 graphsim_wrap.o: graphsim_wrap.cxx
-	${CXX} ${CFLAGS} ${NOLINK} -fpic graphsim_wrap.cxx -I/usr/include/python2.7/
+	${CXX} ${CFLAGS} ${NOLINK} graphsim_wrap.cxx -I/usr/include/python2.7/
 
 loccliff.h: multtbl.tbl
 
@@ -123,7 +123,7 @@ doc/timestamp.dummy: graphsim.h loccliff.h stabilizer.h
 chp.py: _chp.so
 
 chp_wrap.o: CHP/chp_wrap.c
-	${CC} ${CFLAGS} ${NOLINK} -fpic CHP/chp_wrap.c -I/usr/include/python2.7/
+	${CC} ${CFLAGS} ${NOLINK} CHP/chp_wrap.c -I/usr/include/python2.7/
 
 chp_wrap.c: CHP/chp.i CHP/chp.h
 	${SWIG} -python CHP/chp.i
@@ -132,4 +132,4 @@ chp.o: CHP/chp.c
 	${CC} ${CFLAGS} ${NOLINK} CHP/chp.c
    
 chp.py _chp.so: chp.o chp_wrap.o
-	${CC} ${CFLAGS} -shared -fPIC chp.o chp_wrap.o -o _chp.so
+	${CC} ${CFLAGS} -shared chp.o chp_wrap.o -o _chp.so
