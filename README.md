@@ -8,10 +8,10 @@ This code is not actively supported or maintained, but pull requests for minor b
 
 > This is GraphSim, a library do simulate stabilizer quantum circuits.
 >
-> Author: Simon Anders, sanders@fs.tum.de, University of Innsbruck
-> Version: v.10 (initial release)
-> Date: 1 Feb 2005 (last change), 18 Apr 2005 (release prep)
-> (c) 2005, released under GPL
+> - Author: Simon Anders, sanders@fs.tum.de, University of Innsbruck
+> - Version: v.10 (initial release)
+> - Date: 1 Feb 2005 (last change), 18 Apr 2005 (release prep)
+> - (c) 2005, released under GPL
 >
 > For information about this package, please read
 > - the paper describing the algorithm:
