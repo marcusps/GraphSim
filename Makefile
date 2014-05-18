@@ -21,13 +21,13 @@ OPTIMIZE=yes
 # (here: Python). Enter here the path to the SWIG binary. If you do not have
 # SWIG and do not need Python bindings, leave it empty and build only the target
 # 'gs', not 'all'
-SWIG=/net/dopey1/sanders/bin/swig
+SWIG=/usr/bin/swig
 
 # Mathlink is a part of Mathematica. It is used here to compare the computation of
 # graphsim with Scott Aaronson's CHP program. If you do not want to do debugging
 # or checking, you do not need this. Put it to 'no'.
 WITH_MATHLINK=no
-MATHLINK=/opt/local/cluster/Mathematica/5.0/AddOns/MathLink/DeveloperKit/Linux/CompilerAdditions/
+#MATHLINK=/opt/local/cluster/Mathematica/5.0/AddOns/MathLink/DeveloperKit/Linux/CompilerAdditions/
 
 # The following compiler flags are for GNU C/C++. if you have another compiler
 # you might have to change them
