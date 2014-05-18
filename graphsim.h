@@ -72,7 +72,7 @@ file and the namespace identifier.
 #endif // SWIG
 
 #include <iostream>
-#include <stdlib.h>
+#include <cstdlib>
 #include <vector>
 #include <cassert>
 

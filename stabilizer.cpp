@@ -3,7 +3,7 @@
 #ifdef WITH_MATHLINK
    #include <mathlink.h>
 #endif   
-#include <stdlib.h>
+#include <cstdlib>
 
 Stabilizer::Stabilizer (const VertexIndex numQubits_):
    paulis (numQubits_, vector<LocCliffOp> (numQubits_, lco_Id)),
