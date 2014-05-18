@@ -11,7 +11,7 @@ defines the Stabilizer class */
 #include <cassert>
 #include "loccliff.h"
 
-#include <unordered_set>
+#include <tr1/unordered_set>
 // See note at top of file graphsim.h in case of problems compiling
 // the preceding lines.
 
@@ -52,7 +52,7 @@ struct Stabilizer {
    vector<RightPhase> rowsigns;
    vector<VertexIndex> vtxidx;
    Stabilizer (const VertexIndex numQubits_);
-   Stabilizer (const GraphRegister& gr, const unordered_set<VertexIndex>& qubits);
+  Stabilizer (const GraphRegister& gr, const std::tr1::unordered_set<VertexIndex>& qubits);
    Stabilizer (QState * qs);
    void add_row (unsigned target, unsigned addend);
    void conjugate (unsigned row, unsigned col, const LocCliffOp trans);

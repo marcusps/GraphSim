@@ -66,6 +66,7 @@ released under GPL.
 #include <iostream>
 #include <cstdlib>
 #include <vector>
+#include <tr1/unordered_set>
 #include <cassert>
 
 #include "loccliff.h"
@@ -75,6 +76,7 @@ released under GPL.
 #include <cstdlib>
 
 using namespace std;
+using namespace std::tr1;
 
 /*! All vertices in a graph state are numbered beginning with 0. To specify
 auch an index, the type VertexIndex (which is just unsigned long) is always
