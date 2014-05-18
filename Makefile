@@ -1,7 +1,7 @@
 # Makefile for graphsim
 
 # This make file defines the following targets:
-#   graphsim: The graphsim C++ library (as simple object file to link against)
+#   gs: The graphsim C++ library (as simple object file to link against)
 #      and a small test program called gstest
 #   pywrapper: Python bindings to graphsim (needs SWIG)
 #   doc: documentation for use with C++ (needs Doxygen)
@@ -20,21 +20,21 @@ OPTIMIZE=yes
 # SWIG is a tool to generate bindings to the C++ library for script languages
 # (here: Python). Enter here the path to the SWIG binary. If you do not have
 # SWIG and do not need Python bindings, leave it empty and build only the target
-# 'graphsim', not 'all'
-SWIG=/net/dopey1/sanders/bin/swig
+# 'gs', not 'all'
+SWIG=/usr/bin/swig
 
 # Mathlink is a part of Mathematica. It is used here to compare the computation of
 # graphsim with Scott Aaronson's CHP program. If you do not want to do debugging
 # or checking, you do not need this. Put it to 'no'.
 WITH_MATHLINK=no
-MATHLINK=/opt/local/cluster/Mathematica/5.0/AddOns/MathLink/DeveloperKit/Linux/CompilerAdditions/
+#MATHLINK=/opt/local/cluster/Mathematica/5.0/AddOns/MathLink/DeveloperKit/Linux/CompilerAdditions/
 
 # The following compiler flags are for GNU C/C++. if you have another compiler
 # you might have to change them
 CXX=g++
 CC=gcc
 
-CFLAGS=-W 
+CFLAGS=-Wall -fPIC
 NOLINK=-c
 ifeq (${DEBUG}, yes)
    CFLAGS += -g
@@ -102,7 +102,7 @@ _graphsim.so: graphsim.o graphsim_wrap.o loccliff.o stabilizer.o
 	stabilizer.o ${MLLIB} -o _graphsim.so
  
 graphsim_wrap.o: graphsim_wrap.cxx
-	${CXX} ${CFLAGS} ${NOLINK} -fpic graphsim_wrap.cxx -I/usr/include/python2.2/
+	${CXX} ${CFLAGS} ${NOLINK} graphsim_wrap.cxx -I/usr/include/python2.7/
 
 loccliff.h: multtbl.tbl
 
@@ -123,7 +123,7 @@ doc/timestamp.dummy: graphsim.h loccliff.h stabilizer.h
 chp.py: _chp.so
 
 chp_wrap.o: CHP/chp_wrap.c
-	${CC} ${CFLAGS} ${NOLINK} -fpic CHP/chp_wrap.c -I/usr/include/python2.2/
+	${CC} ${CFLAGS} ${NOLINK} CHP/chp_wrap.c -I/usr/include/python2.7/
 
 chp_wrap.c: CHP/chp.i CHP/chp.h
 	${SWIG} -python CHP/chp.i

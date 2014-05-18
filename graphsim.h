@@ -79,6 +79,8 @@ file and the namespace identifier.
 #include "loccliff.h"
 #include "stabilizer.h"
 
+#include <cstring>
+#include <cstdlib>
 
 using namespace std;
 
