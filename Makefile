@@ -98,7 +98,7 @@ graphsim_wrap.cxx: graphsim.h loccliff.h
 	${SWIG} -python ${NOLINK}++ -globals consts graphsim.h
    
 _graphsim.so: graphsim.o graphsim_wrap.o loccliff.o stabilizer.o
-	${CXX} ${CFLAGS} -shared graphsim.o graphsim_wrap.o loccliff.o \
+	${CXX} ${CFLAGS} -shared -fPIC graphsim.o graphsim_wrap.o loccliff.o \
 	stabilizer.o ${MLLIB} -o _graphsim.so
  
 graphsim_wrap.o: graphsim_wrap.cxx
@@ -132,4 +132,4 @@ chp.o: CHP/chp.c
 	${CC} ${CFLAGS} ${NOLINK} CHP/chp.c
    
 chp.py _chp.so: chp.o chp_wrap.o
-	${CC} ${CFLAGS} -shared chp.o chp_wrap.o -o _chp.so
+	${CC} ${CFLAGS} -shared -fPIC chp.o chp_wrap.o -o _chp.so
