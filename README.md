@@ -1,3 +1,7 @@
+# GraphSim
+
+[![Build Status](https://travis-ci.org/marcusps/GraphSim.svg?branch=hash-set-fix)](https://travis-ci.org/marcusps/GraphSim)
+
 This is GraphSim, a library do simulate stabilizer quantum circuits.
 
 Author: Simon Anders, sanders@fs.tum.de, University of Innsbruck
