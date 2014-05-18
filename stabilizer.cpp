@@ -15,7 +15,7 @@ Stabilizer::Stabilizer (const VertexIndex numQubits_):
 
 
 Stabilizer::Stabilizer (const GraphRegister& gr, 
-      const hash_set<VertexIndex>& qubits):
+      const unordered_set<VertexIndex>& qubits):
    paulis (qubits.size(), vector<LocCliffOp> (qubits.size(), lco_Id)),
    rowsigns (qubits.size()),
    vtxidx (qubits.size())
