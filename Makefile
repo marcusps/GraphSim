@@ -1,7 +1,7 @@
 # Makefile for graphsim
 
 # This make file defines the following targets:
-#   graphsim: The graphsim C++ library (as simple object file to link against)
+#   gs: The graphsim C++ library (as simple object file to link against)
 #      and a small test program called gstest
 #   pywrapper: Python bindings to graphsim (needs SWIG)
 #   doc: documentation for use with C++ (needs Doxygen)
@@ -20,7 +20,7 @@ OPTIMIZE=yes
 # SWIG is a tool to generate bindings to the C++ library for script languages
 # (here: Python). Enter here the path to the SWIG binary. If you do not have
 # SWIG and do not need Python bindings, leave it empty and build only the target
-# 'graphsim', not 'all'
+# 'gs', not 'all'
 SWIG=/net/dopey1/sanders/bin/swig
 
 # Mathlink is a part of Mathematica. It is used here to compare the computation of
@@ -34,7 +34,7 @@ MATHLINK=/opt/local/cluster/Mathematica/5.0/AddOns/MathLink/DeveloperKit/Linux/C
 CXX=g++
 CC=gcc
 
-CFLAGS=-W 
+CFLAGS=-Wall
 NOLINK=-c
 ifeq (${DEBUG}, yes)
    CFLAGS += -g
