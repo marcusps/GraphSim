@@ -76,7 +76,9 @@ released under GPL.
 #include <cstdlib>
 
 using namespace std;
+#ifndef SWIG
 using namespace std::tr1;
+#endif
 
 /*! All vertices in a graph state are numbered beginning with 0. To specify
 auch an index, the type VertexIndex (which is just unsigned long) is always
