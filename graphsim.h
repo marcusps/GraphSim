@@ -72,13 +72,15 @@ file and the namespace identifier.
 #endif // SWIG
 
 #include <iostream>
-#include <stdlib.h>
+#include <cstdlib>
 #include <vector>
 #include <cassert>
 
 #include "loccliff.h"
 #include "stabilizer.h"
 
+#include <cstring>
+#include <cstdlib>
 
 using namespace std;
 

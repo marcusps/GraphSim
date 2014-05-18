@@ -3,7 +3,7 @@
 #ifdef WITH_MATHLINK
    #include <mathlink.h>
 #endif   
-#include <stdlib.h>
+#include <cstdlib>
 
 Stabilizer::Stabilizer (const VertexIndex numQubits_):
    paulis (numQubits_, vector<LocCliffOp> (numQubits_, lco_Id)),
@@ -52,10 +52,10 @@ Stabilizer::Stabilizer (struct QState * qs) :
 {
    static const unsigned char optbl[4] = {0, 1, 3, 2};
    numQubits = qs->n;
-   for (int i = 0; i < numQubits; i++) {
+   for (int i = 0; i < (int)numQubits; i++) {
       rowsigns[i] = RightPhase (qs->r[numQubits + i]);
 	   vtxidx[i] = i;
-      for (int j = 0; j < numQubits; j++) {
+      for (int j = 0; j < (int)numQubits; j++) {
          bool xhere = ((qs->x [numQubits+i] [j >> 5]) & (1 << (j & 0x1f))) > 0;
          bool zhere = ((qs->z [numQubits+i] [j >> 5]) & (1 << (j & 0x1f))) > 0;
          paulis[i][j] = LocCliffOp (optbl [(zhere<<1) | xhere]);

@@ -1,11 +1,14 @@
 language: cpp
 compiler:
   - clang
+  - gcc
 notifications:
   email: false
 env:
   matrix:
 before_install:
   - sudo apt-get update -qq -y
+  - sudo apt-get install python2.7 python2.7-dev -y
+  - sudo apt-get install swig
 script:
   - make all
