@@ -12,9 +12,9 @@ defines the Stabilizer class */
 #include "loccliff.h"
 
 #include <tr1/unordered_set>
-// See note at top of file graphsim.h in case of problems compiling
-// the preceding lines.
-
+#ifndef SWIG
+using namespace std::tr1;
+#endif
 
 #ifdef SWIG
 struct QState;
