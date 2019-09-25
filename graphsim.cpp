@@ -65,7 +65,7 @@ void GraphRegister::toggle_edge (VertexIndex v1, VertexIndex v2)
 You can also use print_stabilizer.*/
 Stabilizer& GraphRegister::get_full_stabilizer (void) const
 {
-   hash_set<VertexIndex> all_qubits; 
+   unordered_set<VertexIndex> all_qubits; 
    for (VertexIterConst i = vertices.begin(); i != vertices.end(); i++) {
       all_qubits.insert (i-vertices.begin());
    }
@@ -225,10 +225,10 @@ struct edge_hash {
 /*! The function takes extra care not to invert an edge twice. If vs1 and
 vs2 are disjunct, this cannot happen and we do not need the function.
 If vs1 == v2s, we can do without, too. */
-void GraphRegister::toggle_edges (const hash_set<VertexIndex> vs1, 
-   const hash_set<VertexIndex> vs2)
+void GraphRegister::toggle_edges (const unordered_set<VertexIndex> vs1, 
+   const unordered_set<VertexIndex> vs2)
 {
-   hash_set<Edge, edge_hash> procd_edges;
+   unordered_set<Edge, edge_hash> procd_edges;
    for (VtxIdxIterConst i = vs1.begin(); i != vs1.end(); i++) {
       for (VtxIdxIterConst j = vs2.begin(); j != vs2.end(); j++) {
          if ((*i != *j) && 
@@ -253,7 +253,7 @@ int GraphRegister::graph_Z_measure (VertexIndex v, int force)
    #ifdef DEBUGOUTPUT
       print_adj_list_line (cout, v);
    #endif
-   hash_set<VertexIndex> nbg = vertices[v].neighbors;
+   unordered_set<VertexIndex> nbg = vertices[v].neighbors;
    for (VtxIdxIter i = nbg.begin(); i != nbg.end(); i++) {
       del_edge (v, *i);
       if (res) {
@@ -278,7 +278,7 @@ int GraphRegister::graph_Y_measure (VertexIndex v, int force)
       res = force;
    }
    DBGOUT ("gYm" << v << "," << res << " ");
-   hash_set<VertexIndex> vnbg = vertices[v].neighbors;
+   unordered_set<VertexIndex> vnbg = vertices[v].neighbors;
    for (VtxIdxIter i = vnbg.begin(); i != vnbg.end(); i++) {
       if (res) {
          vertices[*i].byprod = vertices[*i].byprod * lco_spiZ;
@@ -330,8 +330,8 @@ int GraphRegister::graph_X_measure (VertexIndex v, bool* determined,
    VertexIndex vb = *vertices[v].neighbors.begin(); // the choosen vertex
    //D cerr << "vb = " << vb << endl;
    // preparation step: store the neighborhood of v and vb
-   hash_set<VertexIndex> vn = vertices[v].neighbors;
-   hash_set<VertexIndex> vbn = vertices[vb].neighbors;
+   unordered_set<VertexIndex> vn = vertices[v].neighbors;
+   unordered_set<VertexIndex> vbn = vertices[vb].neighbors;
    // First, put the byproduct ops: 
    if (! res) {
       // measured a |+>:
@@ -365,7 +365,7 @@ int GraphRegister::graph_X_measure (VertexIndex v, bool* determined,
    // STEP 2: complement with the complete subgraph induced by the 
    // intersection of nbg(v) and nbg(vb):
    // First, make the intersection
-   hash_set<VertexIndex> isc;
+   unordered_set<VertexIndex> isc;
    for (VtxIdxIter i = vn.begin(); i != vn.end(); i++) {
       if (vbn.find(*i) != vbn.end()) {
          isc.insert (*i);
@@ -439,7 +439,7 @@ void GraphRegister::invert_neighborhood (VertexIndex v)
       DBGOUT ("Inverting about ");
       print_adj_list_line (cout, v);
    #endif
-   hash_set<VertexIndex> vn = vertices[v].neighbors;
+   unordered_set<VertexIndex> vn = vertices[v].neighbors;
    for (VtxIdxIter i = vn.begin(); i != vn.end(); i++) {
       for (VtxIdxIter j = i; j != vn.end(); j++) {
          if (*i != *j) {
