@@ -48,6 +48,8 @@ For GNU C++, the header file <ext/hash_set> hasa to be included
 and hash_set has to be prefixed with namespace __gnu_cxx.
 If you use another compiler, you might have to change the include
 file and the namespace identifier.
+
+-> Replaced hash_set with unordered_set. Old compilers may complain, but recent ones will be happy.
 */
 
 #ifndef GRAPHSIM_H
@@ -97,7 +99,7 @@ struct QubitVertex {
    the one-way quantum computer.*/
    LocCliffOp byprod;
    /*! neigbors is the adjacency list for this vertex */
-   hash_set<VertexIndex> neighbors;
+   unordered_set<VertexIndex> neighbors;
    /*! Upon construction, a qubit vertex is initialised with the Hadamard
    operation as VOp, and with wmpty neighbor list. This makes it represent
    a |0>. */
@@ -147,8 +149,8 @@ class GraphRegister {
    int graph_Z_measure (VertexIndex v, int force = -1);
    int graph_Y_measure (VertexIndex v, int force = -1);
    int graph_X_measure (VertexIndex v, bool* determined = NULL, int force = -1);
-   void toggle_edges (const hash_set<VertexIndex> vs1, 
-      const hash_set<VertexIndex> vs2);      
+   void toggle_edges (const unordered_set<VertexIndex> vs1, 
+      const unordered_set<VertexIndex> vs2);      
    bool remove_byprod_op (VertexIndex v, VertexIndex use_not);
    void cphase_with_table (VertexIndex v1, VertexIndex v2);
    ConnectionInfo getConnectionInfo (VertexIndex v1, VertexIndex v2);  
@@ -161,12 +163,12 @@ iterator typedef is a handy abbreviation. */
 typedef vector<QubitVertex>::iterator VertexIter;
 /*! Another iterator, this one for the adjacency lists QubitVertex::neigbors,
 and subsets. */
-typedef hash_set<VertexIndex>::iterator VtxIdxIter;
+typedef unordered_set<VertexIndex>::iterator VtxIdxIter;
 
 /*! A constant version of VertexIter */
 typedef vector<QubitVertex>::const_iterator VertexIterConst;
 /*! A constant version of VtxIdxIter */
-typedef hash_set<VertexIndex>::const_iterator VtxIdxIterConst;
+typedef unordered_set<VertexIndex>::const_iterator VtxIdxIterConst;
 
 
 /*! Apply the local (i.e. single-qubit) operation o on vertex v. */

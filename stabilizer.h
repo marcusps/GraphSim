@@ -11,10 +11,12 @@ defines the Stabilizer class */
 #include <cassert>
 #include "loccliff.h"
 
-#include <ext/hash_set>
-#ifndef SWIG
-using __gnu_cxx::hash_set;
-#endif
+// #include <ext/hash_set>
+// #ifndef SWIG
+// using __gnu_cxx::hash_set;
+// #endif
+
+#include <unordered_set>
 // See note at top of file graphsim.h in case of problems compiling
 // the preceding lines.
 
@@ -55,7 +57,7 @@ struct Stabilizer {
    vector<RightPhase> rowsigns;
    vector<VertexIndex> vtxidx;
    Stabilizer (const VertexIndex numQubits_);
-   Stabilizer (const GraphRegister& gr, const hash_set<VertexIndex>& qubits);
+   Stabilizer (const GraphRegister& gr, const unordered_set<VertexIndex>& qubits);
    Stabilizer (QState * qs);
    void add_row (unsigned target, unsigned addend);
    void conjugate (unsigned row, unsigned col, const LocCliffOp trans);
